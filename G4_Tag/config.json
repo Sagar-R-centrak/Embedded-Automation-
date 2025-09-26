@@ -1,0 +1,13 @@
+{
+    "Arduino_serial_port": "COM5",
+    "host": "192.168.1.5",
+	"SERVER_IP": "192.168.1.5",
+    "Port_profile": 8185,
+    "port": 7167,
+	"tcp_command_port": 8181,
+	
+    "timeout": 5,
+	"POWER_SUPPLY": {
+        "COM_PORT": "COM4"
+    }
+}
