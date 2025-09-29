@@ -1,46 +1,34 @@
-from UDP_API.UDP_stream_validation_API import PacketCapture
-from Arduino_API.Arduino_serial_API import SerialConnection
+import json
 import time
+from UDP_Stream.UDP_Stream_validation_API.MainProcess import MainProcess
+from UDP_Stream.UDP_Stream_validation_API.Report import Report
+from UDP_Stream.UDP_Stream_validation_API.Output import Output
+import logging
 
-class MainProcess:
-    def __init__(self):
-        self.serial_conn = SerialConnection(port="COM11", baud_rate=9600)
-        self.packet_capture = PacketCapture()
-        print("Initializing serial connection...")
-        self.serial_conn.init_serial()
-
-    def button_api(self, serial_message, expected_values):
+g4_tag1_id = 8457892
+server_ip = "192.168.1.5"
 
 
-        print(f"Sending command '{serial_message}' to Arduino...")
-        self.serial_conn.send_command(serial_message)
-
-        print("Capturing packets...")
-        self.packet_capture.capture()
-
-        print("Processing and validating captured packets...")
-        is_valid = self.packet_capture.process_packets(expected_values)
-
-        return is_valid
-
+process = MainProcess()
 if __name__ == "__main__":
-    process = MainProcess()
-    print("Executing Button_03 : To validate button3 short press ")
-    time.sleep(10)
-    expected_values = {
-    'Tag ID': 4296372,
-    'Button 4': '0',
-    'Button 3': '1',
-    'Button 2': '1',
-    'Button 1': '1',
-    }
 
-    result = process.button_api(serial_message="tag1skey1", expected_values=expected_values)
+
+    print("Executing ButtonPress_05 : To validate tag Button Press")
+    logging.info("Executing ButtonPress_05 : To validate tag Button Press \n  ")
+    time.sleep(3)
+    expected_values = {
+        'Tag ID': g4_tag1_id,
+        'Button 1': '1'
+    }
+    result = process.button_api(serial_message="t1lp", expected_values=expected_values)
+    i = 1
     if result:
         print("Packet validation successful.")
-
+        print(f"Iteration{i}: ButtonPress_05 Test PASS")
+        Report("ButtonPress_05", 1)
+        Output(f"Iteration{i}: ButtonPress_05 Test PASS")
     else:
         print("Packet validation failed.")
-
-    process.serial_conn.close()
-
+        print(f"Iteration{i}: ButtonPress_05 Test FAIL")
+        Report("ButtonPress_05", 0)
+        Output(f"Iteration{i}: ButtonPress_05 Test FAIL")
