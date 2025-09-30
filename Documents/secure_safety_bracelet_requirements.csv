@@ -1,0 +1,1154 @@
+Category,TRD_ID,Technical_Requirement_Description,PRD_Relationship,Owner,Comments
+Band,TR-Band-1,Product assembled with Rugged Band shall withstand up to 10kg of pull force without damage to product or Rugged Band.,,,
+Band,TR-Band-10,Product shall support black Rugged band color option.,,,
+Band,TR-Band-11,Product shall support black Secure band color option.,,,
+Band,TR-Band-12,Product assembled with Rugged Band shall withstand up to 10kg of pull force without resulting in a band open condition.,,,
+Band,TR-Band-13,Product shall support blue-gray (Pantone 550c) Rugged band color option.,,,
+Band,TR-Band-14,Product shall support blue-gray (Pantone 550c) Secure band color option.,,,
+Band,TR-Band-15,Product shall support cut band detection with Rugged Band.,,,
+Band,TR-Band-16,Product shall support cut band detection with Secure Band.,,,
+Band,TR-Band-17,Product shall support maroon (Pantone 483c) Rugged band color option.,,,
+Band,TR-Band-18,Product shall support maroon (Pantone 483c) Secure band color option.,,,
+Band,TR-Band-19,Product shall support one color option and a black option for the Rugged Band.,,,
+Band,TR-Band-2,Product Secure Band shall use a locking mechanism with plunger apparatus which pierces through and establishes an electrical closed circuit between right and left bracelet band conductive mesh.,,,
+Band,TR-Band-20,Product shall support one color option and a black option for the Secure Band.,,,
+Band,TR-Band-21,Product shall support purple (Pantone 17-3725) Rugged band color option.,,,
+Band,TR-Band-22,Product shall support purple (Pantone 17-3725) Secure band color option.,,,
+Band,TR-Band-23,Product Rugged Band metal clasp shall use a torque-head screw with center post to prevent patients from removing.,,,
+Band,TR-Band-24,Product shall support two additional colors for a total of 3 colors and black for the Rugged Band.,,,
+Band,TR-Band-25,Product shall support two additional colors for a total of 3 colors and black for the Secure Band.,,,
+Band,TR-Band-26,Product shall transmit band closed event to server periodically as long as band is in a closed state.,,,
+Band,TR-Band-27,Product shall transmit band open event to server immediately after a band open event occurs.,,,
+Band,TR-Band-28,Product shall transmit band open event to server immediately after a cut band event occurs.,,,
+Band,TR-Band-29,Product shall transmit band open event to server periodically as long as band is not in a closed state.,,,
+Band,TR-Band-3,Product Secure Band shall use electrical continuity to detect cut band event.,,,
+Band,TR-Band-30,"Product shall trigger an auto-admit in the SW when the band ""closes""",,,
+Band,TR-Band-31,"Product Rugged Band shall be comprised of two bands containing internal, electrically conductive, metal strips, with exposed contact points for creating a closed electrical circuit between both connection points of the product housing.",,,
+Band,TR-Band-32,Product Rugged band shall use a metal clasp to establish electrical closed circuit between right and left bracelet bands.,,,
+Band,TR-Band-33,Product Rugged Band shall use electrical continuity to detect clasp open event.,,,
+Band,TR-Band-34,Product Rugged Band shall use electrical continuity to detect cut band event.,,,
+Band,TR-Band-35,"Product Secure Band shall be comprised of two bands containing internal, electrically conductive, metal mesh, for creating a closed electrical circuit between both connection points of the product housing.",,,
+Band,TR-Band-36,Product Secure band shall require a Centrak-specific locking tool to opperate band locking aparatus.,,,
+Band,TR-Band-4,Product Secure Band shall use electrical continuity to detect unlock/removal event.,,,
+Band,TR-Band-5,Product shall be compatible with Rugged Band.,,,
+Band,TR-Band-6,Product shall be compatible with Secure band.,,,
+Band,TR-Band-7,Product shall immediately transmit band closed event to server as soon as band closed event occurs.,,,
+Band,TR-Band-8,Product shall support band open detection with Rugged Band.,,,
+Band,TR-Band-9,Product shall support band open detection with Secure Band.,,,
+Battery,TR-Battery-1,A tool shall be required to remove an installed battery from the product.,,,
+Battery,TR-Battery-2,Product battery shall be replaceable.,,,
+Battery,TR-Battery-3,"Product current draw during factory and inventory sleep states shall be large enough to prevent battery passivation.
+
+NOTE: Applies only if battery used is vulnerable to passivation",,Damian,"does this product use batteries vulnerable to passivation.
+Validate battery susceptabiity to passivation."
+Battery,TR-Battery-4,"Product shall be capable of achieving a 12 month battery life under the following conditions:
+
+-Within star coverage, and not paging around 85% of the time
+-In motion 80% of the time
+-In LF coverage 5% of the time
+-In IR coverage 85% of the time
+-BLE location advertisements not active",,,(This is a product that will be worn by the wearer 24/7 even when sleeping. This percentage is difficult to calculate since I do not know how sensitive the sensor is to motion when someone is lying still sleeping and breathing)
+BLE,TR-BLE-1,"Product shall not enable location reporting via BLE when in Safety Solutions mode.
+
+NOTE: Only BLE FW upgrade and product configuration updates are supported in SS mode to reduce battery consumption.",,,
+BLE,TR-BLE-10,"Product 31-byte BLE common location advertisement packet shall contain the following fields:
+- Length (1 byte)
+- Advertisement Type (1 byte)
+- Advertisement Flag (1 byte)
+- Data Length (1 byte)
+- Data Type (1 byte)
+- Unique Identifier (4 bytes)
+- Header (1 byte)
+- Tag ID (4 bytes)
+- Device Type (1 byte)
+- FW Version (1 byte)
+- HW Version (1 byte)
+- Room ID (12 bits)
+- Data Index (4 bits)
+- Motion Flag (1 bit)
+- Sleep Flag (1 bit)
+- Sync Status-tag in UHF or not (1 bit)
+- LF Flag (1 bit)
+- Keys (4 bits)
+- Cyclic Command (1 byte)
+- Battery Voltage Value (2 bytes)
+- Tag Profile (5 bytes)
+- LBS Status (1 byte)
+- Profile Update Counter (4 bits)
+- Platform-Orion or Pegasus (1 bit)
+- Connectable/Non-Connectable Beacon (1 bit)
+- Free Bits (2 bits)
+- Checksum (1 byte)",,,
+BLE,TR-BLE-11,Product BLE antenna efficiency shall be -10dBi or better.,,,
+BLE,TR-BLE-12,Product BLE shall operate at 1Mbps.,,,
+BLE,TR-BLE-13,"Product common location advertisement packet shall set all fixed fields as follows for Orion system:
+- Length = 0x02
+- Advertisement Type = 0x01
+- Advertisement Flag = 0x06
+- Data Length = 0x1B
+- Data Type = 0x20
+- Header = 0x01
+- Device Type = 0x1E
+- Cyclic Command = 0x07",,,
+BLE,TR-BLE-14,"Product common location advertisement packet shall set all fixed fields as follows for Pegasus system:
+- Length = 0x02
+- Advertisement Type = 0x01
+- Advertisement Flag = 0x06
+- Data Length = 0x1B
+- Data Type = 0x20
+- Header = 0x01
+- Device Type = TBD
+- Cyclic Command = 0x07",,Dheepamari,"In pegasus mode, device type field will hold both device type and subtype. Device type is most significant 3 bits and device subtype is least significant 5 bits."
+BLE,TR-BLE-15,"Product forced BLE feature shall transmit connectible BLE advertisements according to the following pattern:
+
+Duration: 30, 60, 90, 120s per BLE Duress Timeout configurable parameter
+Rate: 1s
+",,,
+BLE,TR-BLE-16,Product RX BLE performance shall be reduced by no more than 5% as a result of wearing product on skin as it would be worn by end user.,,,
+BLE,TR-BLE-17,Product RX BLE performance shall be reduced by no more than 5% when watch face accessory is installed.,,,
+BLE,TR-BLE-18,"Product shall continuously transmit BLE connectable advertisements in a forced BLE mode when a ""TURN_ON_BLE"" command is received from the server over UHF.",,,
+BLE,TR-BLE-19,Product shall continuously transmit BLE connectable advertisements in a forced BLE mode when the button is pressed and held for greater than 5 seconds.,,,
+BLE,TR-BLE-2,Product shall support receiving BLE packets with RSSI >= -85dBm in Pegasus,,,
+BLE,TR-BLE-20,"Product shall not report location over BLE when configured for Multi-Mode, in synchronous mode, and in valid IR field, if ""BLE In 900MHz"" is disabled.",,,
+BLE,TR-BLE-22,"Product shall support activating BLE connectable advertisements and establishing a connection to BLE Mobile app device, when button is pressed and held for 5s.
+
+NOTE1: Method supports FW upgrade from BLE Mobile App scenario
+NOTE2: This will be treated as a button press event and a packet will be sent to server",,,
+BLE,TR-BLE-23,"Product shall support activating BLE connectable advertisements and establishing a connection to BLE Mobile app device, when it receives a BLE activation command from server via UHF.
+
+NOTE: Method supports FW upgrade from BLE Mobile App scenario",,,
+BLE,TR-BLE-24,Product shall support BLE button press packets compaitble with the Orion system.,,,
+BLE,TR-BLE-25,Product shall support BLE button press packets compaitble with the Pegasus system.,,,
+BLE,TR-BLE-26,Product shall support BLE location packets compaitble with the Orion system.,,,
+BLE,TR-BLE-27,Product shall support BLE location packets compaitble with the Pegasus system.,,,
+BLE,TR-BLE-28,"Product shall support BLE received packet RSSI at BLE AP as follows:
+- RSSI >= -85dBm
+- BLE AP positioned 10ft from ground, flat with antenna side facing down.
+- Horizontal distance between BLE AP and product = 35ft
+- Spec applies to worst-case product/BLE AP orientation.
+- BLE RSSI value reported in Core Server.",,,
+BLE,TR-BLE-29,"Product shall support BLE RX packet error rate at BLE AP as follows:
+- PER <= 5%
+- BLE AP positioned 10ft from ground, flat with antenna side facing down.
+- Horizontal distance between BLE AP and product = 35ft
+- Spec applies to worst-case product/BLE AP orientation.
+- Packet Error Rate measured at BLE AP",,,
+BLE,TR-BLE-3,Product shall support receiving BLE packets with RSSI >= -85dBm in Orion,,,
+BLE,TR-BLE-30,"Product shall support BLE RX packet error rate at product as follows:
+- PER <= 5%
+- BLE AP positioned 10ft from ground, flat with antenna side facing down.
+- Horizontal distance between BLE AP and product = 35ft
+- Spec applies to worst-case product/BLE AP orientation.
+- Packet Error Rate measured at Product",,,
+BLE,TR-BLE-31,Product shall support Cisco BLE profile.,,,
+BLE,TR-BLE-32,Product shall support forced BLE feature via button press.,,,
+BLE,TR-BLE-33,Product shall support forced BLE feature via button UHF command.,,,
+BLE,TR-BLE-34,"Product shall support location over BLE when configured for Multi-Mode, in synchronous mode, and in valid IR field, if ""BLE In 900MHz"" is enabled.",,,
+BLE,TR-BLE-35,Product shall support OTA upgrade packets compatible with Orion system.,,,
+BLE,TR-BLE-36,Product shall support OTA upgrade packets compatible with Pegasus system.,,,
+BLE,TR-BLE-37,Product shall support profile configuration via Centrak server over BLE.,,,
+BLE,TR-BLE-38,"Product shall support the following BLE commands from Core Server via BLE AP:
+- Inventory Sleep
+- Reset
+- Set Frequency
+- Set Platform (Orion or Pegasus)
+- Duress Acknowledgement
+- LF Calibration
+- Clear LBS Status",,,
+BLE,TR-BLE-39,"Product shall transmit all BLE advertisement packets on all three BLE advertising channels. 37, 38, 39",,,
+BLE,TR-BLE-4,Product shall support BLE TX maximum power level no less than 5dBm in Pegasus.,,,
+BLE,TR-BLE-40,"Product shall transmit BLE connectible advertisements according to the following configurable duration determined by ""Duress TimeOut"" when in forced BLE mode:
+
+Duress TimeOut: 30s, 60s, 90s, and 120s",,,
+BLE,TR-BLE-41,"Product shall transmit BLE connectible advertisements according to the following configurable rate determined by ""Duress Rate"" when in forced BLE mode:
+
+Duress Rate: 250ms, 500ms, 1s, and 2s",,,
+BLE,TR-BLE-42,"Product shall use a common, BLE advertisement packet for locating in both Cisco and Polestar BLE configurations.",,,
+BLE,TR-BLE-43,Product shall use Polestar NAO Button Press packet for button press transmit in Polestar BLE configuration.,,,
+BLE,TR-BLE-44,"Product shall use the common, BLE advertisement packet for button press transmit in Cisco BLE configuration.",,,
+BLE,TR-BLE-5,Product shall support BLE TX maximum power level no less than 5dBm in Orion.,,,
+BLE,TR-BLE-6,Product shall support profile configuration via BLE mobile app.,,,
+BLE,TR-BLE-7,Product shall support BLE beaconing at configurable rates.,,,
+BLE,TR-BLE-8,Product shall support hardware for BLE 5.1.,,,
+BLE,TR-BLE-9,Product TX BLE performance shall be reduced by no more than 5% as a result of wearing product on skin as it would be worn by end user.,,,
+Button Press,TR-Button-1,Product Shall Support Hardware Interrupt via Button,,,
+Button Press,TR-Button-10,"In UHF-only mode, product shall not transmit UHF button press packet in asynchronous state.",,,
+Button Press,TR-Button-11,"In UHF-only mode, product shall hold UHF button press packet in memory when in asynchronous state.",,,
+Button Press,TR-Button-12,"In UHF-only mode, product shall re-start transmitting UHF button press packet if tag transitions from asynchronous state to synchronous or pseudo-paging state prior to button press timeout.",,,
+Button Press,TR-Button-13,"In UHF-only mode, product shall clear and stop transmitting UHF button press packet when it receives acknowledgement from associated STAR for UHF button press packet.",,,
+Button Press,TR-Button-14,"In UHF-only mode, product shall clear and stop transmitting UHF button press packet when button press timeout window expires if no acknowledgement is received from associated STAR for UHF button press packet within button press timeout window.",,,
+Button Press,TR-Button-15,"In UHF-only mode, product shall not transmit button press packet over BLE at any time.",,,
+Button Press,TR-Button-16,"In BLE-Only mode, product shall begin transmitting BLE button press packet immediately after legitimate button press is detected.",,,
+Button Press,TR-Button-17,"In BLE-only mode, product shall clear and stop transmitting BLE button press packet when it receives acknowledgement from BLE AP for BLE button press packet.",,,
+Button Press,TR-Button-18,"In BLE-only mode, product shall clear and stop transmitting BLE button press packet if no acknowledgement is received from BLE AP for BLE button press packet within button press timeout window.",,,
+Button Press,TR-Button-19,"In BLE-only mode, product shall not transmit button press packet over UHF at any time.",,,
+Button Press,TR-Button-2,"Product shall send a forced location packet to server with the following key value, whenever button press is released while band is in closed state.
+
+- Key Value: 2, 3",,,
+Button Press,TR-Button-20,"In Multi-mode, product shall begin transmitting UHF button press packet immediately after legitimate button press is detected if product is in synchronous mode.",,,
+Button Press,TR-Button-21,"In Multi-mode, product shall transmit UHF button press packet in synchronous state.",,,
+Button Press,TR-Button-22,"In Multi-mode, product shall transmit UHF button press packet in pseudo-paging state.",,,
+Button Press,TR-Button-23,"In Multi-mode, product shall not transmit UHF button press packet in asynchronous state.",,,
+Button Press,TR-Button-24,"In Multi-mode, product shall hold UHF button press packet in memory for duration of button press timeout window when in asynchronous state.",,,
+Button Press,TR-Button-25,"In Multi-mode, product shall re-start transmitting UHF button press packet if tag transistions from asynchronous state to synchronous or pseudo-paging state prior to button press timeout, and button press acknowledgment still not received over BLE or UHF.",,,
+Button Press,TR-Button-26,"In Multi-mode, product shall clear and stop transmitting UHF button press packet when it receives acknowledgement from asociated STAR for UHF button press packet.",,,
+Button Press,TR-Button-27,"In Multi-mode, product shall clear and stop transmitting UHF button press packet when it receives acknowledgement from BLE AP for BLE button press packet.",,,
+Button Press,TR-Button-28,"In Multi-mode, product shall clear and stop transmitting UHF button press packet if no acknowledgement is received from associated STAR for UHF button press packet and BLE AP for BLE button press packet within button press timeout window.",,,
+Button Press,TR-Button-29,"In Multi-mode, product shall only transmit BLE button press packet when tag is in asynchronous state.",,,
+Button Press,TR-Button-3,"Product shall send a forced location packet to server with the following key value, whenever button press is released while band is in open state.
+
+- Key Value: 2, 3, 4",,,
+Button Press,TR-Button-30,"In Multi-mode, Product shall clear and stop transmitting BLE button press packet when it receives acknowledgement from BLE AP for BLE button press packet.",,,
+Button Press,TR-Button-31,"In Multi-mode, product shall clear and stop transmitting BLE button press packet when it receives acknowledgement from associated STAR for UHF button press packet.",,,
+Button Press,TR-Button-32,"In Multi-mode, product shall clear and stop transmitting BLE button press packet if no acknowledgement is received from BLE AP for BLE button press packet within button press timeout window.",,,
+Button Press,TR-Button-33,A button press packet transmission shall not be interrupted or overwritten by any subsequent button presses within the button press timeout window while waiting for button press packet acknowldgement.,,,
+Button Press,TR-Button-34,"Product shall send a forced location packet to server with the following key value, whenever button is pressed while band is in open state.
+
+- Key Value: 1, 2, 3, 4",,,
+Button Press,TR-Button-35,"Product shall send a forced location packet to server with the following key value, whenever button is pressed while band is in closed state.
+
+- Key Value: 1, 2, 3",,,
+Button Press,TR-Button-36,"In Multi-mode, product shall clear button press packet in the event of a reset.",,,
+Button Press,TR-Button-37,"In UHF-only mode, product shall clear button press packet in the event of a reset.",,,
+Button Press,TR-Button-38,"In UHF-only mode, product shall begin transmitting UHF button press packet immediately after legitimate button press is detected if product is in pseudo-paging mode.",,,
+Button Press,TR-Button-39,"In Multi-mode, product shall begin transmitting UHF button press packet immediately after legitimate button press is detected if product is in pseudo-paging mode.",,,
+Button Press,TR-Button-4,Product shall support Debounce for Button.,,,
+Button Press,TR-Button-40,"In BLE-only mode, product shall clear button press packet in the event of a reset.",,,
+Button Press,TR-Button-41,"Product shall interpret any button press lasting longer than 15mS as a single button press.
+
+NOTE: This product does not support long or double button press patterns. Product shall not wait 2 seconds to determine legitimate button press.",,,
+Button Press,TR-Button-5,Product button press shall trigger a call event for assistance by the user.,,,
+Button Press,TR-Button-6,"Product shall interpret any button press lasting less than 15mS as invalid.
+
+NOTE: Button press debounce",,,
+Button Press,TR-Button-7,"In UHF-only mode, product shall begin transmitting UHF button press packet immediately after legitimate button press is detected if product is in synchronous mode.",,,
+Button Press,TR-Button-8,"In UHF-only mode, product shall transmit UHF button press packet in synchronous state.",,,
+Button Press,TR-Button-9,"In UHF-only mode, product shall transmit UHF button press packet in pseudo-paging state.",,,
+Configuration,TR-Config-1,"Product shall support configurable IR profiles as follows (values in units of seconds):
+
+Valid Values: 1.5, 3, and 6",,,
+Configuration,TR-Config-10,"Product shall support Multi-Mode configuration, enabling both UHF and BLE communications.",,,
+Configuration,TR-Config-11,Product shall support dynamically switching to Orion mode based on profile configuration.,,,
+Configuration,TR-Config-12,"Product shall support skipping IR slots according to a configurable skip count; to effectively reduce IR event rate according to the following formula:
+
+IR Event Rate = IR profile x (SKIP + 1)
+Where:
+IR Event Rate = IR window open rate measured in seconds
+IR profile = System-wide IR transmit rate. 1.5, 3, or 6 seconds
+SKIP = Configurable skip count. Valid values from 0 to 20 in increments of 1.",,,
+Configuration,TR-Config-13,"Product shall support the ability to enable and disable BLE in 900MHz feature.
+
+",,,
+Configuration,TR-Config-14,Product shall support the ability to enable and disable button press feature.,,,
+Configuration,TR-Config-15,Product shall support the ability to enable and disable IR feature.,,,
+Configuration,TR-Config-16,Product shall support the ability to enable and disable LF feature.,,,
+Configuration,TR-Config-17,Product shall support dynamically switching to Pegasus mode based on profile configuration.,,,
+Configuration,TR-Config-18,"Product shall support the following UHF commands from Core Server:
+- Inventory Sleep
+- Reset
+- Set Frequency
+- Set Platform (Orion or Pegasus)
+- Duress Acknowledgement
+- LF Calibration
+- Clear LBS Status",,,
+Configuration,TR-Config-19,Product shall support UHF only configuration which disables BLE radio.,,,
+Configuration,TR-Config-2,"Product shall support configurable location report rates as follows, when product detects valid IR (values in units of seconds):
+
+Valid Values: 12, 24, 48, 96",,,
+Configuration,TR-Config-20,"Product shall support configurable BLE fast report rate as follows (values in units of hours):
+
+Valid Values: None, 1, 2, 6",,,
+Configuration,TR-Config-21,"Product shall support configurable BLE active report rate as follows (values in units of seconds):
+
+Valid Values: 1, 3, 6, 9, 12, 24, 48",,,
+Configuration,TR-Config-22,"Product shall support BLE ping clusters with configurable intra-cluster ping count as follows:
+
+Valid Values: 1 through 15 in increments of 1",,,
+Configuration,TR-Config-23,"Product shall support a configurable BLE button press timeout as follows (values in units of seconds):
+
+Valid Values: 30, 60, 90, 120",,,
+Configuration,TR-Config-24,Product shall support BLE only configuration which disables UHF radio..,,,
+Configuration,TR-Config-25,All configurable options supported from server shall also be supported via BLE mobile app.,,,
+Configuration,TR-Config-26,"Product shall support a configurable button press BLE transmit rate as follows (values in units of mS):
+
+Valid Values: 250, 500, 1000, 2000",,,
+Configuration,TR-Config-27,"Product device type shall be TBD in Pegasus platform.
+
+NOTE: Pegasus device type field consists of device type 0x07 in the most significant 3 bits and device sub-type TBD in the least significant 5 bits.",,Dheepamari,"Need to determine tag subtype version. Need to discuss with Hilux team.
+We are out of device types for Pegasus. Need to specify device type as 0x07, with a device subtype that needs to be determined."
+Configuration,TR-Config-28,"Product shall support a configurable UHF button press timeout as follows (values in units of seconds):
+
+Valid Values: 30, 60, 90, 120",,,
+Configuration,TR-Config-29,Product shall support configurable IR RX profile with the following settings: 0 to 20 (inclusive and integer values),,,
+Configuration,TR-Config-3,"Product shall support configurable location report rates as follows, when product does not detect valid IR (values in units of seconds):
+
+Valid Values: 6, 12, 24, 48",,,
+Configuration,TR-Config-30,"Product UHF location report rate when configured for operating mode ""UHF and BLE"", in active state, and in pseudo-paging mode shall be the same as UHF location report rate in synchronous state for that configuration.",,,
+Configuration,TR-Config-31,"Product UHF location report rate when configured for operating mode ""UHF Only"", in active state, and in pseudo-paging mode shall be the same as UHF location report rate in synchronous state for that configuration.",,,
+Configuration,TR-Config-4,Product shall support profile configuration via Centrak server over UHF.,,,
+Configuration,TR-Config-5,Product shall support regular profile enabling tag to enter low power sleep mode when motion is not detected.,,,
+Configuration,TR-Config-6,Product shall support Safety Solutions profile which prevents tag from entering low power sleep mode when motion is not detected.,,,
+Configuration,TR-Config-7,"Product shall support configurable BLE transmit power as follows (values in units of dBm):  
+
+Valid Values: -20, -18, -15, -12, -10, -9, -6, -5, -3, 0, 1, 2, 3, 4, 5",,,
+Configuration,TR-Config-8,"Product shall support configurable BLE sleep report rate as follows (values in units of minutes):
+
+Valid Values: 5, 10, 15, 30, 45, 60",,,
+Configuration,TR-Config-9,"Product shall support configurable, BLE intra-cluster, ping rate as follows (values in units of mS):
+
+Valid Values: 50, 100, 150, 200",,,
+Environmental,TR-Env-1,"Product shall operate as expected, without reseting, during a 1.5m drop onto concrete.",,,
+Environmental,TR-Env-10,"Product Secure Band shall withstand up to 500 wipes from a Sani-wipe cloth with no signs of deterioration (fading, cracking, or drying).",,,
+Environmental,TR-Env-11,Product shall meet IP67 rating.,,,
+Environmental,TR-Env-12,"Product shall operate as expected, with no signs of mechancial damage, after a 1.5m drop onto concrete.",,,
+Environmental,TR-Env-13,Product Shall Comply with IP67 Ingress rating.,,,
+Environmental,TR-Env-2,"Product labels shall withstand up to 30 minute submersion in water with no signs of deterioration (pealing, fading, cracking, or drying).",,,
+Environmental,TR-Env-3,"Product labels shall withstand up to 500 wipes from a Sani-wipe cloth with no signs of deterioration (pealing, fading, cracking, or drying).",,,
+Environmental,TR-Env-4,"Product shall operate within the following Temperature/Humidity specification: Temperature Range: 0 - 60C
+Humidity Maximum: 100% condensing",,,
+Environmental,TR-Env-5,"Product mechanical enclosure shall withstand up to 30 minute submersion in water with no signs of deterioration (moisture ingress, fading, cracking, or drying).",,,
+Environmental,TR-Env-6,"Product mechanical enclosure shall withstand up to 500 wipes from a Sani-wipe cloth with no signs of deterioration (moisture ingress, fading, cracking, or drying).",,,
+Environmental,TR-Env-7,"Product Rugged Band shall withstand up to 30 minute submersion in water with no signs of deterioration (fading, cracking, or drying).",,,
+Environmental,TR-Env-8,"Product Rugged Band shall withstand up to 500 wipes from a Sani-wipe cloth with no signs of deterioration (fading, cracking, or drying).",,,
+Environmental,TR-Env-9,"Product Secure Band shall withstand up to 30 minute submersion in water bath with no signs of deterioration (fading, cracking, or drying).",,,
+Factory Sleep,TR-Sleep-1,Product shall remain in low power consumption sleep mode until activated for use. (Inventory/Factory Sleep),,,
+Factory Sleep,TR-Sleep-10,Product shall hard-code associated STAR ID to 4095 for 24 hour location transmission while in INVENTORY SLEEP state.,,,
+Factory Sleep,TR-Sleep-11,"Product shall support 4, sleep states to support manufacturing and inventory operations:
+- NONE
+- FACTORY SLEEP
+- INVENTORY SLEEP
+- ACTIVE",,,
+Factory Sleep,TR-Sleep-12,Product shall transition from FACTORY SLEEP to ACTIVE due to LF ID within 2 minutes of being placed the LF field.,,,
+Factory Sleep,TR-Sleep-13,Product shall transition from INVENTORY SLEEP to ACTIVE due to LF ID within 2 minutes of being placed the LF field.,,,
+Factory Sleep,TR-Sleep-14,Product shall transmit location data once every 24 hours while in INVENTORY SLEEP state.,,,
+Factory Sleep,TR-Sleep-15,Product sleep state shall be set to FACTORY SLEEP when FACTORY SLEEP step is executed during direct flash programming.,,,
+Factory Sleep,TR-Sleep-16,Product sleep state shall be set to NONE when FACTORY SLEEP step is bypassed during direct flash programming.,,,
+Factory Sleep,TR-Sleep-17,Product sleep state shall transition from ACTIVE to INVENTORY SLEEP when product receives INVENTORY SLEEP command.,,,
+Factory Sleep,TR-Sleep-18,"Product sleep state shall transition from FACTORY SLEEP to ACTIVE when a closed band event occurs.
+
+NOTE: This is when the band clasp/lock is fully closed/engaged and electrical continuity is established between both sides of the housing.",,,
+Factory Sleep,TR-Sleep-19,Product sleep state shall transition from FACTORY SLEEP to ACTIVE when button is pressed and held for greater than 3 seconds.,,,
+Factory Sleep,TR-Sleep-2,Product sleep state shall transition from INVENTORY SLEEP to ACTIVE when button is pressed and held for greater than 3 seconds.,,,
+Factory Sleep,TR-Sleep-20,Product sleep state shall transition from FACTORY SLEEP to ACTIVE when product detects LF ID 1111.,,,
+Factory Sleep,TR-Sleep-21,"Product sleep state shall transition from INVENTORY SLEEP to ACTIVE when a closed band event occurs.
+
+NOTE: This is when the band clasp/lock is fully closed/engaged and electrical continuity is established between both sides of the housing.",,,
+Factory Sleep,TR-Sleep-3,Product sleep state shall transition from NONE to FACTORY SLEEP when button is pressed and held for greater than 5 seconds.,,,
+Factory Sleep,TR-Sleep-4,Product sleep state shall transition from NONE to FACTORY SLEEP when product detects LF ID 430.,,,
+Factory Sleep,TR-Sleep-5,Product sleep state shall transition from NONE to FACTORY SLEEP when product receives a UHF command SET_FACTORY_SLEEP.,,,
+Factory Sleep,TR-Sleep-6,Product sleep state shall transition from INVENTORY SLEEP to ACTIVE when product detects LF ID 1111.,,,
+Factory Sleep,TR-Sleep-7,Product sleep state shall transition from INVENTORY SLEEP to ACTIVE when product receives WAKE FROM INVENTORY SLEEP command.,,,
+Factory Sleep,TR-Sleep-8,Product 24 hour average current consumption shall be less than 8uA in FACTORY SLEEP state.,,,
+Factory Sleep,TR-Sleep-9,Product 24 hour average current consumption shall be less than 8uA in INVENTORY SLEEP state.,,,
+Firmware Upgrade,TR-Upgrade-1,"Product shall support BLE FW upgrade within 60s in the following configuration:
+- Upgrade via Mobile App at a distance of 10ft.
+
+NOTE: Duration specified from upgrade start to tag reset",,,
+Firmware Upgrade,TR-Upgrade-10,Product shall be capable of performing a BLE upgrade while in synchronous mode.,,,
+Firmware Upgrade,TR-Upgrade-11,Product shall continue to operate using original FW if BLE FW upgrade terminates prior to completion.,,,
+Firmware Upgrade,TR-Upgrade-12,"Product shall continue UHF FW upgrade without reseting the packet count, after locking a new ASTAR via full paging process.",,,
+Firmware Upgrade,TR-Upgrade-13,"Product shall continue UHF FW upgrade without reseting the packet count, after locking a new ASTAR via pseudo-paging process.",,,
+Firmware Upgrade,TR-Upgrade-14,Product shall restart upgrade automatically upon bootup if product resets during UHF upgrade.,,,
+Firmware Upgrade,TR-Upgrade-15,"Product shall support BLE FW upgrade within 60s in the following configuration:
+- Upgrade via BLE AP at a distance of 30ft.
+
+NOTE: Duration specified from upgrade start to tag reset",,,
+Firmware Upgrade,TR-Upgrade-16,"Product shall support firmware upgrade within 120 minutes over UHF under the following conditions:
+- Orion System
+- Within 35ft of STAR
+- UHF RSSI >= -80dBm
+- Limited bandwidth contention (less than 30 devices using the same ASTAR)
+- Remain in STAR coverage meeting all other conditions listed for entire duration of upgrade.",,,
+Firmware Upgrade,TR-Upgrade-17,"Product shall support firmware upgrade within 180 minutes over UHF under the following conditions:
+- Pegasus System
+- Within 35ft of STAR
+- UHF RSSI >= -80dBm
+- Limited bandwidth contention (less than 30 devices using the same ASTAR)
+- Remain in STAR coverage meeting all other conditions listed for entire duration of upgrade.",,,
+Firmware Upgrade,TR-Upgrade-18,Product shall support FW upgrade via Polestar packets.,,,
+Firmware Upgrade,TR-Upgrade-19,"Product shall support wireless upgrade of active firmware via BLE without hands on access.
+
+NOTE: Forced BLE activation is required",,,
+Firmware Upgrade,TR-Upgrade-2,"Product shall retain full functionality while firmware upgrade is being performed.
+
+NOTE: FW upgrade must be a background operation with no impact to product functionality or performance.",,,
+Firmware Upgrade,TR-Upgrade-20,Product shall support wireless upgrade of active firmware via UHF without hands on access.,,,
+Firmware Upgrade,TR-Upgrade-21,Product shall terminate UHF upgrade process if server upgrade timer expires prior to upgrade completion.,,,
+Firmware Upgrade,TR-Upgrade-3,Product shall support firmware upgrade over UHF.,,,
+Firmware Upgrade,TR-Upgrade-4,Product shall support firmware upgrade over BLE via local BLE mobile app.,,,
+Firmware Upgrade,TR-Upgrade-5,Product shall support firmware upgrade over BLE via CT-Bridge.,,,
+Firmware Upgrade,TR-Upgrade-6,Product shall support firmware upgrade over BLE via BLE AP.,,,
+Firmware Upgrade,TR-Upgrade-7,Product shall continue to operate using original FW if product resets during BLE upgrade.,,,
+Firmware Upgrade,TR-Upgrade-8,Product shall continue to operate using original FW if UHF FW upgrade terminates prior to completion.,,,
+Firmware Upgrade,TR-Upgrade-9,Product shall be capable of performing a BLE upgrade while in asynchronous mode.,,,
+IR,TR-IR-1,Product shall support IR Sync Via UHF in Pegasus,,,
+IR,TR-IR-10,Product shall be capable of decoding Orion IR IDs in the presence of ambient flourescent lighting.,,,
+IR,TR-IR-11,Product shall be capable of decoding Orion IR IDs in the presence of Centrak IR source self noise.,,,
+IR,TR-IR-12,Product shall be capable of decoding Orion IR IDs transmitted by Orion Monitors.,,,
+IR,TR-IR-13,Product shall be capable of decoding Orion IR IDs transmitted by Orion Virtual Walls.,,,
+IR,TR-IR-14,Product shall be capable of decoding Pegasus IR IDs in the presence of ambient flourescent lighting.,,,
+IR,TR-IR-15,"Product shall decode Orion IR ID transmitted in IR sub-slot 1 (Profile A) according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-16,"Product shall decode Orion IR ID transmitted in IR sub-slot 1 (Profile A) and self noise on according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-17,"Product shall decode Orion IR ID transmitted in IR sub-slot 2 (Profile B) according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-18,"Product shall decode Orion IR ID transmitted in IR sub-slot 2 (Profile B) and self noise on according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-19,"Product shall decode Orion IR ID transmitted in IR sub-slot 3 (Profile C) according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-2,Product shall support IR Sync Via UHF in Orion,,,
+IR,TR-IR-20,"Product shall decode Orion IR ID transmitted in IR sub-slot 3 (Profile C) and self noise on according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-21,"Product shall decode Orion IR ID transmitted in IR sub-slot 4 (Profile D) according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-22,"Product shall decode Orion IR ID transmitted in IR sub-slot 4 (Profile D) and self noise on according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-23,"Product shall decode Orion IR ID transmitted in IR sub-slot 5 (Profile E) according to the following criterea:
+
+- Success Rate > 95%;
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-24,"Product shall decode Orion IR ID transmitted in IR sub-slot 5 (Profile E) and self noise on according to the following criterea:
+
+- Success Rate > 95%;
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-25,"Product shall decode Orion IR ID transmitted in IR sub-slot 6 (Profile F) according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-26,"Product shall decode Orion IR ID transmitted in IR sub-slot 6 (Profile F) and self noise on according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-27,"Product shall decode Pegasus IR ID transmitted in Normal Profile according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)",,,
+IR,TR-IR-28,"Product shall decode Pegasus IR ID transmitted in Normal Profile and IR self noise according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-29,"Product shall decode Pegasus IR ID transmitted in the presence of Wolver-Hampton IR noise according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- UUT centered beneath desired IR source (desired bay 6ft wide)
+- Wolver-Hampton noise sources on either side of desired bay
+- All IR sources must use IR visors",,,
+IR,TR-IR-3,Product shall support asynchronous IR reception in Pegasus system.,,,
+IR,TR-IR-30,"Product shall decode Pegasus IR ID transmitted in the presence of Wolver-Hampton IR noise and IR self noise according to the following criterea:
+
+- Success Rate > 95%
+- 200 IR location packets (10 minutes in constant motion; 3s IR window system)
+- UUT centered beneath desired IR source (desired bay 6ft wide)
+- Wolver-Hampton noise sources on either side of desired bay
+- All IR sources must use IR visors
+- All IR sources configured with self noise enabled",,,
+IR,TR-IR-31,"Product shall open for IR every ""T"" seconds according to the formula:
+T = IR Profile x (IR RX Profile + 1) seconds
+where:
+IR Profile = 1.5 or 3 or 6
+IR RX Profile =  0 to 20 (inclusive and integer values)",,,
+IR,TR-IR-35,"Product shall transmit a new Orion location packet immediately following IR decode if the decoded IR ID differs from last IR ID.
+",,,
+IR,TR-IR-36,Product shall support long IR open to receive IR in asynchronous mode in Orion system.,,,
+IR,TR-IR-4,Product shall support asynchronous IR reception in Orion system.,,,
+IR,TR-IR-5,Product shall support Receiving and Decoding synchronous IR in Pegasus,,,
+IR,TR-IR-6,Product shall support Receiving and Decoding synchronuos IR in Orion,,,
+IR,TR-IR-7,Product shall support long IR open to receive IR in asynchronous mode in Pegasus system.,,,
+IR,TR-IR-8,Product shall support Receiving and Decoding IR in asynchronous mode by SUPT Marker Detection in Orion.,,,
+IR,TR-IR-9,Product shall be capable of decoding Orion IR IDs from 1 to 4095.,,,
+LBI_LBS,TR-LBILBS-1,Product shall contain a battery voltage monitoring circuit external to MCU.,,,
+LBI_LBS,TR-LBILBS-10,"Product shall support measuring battery voltage under low-load (referenced here as ""VLL"") as part of LBI measurement.",,,
+LBI_LBS,TR-LBILBS-11,"Product shall support measuriung battery voltage under high-load (referenced here as ""VHL"") as part of LBI measurement.",,,
+LBI_LBS,TR-LBILBS-12,Product shall measure voltage directly across battery terminals (known as LBI measurement) periodically for the purpose of determining health and depletion level of battery.,,,
+LBI_LBS,TR-LBILBS-13,"Product shall use a low temperature threshold (referenced here as ""LTT"") for LBS state entry, defined as follows:
+
+LTT = -5C",,,
+LBI_LBS,TR-LBILBS-14,"Product shall use a high temperature threshold (referenced here as ""HTT"") for LBS state entry, defined as follows:
+
+HTT = 65C",,,
+LBI_LBS,TR-LBILBS-15,"Product shall use temperature hysteresis (referenced here as ""LBSTempHyst"") for LBS state exit, defined as follows:
+
+LBSTempHyst = 5 (where 5 is in units of C)",,,
+LBI_LBS,TR-LBILBS-16,"Product shall use voltage hysteresis (refereneced here as ""LBSVHLHyst"") for LBS state exit due to VHL measurement, defined as follows:
+
+LBSVHLHyst = VHL x 5%",,,
+LBI_LBS,TR-LBILBS-17,"Product shall use voltage hysteresis (referenced here as ""LBSVLLHyst"") for LBS state exit due to VLL measurement, defined as follows:
+
+LBSVLLHyst = VLL x 5%",,,
+LBI_LBS,TR-LBILBS-18,"Product shall use a voltage threshold (referenced here as ""NBTH"") to determine if a new battery has been installed defined as follows:
+
+NBTH = TBD
+ ",,Damian,determine values
+LBI_LBS,TR-LBILBS-19,"Product shall use a threshold voltage (referenced here as ""VHLThresh"") for LBS entry/exit criteria defined as follows:
+
+VHLThresh = TBD",,Damian,determine values
+LBI_LBS,TR-LBILBS-2,Product shall support Battery Status Circuit that does not consume current when idle,,,
+LBI_LBS,TR-LBILBS-20,"Product shall use a threshold voltage (referenced here as ""VLLThresh"") for LBS entry/exit criteria defined as follows:
+
+VLLThresh = TBD",,Damian,determine values
+LBI_LBS,TR-LBILBS-21,"Product shall support Low Battery Sleep (referenced here as ""LBS"") state such that in this state, product is shut down and functionality is limited to periodically checking for LBS exit condition.",,,
+LBI_LBS,TR-LBILBS-22,Product shall reset whenever it exits LBS state.,,,
+LBI_LBS,TR-LBILBS-23,"Product shall enter LBS state due to crash count if the following crash count condition is met:
+
+crash count > 3",,,
+LBI_LBS,TR-LBILBS-24,"Product shall enter LBS state due to temperature if the following temperature measurement condition is met:
+
+Temp < LTT",,,
+LBI_LBS,TR-LBILBS-25,"Product shall enter LBS state due to temperature if the following temperature measurement condition is met:
+
+Temp > HTT",,,
+LBI_LBS,TR-LBILBS-26,"Product shall enter LBS state due to battery voltage only if the following LBI measurement condition is met:
+
+4, consecutive LBI measurements of VHL <= VHLThresh
+
+NOTE: First VHL <= VHLThresh transitions to fast LBI mesurement. Remaining three consecutive measurements of VHL <= VHLThresh occur over a 30 minute period. (3 x 10 minutes).",,,
+LBI_LBS,TR-LBILBS-27,"When product is in LBS state, product shall continuously check for button press.
+
+NOTE: any button press exits LBS state.",,,
+LBI_LBS,TR-LBILBS-28,"When product is in LBS state, if product enters LBS state due to temperature, then while in LBS state, product shall measure temperture every 5 minutes.",,,
+LBI_LBS,TR-LBILBS-29,"If product enters LBS state due to temperature, then product shall exit LBS state only after the following LBS exit condition is met:
+
+LTT + LBSTempHyst <= Temp <= HTT - LBSTempHyst
+
+NOTE: Temp is the temperature measured every 5 minutes in LBS state.",,,
+LBI_LBS,TR-LBILBS-3,Product shall support Low Battery Sleep (LBS) mode to prevent memory corruption or other adverse affects from depleted battery.,,,
+LBI_LBS,TR-LBILBS-30,"When product is in LBS state, if product enters LBS state due to battery voltage, then while in LBS state, product shall measure VLL every 5 minutes.
+
+NOTE: VHL is only measured if VLL is above VLLThresh + LBSVLLHyst",,,
+LBI_LBS,TR-LBILBS-31,"When product is in LBS state, if product enters LBS state due to battery voltage, product shall exit LBS state only after the following LBS exit conditions are met:
+
+VLL > VLLThresh + LBSVLLHyst
+VHL > VHLThresh + LBSVHLHyst",,,
+LBI_LBS,TR-LBILBS-32,"Product shall detect a new battery only after the following new battery conditions are met:
+
+Product in LBS state
+VHL > NBTH",,,
+LBI_LBS,TR-LBILBS-33,"Product shall transition from normal LBI measurement operation (1x per hour) to fast LBI measurement (1x per 10 minutes) only after the following fast LBI measurement condition is met:
+
+VHL <= VHLThresh",,,
+LBI_LBS,TR-LBILBS-34,"Product shall transition from fast LBI mesurement (1x per 10 minutes) to normal LBI measurement (1x per hour) only after the following conditions are met:
+
+Product in fast LBI measurement state prior to; but not yet in LBS state.
+VHL > VHLThresh + LBSVHLHyst",,,
+LBI_LBS,TR-LBILBS-35,"Product shall execute LBI measurement periodically, at a rate of 1x per hour during normal LBI measurement operation.",,,
+LBI_LBS,TR-LBILBS-36,"Product shall execute LBI measurement periodically, at a rate of 1x per 10 minutes during fast LBI measurement operation.",,,
+LBI_LBS,TR-LBILBS-37,"Product shall execute LBI measurement periodically, at a rate of 1x per 5 minutes when in LBS state.",,,
+LBI_LBS,TR-LBILBS-38,"Product shall execute LBI measurement periodically, at a rate of 1x per 5 minutes when in FW upgrade state.",,,
+LBI_LBS,TR-LBILBS-39,"Product shall execute LBI measurement periodically, at a rate of 1x per 24 hours when in Factory Sleep and Inventory Sleep states.",,,
+LBI_LBS,TR-LBILBS-4,Product shall support early warning of sleep mode entry.,,,
+LBI_LBS,TR-LBILBS-40,"Product shall execute temperature measurement periodically, at a rate of 1x per minute during normal operation.",,,
+LBI_LBS,TR-LBILBS-41,"Product shall execute temperature measurement periodically, at a rate of 1x per minute during fast LBI measurement operation.",,,
+LBI_LBS,TR-LBILBS-42,"Product shall execute temperature measurement periodically, at a rate of 1x per 5 minutes when in LBS state.",,,
+LBI_LBS,TR-LBILBS-43,"Product shall execute temperature measurement periodically, at a rate of 1x per 1 minute when in FW upgrade state.",,,
+LBI_LBS,TR-LBILBS-44,Product shall not execute temperature measurement in Factory Sleep and Inventory Sleep states.,,,
+LBI_LBS,TR-LBILBS-45,"Product shall implement an LBI status byte for diagnostic purposes such that LBI status byte contains the following flags:
+
+LBS ENTRY FLAG : Reason product entered LBS state
+LBS EXIT FLAG : Reason product exited LBS state
+ENTER LBS : Is product still in LBS state
+NEW BATTERY : New battery has been detected by product",,,
+LBI_LBS,TR-LBILBS-46,"LBI status byte flag ""LBS ENTRY FLAG"" (Reason product entered LBS state) shall support the following valid values:
+
+LBS_ENTRY_FLAG_NONE : LBS entry flag cleared
+LBS_ENTRY_FLAG_CRASH : enter (or remain in) LBS state due to crash count
+LBS_ENTRY_FLAG_VLL : remain in LBS state due to VLL measurement
+LBS_ENTRY_FLAG_VHL : enter (or remain in) LBS state due to VHL measurement
+LBS_ENTRY_FLAG_LOW_TEMP : enter (or remain in) LBS state due to temperature measurement out of range low
+LBS_ENTRY_FLAG_HIGH_TEMP : enter (or remain in) LBS state due to temperature measurement out of range high",,,
+LBI_LBS,TR-LBILBS-47,"LBI status byte flag ""LBS EXIT FLAG"" (Reason product exited LBS state) shall support the following valid values:
+
+LBS_EXIT_FLAG_NONE : LBS exit flag cleared
+LBS_EXIT_FLAG_BUTTON : exit LBS due to button press
+LBS_EXIT_FLAG_VLL_RESET : exit LBS state due to VLL and VHL above LBS threshold
+LBS_EXIT_FLAG_TEMP_RESET : exit LBS state due to Temp within both the high and low temperature LBS thresholds",,,
+LBI_LBS,TR-LBILBS-48,"LBI status byte shall be sent from product to core server in the LBI value field of location packet.
+
+NOTE: LBI value < 128 is an LBI status byte. LBI value >= 128 is an actual LBI value",,,
+LBI_LBS,TR-LBILBS-49,"Product shall re-send LBI value to server in every 3rd location packet when LBI value is not a new LBI measurement.
+
+NOTE: LBI value is true battery LBI and not LBI status byte",,,
+LBI_LBS,TR-LBILBS-5,Product shall implement a crash counter that increments each time the product resets.,,,
+LBI_LBS,TR-LBILBS-50,"Product shall send LBI value to server in the location packet immediately after a new LBI measurement.
+
+NOTE: LBI value is true battery LBI and not LBI status byte",,,
+LBI_LBS,TR-LBILBS-51,Product shall send LBI status byte to server in every location packet during the final 10 minutes of fast LBI measurement state prior to entering LBS state.,,,
+LBI_LBS,TR-LBILBS-52,Product shall send LBI status byte to server in the first location packet after exiting LBS mode and continue to send LBI status byte until it is acknowledged.,,,
+LBI_LBS,TR-LBILBS-53,"Product shall support forced LBI measurement activity whenever the button is pressed and held for greater than 5s.
+
+NOTE: Does not apply when product is in FACTORY SLEEP or INVENTORY SLEEP states.",,,
+LBI_LBS,TR-LBILBS-6,Product shall clear crash counter to 0 when entering Factory or Inventory Sleep.,,,
+LBI_LBS,TR-LBILBS-7,Product shall clear crash counter to 0 when exiting Factory or Inventory Sleep.,,,
+LBI_LBS,TR-LBILBS-8,Product shall clear crash counter to 0 prior to any reset initiated by command.,,,
+LBI_LBS,TR-LBILBS-9,Product shall clear crash counter to 0 upon entering LBS state.,,,
+LED,TR-LED-1,Product GREEN LED shall be visible through housing.,,,
+LED,TR-LED-10,Product shall continue button press transmit LED illumination pattern from initial button press until successful button press acknowledgement including while in synchronous state.,,,
+LED,TR-LED-11,"Product shall illuminate LED according to the following pattern during button press packet transmission:
+
+RED LED: on 20mS off remainder of period
+Period: determined by ""BLE Duress Rate"" (250m2, 500ms, 1s, 2s)
+
+NOTE: independent of button press packet type (UHF or BLE)",,,
+LED,TR-LED-12,"Product shall illuminate LED according to the following pattern to indicate button press timeout expired with no acknowledgement (button press failure):
+
+RED LED: on 250mS off 250mS (4x)
+
+NOTE: independent of button press packet type (UHF or BLE)",,,
+LED,TR-LED-13,"Product shall illuminate LED according to the following pattern to indicate successful acknowledgement of button press packet:
+
+GREEN LED: on 250mS off 250mS (4x)
+
+NOTE: independent of button press packet type (UHF or BLE)",,,
+LED,TR-LED-14,"Product shall illuminate LED according to the following pattern when a new battery is detected:
+
+GREEN LED: on 50mS off 250mS (8x)",,,
+LED,TR-LED-15,"Product shall illuminate LED according to the following pattern when FIND TAG command is received from Core Server:
+
+RED LED: on 250mS off 250mS
+Repeat until timeout (30s) or button press acknowledged",,,
+LED,TR-LED-16,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""128ms On"" is received from Core Server:
+
+GREEN LED: on 128mS off remainder of 3s period",,,
+LED,TR-LED-17,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""16ms On"" is received from Core Server:
+
+GREEN LED: on 16mS off remainder of 3s period",,,
+LED,TR-LED-18,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""2ms On"" is received from Core Server:
+
+RED LED: on 250mS off 250mS
+Repeat until timeout (30s) or button press acknowledged
+
+NOTE: LED ON (with ""2ms On"" value selected is treated as FIND TAG command.",,,
+LED,TR-LED-19,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""32ms On"" is received from Core Server:
+
+GREEN LED: on 32mS off remainder of 3s period",,,
+LED,TR-LED-2,Product GREEN LED shall be visible when watchface accessory is installed.,,,
+LED,TR-LED-20,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""4ms On"" is received from Core Server:
+
+GREEN LED: on 4mS off remainder of 3s period",,,
+LED,TR-LED-21,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""64ms On"" is received from Core Server:
+
+GREEN LED: on 64mS off remainder of 3s period",,,
+LED,TR-LED-22,"Product shall illuminate LED according to the following pattern when LED ON command with value set to ""8ms On"" is received from Core Server:
+
+GREEN LED: on 8mS off remainder of 3s period",,,
+LED,TR-LED-23,"Product shall illuminate LED according to the following pattern whenever a battery check event is executed and battery level is TBD (<25%):
+
+RED LED: on 250mS off 250mS (3x)",,,
+LED,TR-LED-24,"Product shall illuminate LED according to the following pattern whenever a battery check event is executed and battery level is TBD (>25% <50%):
+
+GREEN LED: on 250mS off 250mS (1x)
+RED LED: on 250mS off 250mS (2x)",,,
+LED,TR-LED-25,"Product shall illuminate LED according to the following pattern whenever a battery check event is executed and battery level is TBD(>50% <75%):
+
+GREEN LED: on 250mS off 250mS (2x)
+RED LED: on 250mS off 250mS (1x)",,,
+LED,TR-LED-26,"Product shall illuminate LED according to the following pattern whenever a battery check event is executed and battery level is TBD(>75%):
+
+GREEN LED: on 250mS off 250mS (3x)",,,
+LED,TR-LED-27,"Product shall illuminate LED according to the following pattern, just prior to reset, whenever product transitions from ACTIVE STATE state to INVENTORY SLEEP state:
+
+GREEN LED: 250mS on 250ms off (3x)
+RED LED: 250mS on 250ms off (3x)",,,
+LED,TR-LED-28,"Product shall illuminate LED according to the following pattern, just prior to reset, whenever product transitions from FACTORY SLEEP state to ACTIVE state:
+
+RED LED: 250mS on 250ms off (3x)
+GREEN LED: 250mS on 250ms off (3x)",,,
+LED,TR-LED-29,"Product shall illuminate LED according to the following pattern, just prior to reset, whenever product transitions from INVENTORY SLEEP state to ACTIVE state:
+
+RED LED: 250mS on 250ms off (3x)
+GREEN LED: 250mS on 250ms off (3x)",,,
+LED,TR-LED-3,Product RED LED shall be visible through housing.,,,
+LED,TR-LED-30,"Product shall illuminate LED according to the following pattern, just prior to reset, whenever product transitions from sleep state NONE to FACTORY SLEEP state:
+
+GREEN LED: 250mS on 250ms off (3x)
+RED LED: 250mS on 250ms off (3x)",,,
+LED,TR-LED-31,"When LED is flashing due to LED ON command received, the LED shall only stop flashing in the following cases:
+1. LED OFF command received by product
+2. Product enters no motion sleep",,,
+LED,TR-LED-4,Product RED LED shall visible when watchface accessory is installed.,,,
+LED,TR-LED-5,Product shall clear/stop button press transmit LED illumination pattern immediately prior to failure LED indication.,,,
+LED,TR-LED-6,Product shall clear/stop button press transmit LED illumination pattern immediately prior to success LED indication.,,,
+LED,TR-LED-7,"Product shall contain a single, 2-color, LED with the following supported colors:
+- GREEN
+- RED",,,
+LED,TR-LED-8,Product shall continue button press transmit LED illumination pattern from initial button press until successful button press acknowledgement including while in asynchronous state.,,,
+LED,TR-LED-9,Product shall continue button press transmit LED illumination pattern from initial button press until successful button press acknowledgement including while in pseudo-synchronous state.,,,
+LF,TR-LF-1,Product shall successfully detect and decode LF at a distance of up to 6.5' from LF source when source is operating at maximum power setting.,,,
+LF,TR-LF-10,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-11,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-12,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-13,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-14,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-15,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-16,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-17,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-18,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-19,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-2,Product shall support Noise Reduction algorithm and configuration by profile selection for LF,,,
+LF,TR-LF-20,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-21,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : >=98%
+
+Test Setup
+- System: Pegasus
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 12ft
+- LF Exciter power level: High
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-22,Product shall not detect LF at a distance greater than 10' from LF source when source is operating at maximum power setting.,,,
+LF,TR-LF-23,Product shall support LF Manchester decode.,,,
+LF,TR-LF-24,Product shall support LF PPM decode.,,,
+LF,TR-LF-25,Product shall support Orion LF protocol.,,,
+LF,TR-LF-26,Product shall support Pegasus LF protocol.,,,
+LF,TR-LF-3,Product shall support detection of exit from facility.,,,
+LF,TR-LF-4,Product shall support notification to server that an exit has occurred.   ,,,
+LF,TR-LF-5,"Product shall be capable of locking doors via CenTrak Door Controllers.
+
+i.e. if a Bracelet is near an exit protected by LF Antenna and Door Contoller, the exit should lock down similar to the Secure Tag",,,
+LF,TR-LF-6,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-7,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: Manchester
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+LF,TR-LF-8,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- No watchface",,,
+LF,TR-LF-9,"Product shall meet the following LF functional performance criteria:
+- LF error/drop rate : <=2%
+
+Test Setup
+- System: Orion
+- Test sample size: >= 500 LF receives
+- Distance to LF Exciter: 7ft
+- LF Exciter power level: Low
+- LF Exciter Encoding: PCM
+- Product worn on wrist as in comercial environment
+- Watchface installed",,,
+Locating,TR-BLE-21,"Product shall not report location over BLE when configured for operating mode ""UHF and BLE"", in synchronous mode, and in valid IR field.",,,
+Locating,TR-Locate-1,"Product shall not report location over UHF when configured for operating mode ""UHF and BLE"" and in asynchronous mode.",,,
+Locating,TR-Locate-10,"Product UHF location report rate when configured for operating mode ""UHF Only"", in active state, in synchronous mode, and in valid IR field; shall be timed according to the following configurable IR report rate options:
+12s: Report location every 12s +/-1s
+48s: Report location every 48s +/-2s
+120s: Report location every 120s +/-5s
+300s: Report location every 300s +/-5s",,,
+Locating,TR-Locate-11,"Product UHF location report rate when configured for operating mode ""UHF Only"", in active state, in synchronous mode, and not in valid IR field; shall be timed according to the following configurable RF report rate options:
+6s: Report location every 6s +/-1s
+12s: Report location every 12s +/-1s
+24s: Report location every 24s +/-2s
+48s: Report location every 48s +/-2s",,,
+Locating,TR-Locate-2,"Product shall not report location over UHF when configured for operating mode ""UHF Only"" and in asynchronous mode.",,,
+Locating,TR-Locate-3,"Product shall send periodic location packets to server with the following key value, whenever band is in closed state.
+
+- Key Value: 2, 3",,,
+Locating,TR-Locate-4,"Product shall send periodic location packets to server with the following key value, whenever band is in open state.
+
+- Key Value: 2, 3, 4",,,
+Locating,TR-Locate-5,"Product shall support configurable RF report rate with the following settings: 
+
+6s, 12s, 24s, 48s
+NOTE: This is the report rate when product is not within a valid IR field
+",,,
+Locating,TR-Locate-7,"Product UHF location report rate when configured for operating mode ""UHF and BLE"", in active state, in synchronous mode, and in valid IR field; shall be timed according to the following configurable IR report rate options:
+12s: Report location every 12s +/-1s
+48s: Report location every 48s +/-2s
+120s: Report location every 120s +/-5s
+300s: Report location every 300s +/-5s",,,
+Locating,TR-Locate-8,"Product UHF location report rate when configured for operating mode ""UHF and BLE"", in active state, in synchronous mode, and not in valid IR field; shall be timed according to the following configurable RF report rate options:
+6s: Report location every 6s +/-1s
+12s: Report location every 12s +/-1s
+24s: Report location every 24s +/-2s
+48s: Report location every 48s +/-2s",,,
+Manufacturing,TR-MFG-1,Product shall support Physical Access to JTAG Pads through Battery Compartment,,,
+Manufacturing,TR-MFG-2,Product shall support connection to jig to enable Handheld Hardware/Firmware Debugging in the Field,,,
+Manufacturing,TR-MFG-3,Product shall support manufacturing programming connection via One Step Jig Attachment,,,
+Manufacturing,TR-MFG-4,Product shall support manufacturing test point connection via One Step Jig Attachment,,,
+Manufacturing,TR-MFG-5,"Product shall only use tag IDs from the Pegasus, Multi-Mode, tag ID range.
+
+NOTE: Tag IDs are provided by manufacturer according to the next available block of IDs in the range.",,,
+Memory,TR-Mem-1,Product shall support memory needs for all firmware/configuration options,,,
+Motion,TR-Motion-1,Product shall support Motion Detection,,,
+Motion,TR-Motion-2,Product Shall Reliably Detect Motion,,,
+Motion,TR-Motion-3,Product Shall Reliably Reject False Motion,,,
+Motion,TR-Motion-4,Product May Support Configuration for Motion Sensitivity,,,
+Paging,TR-Page-1,"Product paging pattern when configured for operating mode ""BLE Only"" shall consist of three pages (paging triplet) repeated continuously, according to the following timing:
+Intra-triplet gap = 6.5s+/-1s; inter-triplet gap = 300s+/-3s",,,
+Paging,TR-Page-2,"Product paging pattern when configured for operating mode ""UHF and BLE"", in active state, and asynchronous mode; shall consist of a pair of pages (paging pair) repeated continuously, according to the following configurable optons:
+Setting = 6.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 6.5s+/-1s
+Setting = 9.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 9.5s+/-1s
+Setting = 12.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 12.5s+/-1s
+Setting = 24.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 24.5s+/-1s",,,
+Paging,TR-Page-3,"Product paging pattern when configured for operating mode ""UHF and BLE"", in no-motion sleep state, and asynchronous mode; shall consist of three pages (paging triplet) repeated continuously, according to the following timing, independant of active paging profile configuration:
+Intra-triplet gap = 6.5s+/-1s; inter-triplet gap = 300s+/-3s",,,
+Paging,TR-Page-4,"Product paging pattern when configured for operating mode ""UHF Only"", in active state, and asynchronous mode; shall consist of a pair of pages (paging pair) repeated continuously, according to the following configurable optons:
+Setting = 6.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 6.5s+/-1s
+Setting = 9.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 9.5s+/-1s
+Setting = 12.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 12.5s+/-1s
+Setting = 24.5s: Intra-pair gap = 6.5s+/-1s; inter-pair gap = 24.5s+/-1s",,,
+Paging,TR-Page-5,"Product paging pattern when configured for operating mode ""UHF Only"", in no-motion sleep state, and asynchronous mode; shall consist of three pages (paging triplet) repeated continuously, according to the following timing, independant of active paging profile configuration:
+Intra-triplet gap = 6.5s+/-1s; inter-triplet gap = 300s+/-3s",,,
+Paging,TR-Page-6,"Product shall support configurable active paging profile with the following settings: 6.5s, 9.5s, 12.5s, and 24.5s",,,
+Paging,TR-Page-7,"Product shall use active paging profile settings only when configured for operating mode ""UHF Only"" and ""UHF and BLE"".",,,
+Polestar,TR-Pole-1,Product shall support transmitting Polestar BLE location packets to Core Server.,,,
+Polestar,TR-Pole-10,Product shall disable IR Rx in asynchronous mode.,,,
+Polestar,TR-Pole-11,Product shall disable LF Rx in asynchronous mode.,,,
+Polestar,TR-Pole-12,Product shall support profile updates via Polestar network.,,,
+Polestar,TR-Pole-13,Product shall transmit Polestar BLE pings at 1 ping per burst in active mode.,,,
+Polestar,TR-Pole-14,Product shall support Polestar BLE profile.,,,
+Polestar,TR-Pole-15,Product shall support FW upgrades via Polestar network.,,,
+Polestar,TR-Pole-16,"Product 10-byte BLE Polestar NAO Button Press packet shall contain the following fields:
+- Length (1 byte)
+- Advertisement Type (1 byte)
+- Advertisement Flag (1 byte)
+- Data Length (1 byte)
+- Data Type (1 byte)
+- Unique Identifier (2 bytes)
+- Reserved (1 byte)
+- Badge ID (1 byte)
+- Reserved (1 byte)",,,
+Polestar,TR-Pole-17,"Product shall support forwarding of CenTrak metadata found in a typical 900MHz packet (IRID, LFID, LBI, etc.) via Polestar network.",,,
+Polestar,TR-Pole-18,"Product 10-byte BLE Polestar NAO Button Press packet shall set all fixed fields as follows:
+- Length = 0x02
+- Advertisement Type = 0x01
+- Advertisement Flag = 0x06
+- Data Length = 0x06
+- Data Type = 0x16
+- Unique Identifier = 0xEDFD
+- Reserved = 0x10
+- Reserved = 0x40",,,
+Polestar,TR-Pole-19,Product Polestar locating shall support floor-level accuracy within 99% (less than 1 error in 100 samples).,,,
+Polestar,TR-Pole-2,Product shall support Polestar BLE profile updates from Core Server.,,,
+Polestar,TR-Pole-20,"Product Polestar locating shall support location updates in the form of a zonal location ID, which must be compatible with existing CenTrak IDs and end user software products.",,,
+Polestar,TR-Pole-21,Product shall advertise a burst of 10 Polestar BLE location frames at a rate of 100ms every 5m in sleep.,,,
+Polestar,TR-Pole-22,"Product shall provide Polestar location updates in the form of latitude, longitude, and altitude coordinates.",,,
+Polestar,TR-Pole-23,Product shall support 2-way communication with Polestar network.,,,
+Polestar,TR-Pole-24,Product shall support commands via Polestar network.,,,
+Polestar,TR-Pole-25,Tag shall support transmitting location packets to Core Server via Polestar.,,,
+Polestar,TR-Pole-3,Product shall support Polestar locating with 10m accuracy.,,,
+Polestar,TR-Pole-4,Product shall support transmitting Polestar BLE duress button press to Core Server.,,,
+Polestar,TR-Pole-5,Product shall transmit location packet every 1s.,,,
+Polestar,TR-Pole-6,Product shall transmit duress button press every 70mS for 2 seconds,,,
+Polestar,TR-Pole-7,Product shall ignore all button presses other than duress button press.,,,
+Polestar,TR-Pole-8,Product supports an active BLE report rate of 1s.,,,
+Polestar,TR-Pole-9,Product supports a sleep BLE report rate of 5m.,,,
+Range Extender,TR-RE-1,Product shall support Pegasus UHF repeater packet structure.,,,
+Range Extender,TR-RE-2,Product shall support Orion UHF repeater packet structure.,,,
+Range Extender,TR-RE-3,TBD,,Dheepamari,We need range extender. FW team to provide write-up detailing range extender expected technical behavior for both Pegasus and Orion (as support differs).
+Regulatory,TR-Reg-1,"Product shall comply with IEC 62368-1: 2018
+
+NOTE: Official certification required for:
+Australia",,Kosta? Petty?,"Determine pull force for each band type
+
+Only required to certify ""musts"". Delighters can be set as future."
+Regulatory,TR-Reg-10,BRZIL ???,,Kosta? Petty?,"While this info should be captured, not necessarily a technical requirement"
+Regulatory,TR-Reg-11,Macau (FCC equiv / CE),,Kosta? Petty?,"In Orion platform - We can send the event to Server in less than 2secs.
+But in Pegasus platform - We can send the event to the RTLS Server with in 3 secs
+Unlike the Secure Tag, this device will not send an alarm if patient slides wrist out of band."
+Regulatory,TR-Reg-12,"Product shall comply with AS/NZS 62368.1:2022
+
+NOTE: Official certification required for:
+Australia",,,
+Regulatory,TR-Reg-13,"Product shall comply with Harmonized Standard for access to radio spectrum: 2.4GHz: AS-NZS 4268:2017 (section 3.1)
+
+NOTE: Official certification required for:
+Australia",,,
+Regulatory,TR-Reg-14,United Kingdom (FCC equiv / CE),,Kosta? Petty?,erase duplicate requirement
+Regulatory,TR-Reg-2,"Product shall comply with Harmonized Standard for access to radio spectrum: 25MHz to 1GHz: AS-NZS 4268:2017 (section 3.1)
+
+NOTE: Official certification required for:
+Australia",,,
+Regulatory,TR-Reg-3,"Product shall comply with Harmonized Standard for Electro Magnetic Compatibility: AS/NZS CISPR 32: 2015+AMD1:2020
+
+NOTE: Official certification required for:
+Australia",,,
+Regulatory,TR-Reg-4,"Product shall comply with Human exposure: Radiation Protection Series S-1 (refer to section 3.1).AS/NZS 2772.2:2016+AMD1:2018Radiocommunications Equipment (General) Rules 2021.IEC 62479: 2010
+
+NOTE: Official certification required for:
+Australia",,,
+Regulatory,TR-Reg-5,Hong Kong (FCC equiv / CE),,Kosta? Petty?,"""Server shall be updated..."""
+Regulatory,TR-Reg-6,United States (FCC / CE),,Kosta? Petty?,"PM should pick colors, specify pigments"
+Regulatory,TR-Reg-7,Latin America (FCC equiv / CE),,Kosta? Petty?,"Call out the specific device type for this product
+Create a corresponding requirement for Pegasus"
+Regulatory,TR-Reg-8,European Union (FCC equiv / CE),,Kosta? Petty?,"3 different requirements (bullet 1st, add 2nd as note to 1st)
+
+All certifications must be explicitly called out"
+Regulatory,TR-Reg-9,Canada (FCC equiv / CE),,Kosta? Petty?,need product dimension requirements 
+UHF,TR-UHF-1,Product shall support UHF receive at 35ft under typical application condition in Pegasus,,,
+UHF,TR-UHF-10,Product shall support 15 RF frequencies when it is in Orion platform,,,
+UHF,TR-UHF-11,Product shall support 13 RF frequencies when it is in Pegasus platform,,,
+UHF,TR-UHF-12,Product shall use 150 kbps for Wireless upgrade when it is in Orion System,,,
+UHF,TR-UHF-13,Product shall use 76.8 kbps for Wireless upgrade when it is in Pegasus System,,,
+UHF,TR-UHF-14,Product shall use Orion RF packet structures when it is in Orion System,,,
+UHF,TR-UHF-15,Product shall use Pegasus RF packet structures when it is in Pegasus System,,,
+UHF,TR-UHF-16,"Product shall meet the following UHF functional performance criteria:
+- Location packet error rate as observed on server: <=10%
+
+Test Setup
+- System: Pegasus
+- UHF report rate: 24s (always in motion)
+- Test Duration: >= 1 hour
+- Distance to STAR: 50ft
+- Product worn on wrist as in comercial environment
+- Congestion1: Fewer than 25 other devices locked to STAR
+- Congestion2: Isolate frequency to avoid test environment congestion",,,
+UHF,TR-UHF-17,"Product shall meet the following UHF functional performance criteria:
+- Location packet error rate as observed on server: <=10%
+
+Test Setup
+- System: Orion
+- UHF report rate: 24s (always in motion)
+- Test Duration: >= 1 hour
+- Distance to STAR: 50ft
+- Product worn on wrist as in comercial environment
+- Congestion1: Fewer than 25 other devices locked to STAR
+- Congestion2: Isolate frequency to avoid test environment congestion",,,
+UHF,TR-UHF-18,Product shall meet all UHF parametric performance criteria at all supported UHF bitrates.,,,
+UHF,TR-UHF-19,Product shall meet all UHF parametric performance criteria on all supported UHF channels.,,,
+UHF,TR-UHF-2,Product shall support receiving UHF packets with RSSI >= -85dBm in Pegasus,,,
+UHF,TR-UHF-20,Product RX UHF performance shall be reduced by no more than 5% as a result of wearing product on skin as it would be worn by end user.,,,
+UHF,TR-UHF-21,"Product shall meet the following UHF functional performance criteria:
+- Location packet error rate as observed on server: <=2%
+
+Test Setup
+- System: Pegasus
+- UHF report rate: 24s (always in motion)
+- Test Duration: >= 1 hour
+- Distance to STAR: 35ft
+- Product worn on wrist as in comercial environment
+- Congestion1: Fewer than 25 other devices locked to STAR
+- Congestion2: Isolate frequency to avoid test environment congestion",,,
+UHF,TR-UHF-22,"Product shall meet the following UHF functional performance criteria:
+- Location packet error rate as observed on server: <=2%
+
+Test Setup
+- System: Orion
+- UHF report rate: 24s (always in motion)
+- Test Duration: >= 1 hour
+- Distance to STAR: 35ft
+- Product worn on wrist as in comercial environment
+- Congestion1: Fewer than 25 other devices locked to STAR
+- Congestion2: Isolate frequency to avoid test environment congestion",,,
+UHF,TR-UHF-23,Product shall support Orion UHF location packet structure.,,,
+UHF,TR-UHF-24,Product shall support Orion UHF button press packet structure.,,,
+UHF,TR-UHF-25,Product shall support Orion UHF paging packet structure.,,,
+UHF,TR-UHF-26,Product shall support Orion UHF OTA upgrade packet structure.,,,
+UHF,TR-UHF-27,"Product shall support UHF frequencies as follows:
+- Beacon Channel / Data Channel
+- 904MHz / 914MHz
+- 905MHz / 915MHz
+- 906MHz / 916MHz
+- 907MHz / 917MHz
+- 908MHz / 918MHz
+- 909MHz / 919MHz
+- 912MHz / 917MHz
+- 915MHz / 918MHz
+- 868.9MHz / 869.9MHz
+- 868.4MHz / 869.9MHz
+- 922MHz / 926MHz
+- 865.3MHz / 866.3MHz
+- 865.7MHz / 866.7MHz
+- 868.25MHz / 868.35MHz
+- 921.5MHz / 923.5MHz",,,
+UHF,TR-UHF-28,Product shall support Pegasus UHF paging packet structure.,,,
+UHF,TR-UHF-29,"Product shall support the following UHF data rates:
+- 50kbps
+- 76kbps
+- 150kbps.",,,
+UHF,TR-UHF-3,Product shall support receiving UHF packets with RSSI >= -85dBm in Orion,,,
+UHF,TR-UHF-30,Product shall support Pegasus UHF location packet structure.,,,
+UHF,TR-UHF-31,Product shall support Pegasus UHF OTA upgrade packet structure.,,,
+UHF,TR-UHF-32,Product shall support UHF TX random backoff with 32 distinct backoffs for colision avoidance.,,,
+UHF,TR-UHF-33,Product shall support Pegasus UHF button press packet structure.,,,
+UHF,TR-UHF-34,Product TX UHF performance shall be reduced by no more than 5% as a result of wearing product on skin as it would be worn by end user.,,,
+UHF,TR-UHF-35,Product UHF antenna efficiency shall be -10dBi or better.,,,
+UHF,TR-UHF-36,Product UHF center frequency shall be tunable during manufacture to align with frequency offset of STARs.,,,
+UHF,TR-UHF-37,"Product UHF performance shall meet RX packet error rate as follows:
+- PER <= 5%
+- STAR positioned 10ft from ground, flat with antenna side facing down.
+- Horizontal distance between STAR and product = 35ft
+- Spec applies to worst-case product/STAR orientation.
+- Packet Error Rate measured at Product",,,
+UHF,TR-UHF-38,"Product UHF performance shall meet TX packet error rate as follows:
+- PER <= 5%
+- STAR positioned 10ft from ground, flat with antenna side facing down.
+- Horizontal distance between STAR and product = 35ft
+- Spec applies to worst-case product/STAR orientation.
+- Packet Error Rate measured at STAR",,,
+UHF,TR-UHF-39,"Product UHF performance shall meet TX Upacket RSSI as follows:
+- RSSI >= -85dBm
+- STAR positioned 10ft from ground, flat with antenna side facing down.
+- Horizontal distance between STAR and product = 35ft
+- Spec applies to worst-case product/STAR orientation.
+- Product TX UHF RSSI value reported in Core Server.",,,
+UHF,TR-UHF-4,Product Shall disregard UHF with RSSI of more than -100 in Pegasus,,,
+UHF,TR-UHF-5,Product Shall disregard UHF with RSSI of more than -100 in Orion,,,
+UHF,TR-UHF-6,Product shall support UHF TX at maximum power level of no less than 0dBm in Pegasus.,,,
+UHF,TR-UHF-7,Product shall support UHF TX at maximum power level of no less than 0dBm in Orion.,,,
+UHF,TR-UHF-8,Product shall use 50 kbps bitrate for RF communication when it is in Orion system,,,
+UHF,TR-UHF-9,Product shall use 76.8 kbps bitrate for RF communication when it is in Pegasus system,,,
+Watch Face,TR-Watch-1,"Product shall be configurable to disable IR functionality.
+
+NOTE: Battery saving when watchface accessory is installed.",,,
+Watch Face,TR-Watch-2,"Product shall function as intended, with no performance impacts, with the exception of IR locating, when watch face accessory is installed.
+
+NOTE: IR functionality will be impaired and should be disabled in this configuration.",,,

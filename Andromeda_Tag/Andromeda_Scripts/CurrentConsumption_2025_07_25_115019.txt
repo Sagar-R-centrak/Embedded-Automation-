@@ -1,0 +1,2 @@
+Consuming high sleep current
+ 2025-07-25 11:50:46 Current=4.506629780353978 mA     Voltage=3.0058040050649644 V

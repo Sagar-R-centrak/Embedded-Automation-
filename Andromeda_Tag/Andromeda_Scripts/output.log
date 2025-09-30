@@ -1,0 +1,417 @@
+2025-05-03 13:16:39.393081 - Iteration0: Button_01 Test FAIL
+2025-05-03 13:16:48.448334 - Iteration0: Location_01 Test FAIL
+2025-05-10 16:44:38.815819 - Iteration0: Button_01 Test FAIL
+2025-05-10 16:44:49.687968 - Iteration0: Location_01 Test FAIL
+2025-05-10 16:44:59.448303 - Iteration0: Battery_01 Test FAIL
+2025-05-10 16:45:09.225811 - Iteration0: Version_01 Test FAIL
+2025-05-10 16:45:19.026771 - Iteration0: Button_02 Test FAIL
+2025-05-10 16:45:28.820594 - Iteration0: Button_03 Test FAIL
+2025-05-10 16:45:38.552382 - Iteration0: Button_04 Test FAIL
+2025-05-10 16:45:48.291731 - Iteration0: Button_05 Test FAIL
+2025-05-10 16:45:58.070407 - Iteration0: Button_06 Test FAIL
+2025-05-10 16:46:07.860627 - Iteration0: Button_07 Test FAIL
+2025-05-10 16:46:17.679910 - Iteration0: Button_08 Test FAIL
+2025-05-10 16:46:27.754688 - Iteration0: Button_09 Test FAIL
+2025-05-10 16:46:38.089103 - Iteration0: Button_10 Test FAIL
+2025-05-10 16:46:47.598572 - Iteration 0: Motion_01 Test FAIL
+2025-05-10 16:50:07.968298 - Iteration0: Report_01 Test FAIL
+2025-05-10 16:51:15.586916 - Iteration0: Button_01 Test FAIL
+2025-05-10 16:51:26.425805 - Iteration0: Location_01 Test FAIL
+2025-05-10 16:51:36.190271 - Iteration0: Battery_01 Test FAIL
+2025-05-10 16:51:45.922362 - Iteration0: Version_01 Test FAIL
+2025-05-10 16:51:55.727940 - Iteration0: Button_02 Test FAIL
+2025-05-10 16:52:05.496006 - Iteration0: Button_03 Test FAIL
+2025-05-10 16:52:15.256467 - Iteration0: Button_04 Test FAIL
+2025-05-10 16:54:41.988995 - Iteration0: Button_01 Test FAIL
+2025-05-10 16:54:52.768379 - Iteration0: Location_01 Test FAIL
+2025-05-10 16:55:02.565419 - Iteration0: Battery_01 Test FAIL
+2025-05-10 16:55:12.345583 - Iteration0: Version_01 Test FAIL
+2025-05-10 16:55:22.213511 - Iteration0: Button_02 Test FAIL
+2025-05-10 16:55:32.083634 - Iteration0: Button_03 Test FAIL
+2025-05-10 16:55:42.007700 - Iteration0: Button_04 Test FAIL
+2025-05-10 16:55:51.760057 - Iteration0: Button_05 Test FAIL
+2025-05-10 16:56:01.528709 - Iteration0: Button_06 Test FAIL
+2025-05-10 16:56:11.347261 - Iteration0: Button_07 Test FAIL
+2025-05-10 16:56:21.115175 - Iteration0: Button_08 Test FAIL
+2025-05-10 16:56:30.934800 - Iteration0: Button_09 Test FAIL
+2025-05-10 16:56:40.716762 - Iteration0: Button_10 Test FAIL
+2025-05-10 16:56:50.225623 - Iteration 0: Motion_01 Test FAIL
+2025-05-10 17:00:10.748659 - Iteration0: Report_01 Test FAIL
+2025-05-10 17:00:58.683929 - Iteration0: Button_01 Test FAIL
+2025-05-10 17:01:09.518913 - Iteration0: Location_01 Test FAIL
+2025-05-10 17:01:19.759593 - Iteration0: Battery_01 Test FAIL
+2025-05-10 17:01:29.546694 - Iteration0: Version_01 Test FAIL
+2025-05-10 17:01:39.291502 - Iteration0: Button_02 Test FAIL
+2025-05-10 17:01:49.069685 - Iteration0: Button_03 Test FAIL
+2025-05-10 17:01:58.809785 - Iteration0: Button_04 Test FAIL
+2025-05-10 17:02:08.510593 - Iteration0: Button_05 Test FAIL
+2025-05-10 17:02:18.255554 - Iteration0: Button_06 Test FAIL
+2025-05-10 17:02:28.131169 - Iteration0: Button_07 Test FAIL
+2025-05-10 17:02:37.927842 - Iteration0: Button_08 Test FAIL
+2025-05-10 17:10:37.690211 - Iteration0: Button_01 Test FAIL
+2025-05-10 17:10:46.454606 - Iteration0: Location_01 Test FAIL
+2025-05-10 17:10:55.245081 - Iteration0: Battery_01 Test FAIL
+2025-05-10 17:11:04.025779 - Iteration0: Version_01 Test FAIL
+2025-05-10 17:11:12.758463 - Iteration0: Button_02 Test FAIL
+2025-05-10 17:11:21.551344 - Iteration0: Button_03 Test FAIL
+2025-05-10 17:11:30.339602 - Iteration0: Button_04 Test FAIL
+2025-05-10 17:11:39.066837 - Iteration0: Button_05 Test FAIL
+2025-05-10 17:11:47.800198 - Iteration0: Button_06 Test FAIL
+2025-05-10 17:11:56.627856 - Iteration0: Button_07 Test FAIL
+2025-05-10 17:12:05.407765 - Iteration0: Button_08 Test FAIL
+2025-05-10 19:50:14.927726 - Iteration0: Button_01 Test FAIL
+2025-05-10 19:50:25.753938 - Iteration0: Location_01 Test FAIL
+2025-05-10 19:50:35.545855 - Iteration0: Battery_01 Test FAIL
+2025-05-10 19:50:45.304165 - Iteration0: Version_01 Test FAIL
+2025-05-10 19:50:55.120099 - Iteration0: Button_02 Test FAIL
+2025-05-10 19:51:04.909084 - Iteration0: Button_03 Test FAIL
+2025-05-10 19:51:14.692893 - Iteration0: Button_04 Test FAIL
+2025-05-10 19:51:24.462926 - Iteration0: Button_05 Test FAIL
+2025-05-10 19:51:34.259079 - Iteration0: Button_06 Test FAIL
+2025-05-10 19:51:44.085666 - Iteration0: Button_07 Test FAIL
+2025-05-10 19:51:53.856694 - Iteration0: Button_08 Test FAIL
+2025-05-10 19:52:03.633454 - Iteration0: Button_09 Test FAIL
+2025-05-10 19:53:22.004725 - Iteration0: Button_01 Test FAIL
+2025-05-10 19:53:32.694271 - Iteration0: Location_01 Test FAIL
+2025-05-10 19:53:42.458158 - Iteration0: Battery_01 Test FAIL
+2025-05-10 19:53:52.243734 - Iteration0: Version_01 Test FAIL
+2025-05-10 19:54:01.974467 - Iteration0: Button_02 Test FAIL
+2025-05-10 19:54:11.739878 - Iteration0: Button_03 Test FAIL
+2025-05-10 19:54:21.501065 - Iteration0: Button_04 Test FAIL
+2025-05-10 19:54:31.265591 - Iteration0: Button_05 Test FAIL
+2025-05-10 19:54:41.024917 - Iteration0: Button_06 Test FAIL
+2025-05-10 19:54:50.858906 - Iteration0: Button_07 Test FAIL
+2025-05-10 19:55:00.637545 - Iteration0: Button_08 Test FAIL
+2025-05-10 19:55:10.407735 - Iteration0: Button_09 Test FAIL
+2025-05-10 19:55:20.178039 - Iteration0: Button_10 Test FAIL
+2025-05-10 19:55:29.685488 - Iteration 0: Motion_01 Test FAIL
+2025-05-10 22:22:16.356056 - Iteration0: Button_01 Test FAIL
+2025-05-10 22:22:27.181112 - Iteration0: Location_01 Test FAIL
+2025-05-10 22:22:36.955027 - Iteration0: Battery_01 Test FAIL
+2025-05-10 22:22:46.727219 - Iteration0: Version_01 Test FAIL
+2025-05-10 22:22:56.459423 - Iteration0: Button_02 Test FAIL
+2025-05-10 22:23:06.192851 - Iteration0: Button_03 Test FAIL
+2025-05-10 22:23:15.928642 - Iteration0: Button_04 Test FAIL
+2025-05-10 22:23:25.683716 - Iteration0: Button_05 Test FAIL
+2025-05-10 22:23:35.469591 - Iteration0: Button_06 Test FAIL
+2025-05-10 22:23:45.255757 - Iteration0: Button_07 Test FAIL
+2025-05-10 22:23:54.995603 - Iteration0: Button_08 Test FAIL
+2025-05-10 22:24:04.743799 - Iteration0: Button_09 Test FAIL
+2025-05-10 22:24:14.461270 - Iteration0: Button_10 Test FAIL
+2025-05-10 22:24:23.975801 - Iteration 0: Motion_01 Test FAIL
+2025-05-10 22:27:44.296016 - Iteration0: Report_01 Test FAIL
+2025-05-10 22:29:30.592728 - Iteration0: Button_01 Test FAIL
+2025-05-10 22:29:41.414211 - Iteration0: Location_01 Test FAIL
+2025-05-10 22:29:51.192322 - Iteration0: Battery_01 Test FAIL
+2025-05-10 22:30:00.959838 - Iteration0: Version_01 Test FAIL
+2025-05-10 22:30:10.696796 - Iteration0: Button_02 Test FAIL
+2025-05-10 22:30:20.515395 - Iteration0: Button_03 Test FAIL
+2025-05-10 22:30:30.345106 - Iteration0: Button_04 Test FAIL
+2025-05-10 22:30:40.123573 - Iteration0: Button_05 Test FAIL
+2025-05-10 22:30:49.872596 - Iteration0: Button_06 Test FAIL
+2025-05-10 22:30:59.696560 - Iteration0: Button_07 Test FAIL
+2025-05-10 22:31:09.462420 - Iteration0: Button_08 Test FAIL
+2025-05-10 22:31:19.369092 - Iteration0: Button_09 Test FAIL
+2025-05-10 22:31:29.143840 - Iteration0: Button_10 Test FAIL
+2025-05-10 22:31:38.648722 - Iteration 0: Motion_01 Test FAIL
+2025-05-10 22:34:59.058587 - Iteration0: Report_01 Test FAIL
+2025-05-10 22:40:21.494053 - Iteration0: Report_02 Test FAIL
+2025-05-10 22:52:48.890908 - Iteration0: Report_03 Test FAIL
+2025-05-10 22:58:01.258482 - Iteration0: Report_04 Test FAIL
+2025-05-10 23:04:28.596309 - Iteration0: Report_05 Test FAIL
+2025-05-10 23:14:51.097187 - Iteration0: Report_06 Test FAIL
+2025-05-11 03:47:36.690173 - Iteration0: Report_07 Test FAIL
+2025-05-11 21:00:18.391219 - Iteration0: Report_08 Test FAIL
+2025-05-11 21:53:00.732886 - Iteration0: Cmd_01 Test FAIL
+2025-05-12 03:39:51.757790 - Iteration0: Cmd_02 Test FAIL
+2025-05-12 06:28:51.618928 - Iteration0: Cmd_03 Test FAIL
+2025-05-12 06:31:20.486917 - Iteration0: Cmd_04 Test FAIL
+2025-05-12 06:33:49.362354 - Iteration0: Cmd_05 Test FAIL
+2025-05-12 06:36:18.151951 - Iteration0: Cmd_06 Test FAIL
+2025-05-12 06:38:46.967139 - Iteration0: Cmd_07 Test FAIL
+2025-05-12 06:41:15.722304 - Iteration0: Cmd_08 Test FAIL
+2025-05-12 06:43:44.523238 - Iteration0: Cmd_09 Test FAIL
+2025-05-12 14:54:29.745567 - Iteration0: Button_01 Test FAIL
+2025-05-12 14:54:40.583419 - Iteration0: Location_01 Test FAIL
+2025-05-12 14:54:50.345151 - Iteration0: Battery_01 Test FAIL
+2025-05-12 14:55:00.125971 - Iteration0: Version_01 Test FAIL
+2025-05-12 14:55:09.901306 - Iteration0: Button_02 Test FAIL
+2025-05-12 14:55:19.638658 - Iteration0: Button_03 Test FAIL
+2025-05-12 14:55:29.419286 - Iteration0: Button_04 Test FAIL
+2025-05-12 14:55:39.154974 - Iteration0: Button_05 Test FAIL
+2025-05-12 14:55:48.944020 - Iteration0: Button_06 Test FAIL
+2025-05-12 14:55:58.767173 - Iteration0: Button_07 Test FAIL
+2025-05-12 14:56:08.546180 - Iteration0: Button_08 Test FAIL
+2025-05-12 14:56:18.263076 - Iteration0: Button_09 Test FAIL
+2025-05-12 14:56:27.962325 - Iteration0: Button_10 Test FAIL
+2025-05-12 14:56:37.476226 - Iteration 0: Motion_01 Test FAIL
+2025-05-12 14:59:57.768911 - Iteration0: Report_01 Test FAIL
+2025-05-12 15:17:44.991875 - Iteration0: Button_01 Test FAIL
+2025-05-12 15:39:02.682048 - Iteration0: Button_03 Test FAIL
+2025-05-12 15:40:30.951342 - Iteration0: Button_01 Test FAIL
+2025-05-12 15:40:39.739956 - Iteration0: Location_01 Test FAIL
+2025-05-12 15:41:34.255578 - Iteration0: Button_03 Test FAIL
+2025-05-12 15:45:57.221643 - Iteration0: Button_03 Test FAIL
+2025-05-12 15:46:40.857083 - Iteration0: Button_03 Test FAIL
+2025-05-12 15:47:11.475525 - Iteration0: Button_03 Test FAIL
+2025-05-12 15:48:00.697724 - Iteration0: Button_03 Test FAIL
+2025-05-12 15:53:06.184324 - Iteration0: Button_03 Test FAIL
+2025-05-12 17:23:35.070405 - Iteration0: Button_03 Test FAIL
+2025-05-12 18:22:42.592627 - Iteration0: Button_03 Test FAIL
+2025-05-12 18:24:25.296516 - Iteration0: Button_03 Test FAIL
+2025-05-12 18:56:53.482708 - Iteration0: Button_03 Test FAIL
+2025-05-12 19:57:30.551309 - Iteration0: Button_03 Test FAIL
+2025-05-12 19:58:28.621223 - Iteration0: Button_03 Test FAIL
+2025-05-12 20:27:47.970814 - Iteration0: Button_03 Test FAIL
+2025-05-12 20:28:42.841921 - Iteration0: Button_03 Test FAIL
+2025-05-12 20:37:37.710264 - Iteration0: Button_03 Test PASS
+2025-05-16 18:00:00.262048 - Iteration0: Button_03 Test FAIL
+2025-05-16 18:14:32.252957 - Iteration0: Button_03 Test FAIL
+2025-07-22 09:55:21.285128 - Iteration0: Button_01 Test FAIL
+2025-07-22 09:56:59.172341 - Iteration0: Button_01 Test FAIL
+2025-07-22 09:57:07.987688 - Iteration0: Location_01 Test FAIL
+2025-07-22 09:57:37.821191 - Iteration0: Battery_01 Test FAIL
+2025-07-22 09:57:47.159524 - Iteration0: Version_01 Test FAIL
+2025-07-22 09:57:56.084877 - Iteration0: Button_02 Test FAIL
+2025-07-22 09:58:07.265053 - Iteration0: Button_03 Test FAIL
+2025-07-22 09:58:16.111339 - Iteration0: Button_04 Test FAIL
+2025-07-22 09:58:26.907205 - Iteration0: Button_05 Test FAIL
+2025-07-22 09:58:35.790743 - Iteration0: Button_06 Test FAIL
+2025-07-22 09:58:48.943035 - Iteration0: Button_07 Test FAIL
+2025-07-22 09:58:57.812003 - Iteration0: Button_08 Test FAIL
+2025-07-22 09:59:06.625306 - Iteration0: Button_09 Test FAIL
+2025-07-22 09:59:15.400152 - Iteration0: Button_10 Test FAIL
+2025-07-22 09:59:23.910936 - Iteration 0: Motion_01 Test FAIL
+2025-07-22 10:03:02.377366 - Iteration0: Report_01 Test FAIL
+2025-07-22 10:08:36.272301 - Iteration0: Button_01 Test FAIL
+2025-07-22 10:08:47.113239 - Iteration0: Location_01 Test FAIL
+2025-07-22 10:09:09.385737 - Iteration0: Battery_01 Test FAIL
+2025-07-22 10:09:23.085370 - Iteration0: Version_01 Test FAIL
+2025-07-22 10:09:37.269973 - Iteration0: Button_02 Test FAIL
+2025-07-22 10:09:47.052454 - Iteration0: Button_03 Test FAIL
+2025-07-22 10:09:56.829780 - Iteration0: Button_04 Test FAIL
+2025-07-22 10:10:06.595840 - Iteration0: Button_05 Test FAIL
+2025-07-22 10:10:16.394131 - Iteration0: Button_06 Test FAIL
+2025-07-22 10:10:26.173371 - Iteration0: Button_07 Test FAIL
+2025-07-22 10:10:35.941821 - Iteration0: Button_08 Test FAIL
+2025-07-22 10:10:50.805523 - Iteration0: Button_09 Test FAIL
+2025-07-22 10:11:00.563951 - Iteration0: Button_10 Test FAIL
+2025-07-22 10:11:10.071653 - Iteration 0: Motion_01 Test FAIL
+2025-07-22 10:14:51.460311 - Iteration0: Report_01 Test FAIL
+2025-07-22 10:20:38.874575 - Iteration0: Report_02 Test FAIL
+2025-07-22 10:33:31.382684 - Iteration0: Report_03 Test FAIL
+2025-07-22 10:39:08.840215 - Iteration0: Report_04 Test FAIL
+2025-07-22 10:43:30.196355 - Iteration0: Button_03 Test FAIL
+2025-07-22 10:50:58.911643 - Iteration0: Button_03 Test PASS
+2025-07-22 11:01:33.416846 - Iteration0: Button_03 Test PASS
+2025-07-22 11:02:48.941073 - Iteration0: Button_03 Test PASS
+2025-07-22 11:04:38.407706 - Iteration0: Button_03 Test PASS
+2025-07-22 15:38:04.274896 - Iteration0: Button_03 Test FAIL
+2025-07-22 15:38:37.104982 - Iteration0: Button_03 Test PASS
+2025-07-22 15:42:06.648566 - Iteration0: Button_03 Test FAIL
+2025-07-22 15:42:49.355233 - Iteration0: Button_03 Test FAIL
+2025-07-22 15:44:21.842998 - Iteration0: Button_03 Test PASS
+2025-07-22 16:59:49.441045 - Iteration0: Button_03 Test FAIL
+2025-07-22 17:00:17.958814 - Iteration0: Button_03 Test PASS
+2025-07-25 10:30:44.354915 - Iteration0: Button_03 Test FAIL
+2025-07-25 10:31:27.902141 - Iteration0: Button_03 Test PASS
+2025-07-25 11:51:42.073660 - Iteration0: Button_03 Test PASS
+2025-07-25 11:51:42.437992 - Iteration0: Button_03 current consumption Test FAIL
+2025-07-25 11:54:00.474153 - Iteration0: Button_03 Test FAIL
+2025-07-25 11:55:07.788264 - Iteration0: Button_03 Test FAIL
+2025-07-25 11:58:00.577381 - Iteration0: Button_03 Test FAIL
+2025-07-25 11:59:48.921703 - Iteration0: Button_03 Test FAIL
+2025-07-25 12:00:34.387049 - Iteration0: Button_03 Test PASS
+2025-07-25 12:00:34.767900 - Iteration0: Button_03 current consumption Test FAIL
+2025-07-25 12:01:55.210455 - Iteration0: Button_03 Test PASS
+2025-07-25 12:25:22.510170 - Iteration0: Button_03 Test FAIL
+2025-07-25 12:25:58.823168 - Iteration0: Button_03 Test PASS
+2025-07-25 12:51:02.104466 - Iteration0: Button_03 Test PASS
+2025-07-25 13:52:42.839554 - Iteration0: Button_03 Test FAIL
+2025-07-25 13:54:37.473167 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:00:19.007257 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:02:59.303290 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:04:49.022236 - Iteration0: Button_03 Test PASS
+2025-07-25 14:30:10.677330 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:30:50.090854 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:31:29.405575 - Iteration0: Button_03 Test PASS
+2025-07-25 14:46:39.390171 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:47:14.009823 - Iteration0: Button_03 Test FAIL
+2025-07-25 14:47:45.463868 - Iteration0: Button_03 Test PASS
+2025-07-25 14:48:21.183375 - Iteration0: Button_03 Test PASS
+2025-07-25 15:15:11.049783 - Iteration0: Button_03 Test PASS
+2025-07-25 15:33:08.107361 - Iteration0: Button_03 Test FAIL
+2025-07-25 15:35:16.018478 - Iteration0: Button_03 Test PASS
+2025-09-22 18:08:48.120067 - Iteration0: Version_01 Test FAIL
+2025-09-22 18:08:59.251817 - Iteration0: Location_01 Test FAIL
+2025-09-22 18:11:14.859246 - Iteration0: Version_01 Test FAIL
+2025-09-22 18:11:26.028761 - Iteration0: Location_01 Test FAIL
+2025-09-22 18:11:57.722441 - Iteration0: Button_01 Test FAIL
+2025-09-22 18:14:46.798938 - Iteration0: Button_03 Test FAIL
+2025-09-22 18:17:33.038117 - Iteration0: Version_01 Test FAIL
+2025-09-22 18:17:43.934465 - Iteration0: Button_03 Test FAIL
+2025-09-23 19:53:20.368032 - Iteration0: Current after Flashing Test PASS
+2025-09-23 19:53:30.213724 - Iteration0: Version Test FAIL
+2025-09-23 19:54:06.572443 - Iteration0: Entry to Factory sleep Test PASS
+2025-09-23 19:54:10.272859 - Iteration0: Factory sleep current Test PASS
+2025-09-23 19:54:56.846583 - Iteration0: Exit from Factory sleep Test FAIL
+2025-09-23 19:55:06.812207 - Iteration0: Button_3 Test FAIL
+2025-09-23 19:55:17.241936 - Iteration0: Current consumption short press Test FAIL
+2025-09-23 19:55:28.400617 - Iteration0: Current consumption long press Test FAIL
+2025-09-23 20:00:48.941408 - Iteration0: 5 min sleep current
+2025-09-23 20:01:15.625163 - Iteration0: POR sleep current Test PASS
+2025-09-23 20:01:26.349849 - Iteration1: LBI Test FAIL
+2025-09-23 20:01:37.150111 - Iteration1: Location Test FAIL
+2025-09-23 20:02:07.695199 - Iteration 1: Motion Test FAIL
+2025-09-24 14:22:25.709358 - Iteration0: Current after Flashing Test PASS
+2025-09-24 14:22:35.755327 - Iteration0: Version Test FAIL
+2025-09-24 14:23:12.116439 - Iteration0: Entry to Factory sleep Test PASS
+2025-09-24 14:23:16.411839 - Iteration0: Factory sleep current Test PASS
+2025-09-24 14:24:02.821977 - Iteration0: Exit from Factory sleep Test FAIL
+2025-09-24 14:24:12.893151 - Iteration0: Button_3 Test FAIL
+2025-09-24 14:24:23.657275 - Iteration0: Current consumption short press Test FAIL
+2025-09-24 14:24:34.410839 - Iteration0: Current consumption long press Test FAIL
+2025-09-24 14:29:54.986703 - Iteration0: 5 min sleep current
+2025-09-24 14:30:21.506672 - Iteration0: POR sleep current Test PASS
+2025-09-24 14:30:31.516562 - Iteration1: LBI Test FAIL
+2025-09-24 14:30:44.971430 - Iteration1: Location Test FAIL
+2025-09-24 14:31:15.528146 - Iteration 1: Motion Test FAIL
+2025-09-24 15:10:00.233506 - Iteration0: Current after Flashing Test PASS
+2025-09-24 15:10:13.860933 - Iteration0: Version Test FAIL
+2025-09-24 15:10:27.135314 - Iteration0: Button_3 Test PASS
+2025-09-24 15:10:39.165640 - Iteration0: Current consumption short press Test FAIL
+2025-09-24 15:10:53.308942 - Iteration0: Current consumption long press Test FAIL
+2025-09-24 15:11:19.815139 - Iteration0: POR sleep current Test PASS
+2025-09-24 15:11:29.679164 - Iteration1: LBI Test FAIL
+2025-09-24 15:11:41.739267 - Iteration1: Location Test FAIL
+2025-09-24 15:11:51.252924 - Iteration 1: Motion Test FAIL
+2025-09-24 15:16:57.202915 - Iteration0: Current after Flashing Test PASS
+2025-09-24 15:17:07.174788 - Iteration0: Version Test FAIL
+2025-09-24 15:17:19.408559 - Iteration0: Button_3 Test FAIL
+2025-09-24 15:21:20.471073 - Iteration0: Current after Flashing Test PASS
+2025-09-24 15:21:34.691035 - Iteration0: Version Test FAIL
+2025-09-24 15:21:48.308682 - Iteration0: Button_3 Test PASS
+2025-09-24 15:22:02.431257 - Iteration0: Current consumption short press Test PASS
+2025-09-24 15:22:17.396921 - Iteration0: Current consumption long press Test PASS
+2025-09-24 15:22:44.253473 - Iteration0: POR sleep current Test PASS
+2025-09-24 15:22:53.951665 - Iteration1: LBI Test FAIL
+2025-09-24 15:23:05.680496 - Iteration1: Location Test FAIL
+2025-09-24 15:23:15.189727 - Iteration 1: Motion Test FAIL
+2025-09-24 15:38:32.853599 - Iteration0: Current after Flashing Test PASS
+2025-09-24 15:38:42.696178 - Iteration0: Version Test FAIL
+2025-09-24 15:40:44.670783 - Iteration0: Current after Flashing Test PASS
+2025-09-24 15:40:58.795681 - Iteration0: Version Test FAIL
+2025-09-24 15:41:10.397164 - Iteration0: Button_3 Test PASS
+2025-09-24 15:41:25.042456 - Iteration0: Current consumption short press Test PASS
+2025-09-24 15:41:40.072957 - Iteration0: Current consumption long press Test PASS
+2025-09-24 15:42:13.277309 - Iteration0: POR sleep current Test PASS
+2025-09-24 15:49:12.745707 - Iteration0: Current after Flashing Test PASS
+2025-09-24 15:49:25.743419 - Iteration0: Version Test PASS
+2025-09-24 15:49:38.812641 - Iteration0: Button_3 Test PASS
+2025-09-24 15:49:53.293282 - Iteration0: Current consumption short press Test PASS
+2025-09-24 15:50:07.965834 - Iteration0: Current consumption long press Test PASS
+2025-09-24 15:50:42.149196 - Iteration0: POR sleep current Test PASS
+2025-09-24 15:50:58.611903 - Iteration0: Battery Test FAIL
+2025-09-24 15:51:09.611630 - Iteration0: Location Test FAIL
+2025-09-24 15:51:19.129254 - Iteration 0: Motion Test FAIL
+2025-09-24 16:01:18.301355 - Iteration0: Current after Flashing Test PASS
+2025-09-24 16:01:31.439869 - Iteration0: Version Test PASS
+2025-09-24 16:01:45.217797 - Iteration0: Button_3 Test PASS
+2025-09-24 16:01:59.700756 - Iteration0: Current consumption short press Test PASS
+2025-09-24 16:02:14.592076 - Iteration0: Current consumption long press Test PASS
+2025-09-24 16:02:48.661258 - Iteration0: POR sleep current Test PASS
+2025-09-24 16:03:04.695576 - Iteration0: Battery Test FAIL
+2025-09-24 16:03:15.658350 - Iteration0: Location Test FAIL
+2025-09-24 16:03:29.401749 - Iteration 0: Motion Test FAIL
+2025-09-24 16:07:25.506244 - Iteration0: Current after Flashing Test PASS
+2025-09-24 16:07:39.257655 - Iteration0: Version Test PASS
+2025-09-24 16:07:52.898698 - Iteration0: Button_3 Test PASS
+2025-09-24 16:08:08.049078 - Iteration0: Current consumption short press Test PASS
+2025-09-24 16:08:21.886220 - Iteration0: Current consumption long press Test PASS
+2025-09-24 16:08:55.960132 - Iteration0: POR sleep current Test PASS
+2025-09-24 16:09:12.443119 - Iteration0: Battery Test PASS
+2025-09-24 16:09:23.266595 - Iteration0: Location Test FAIL
+2025-09-24 16:09:33.776473 - Iteration 0: Motion Test FAIL
+2025-09-24 17:13:15.025698 - Iteration0: Current after Flashing Test PASS
+2025-09-24 17:13:28.798143 - Iteration0: Version Test PASS
+2025-09-24 17:13:43.209538 - Iteration0: Button_3 Test PASS
+2025-09-24 17:13:58.078870 - Iteration0: Current consumption short press Test PASS
+2025-09-24 17:14:13.047067 - Iteration0: Current consumption long press Test PASS
+2025-09-24 17:14:47.123651 - Iteration0: POR sleep current Test PASS
+2025-09-24 17:15:03.298468 - Iteration0: Battery Test PASS
+2025-09-24 17:15:14.136126 - Iteration0: Location Test FAIL
+2025-09-24 17:15:24.651249 - Iteration 0: Motion Test FAIL
+2025-09-24 17:20:07.795162 - Iteration0: Current after Flashing Test PASS
+2025-09-24 17:20:18.108927 - Iteration0: Version Test PASS
+2025-09-24 17:20:28.257460 - Iteration0: Button_3 Test PASS
+2025-09-24 17:20:38.727987 - Iteration0: Current consumption short press Test FAIL
+2025-09-24 17:20:52.879323 - Iteration0: Current consumption long press Test PASS
+2025-09-24 17:21:26.974149 - Iteration0: POR sleep current Test PASS
+2025-09-24 17:21:43.658700 - Iteration0: Battery Test PASS
+2025-09-24 17:21:54.588146 - Iteration0: Location Test FAIL
+2025-09-24 17:22:05.104211 - Iteration 0: Motion Test FAIL
+2025-09-24 17:25:02.846336 - Iteration0: Current after Flashing Test PASS
+2025-09-24 17:25:16.783873 - Iteration0: Version Test PASS
+2025-09-24 17:25:31.369129 - Iteration0: Button_3 Test PASS
+2025-09-24 17:25:45.954920 - Iteration0: Current consumption short press Test PASS
+2025-09-24 17:26:00.829018 - Iteration0: Current consumption long press Test PASS
+2025-09-24 17:26:34.928952 - Iteration0: POR sleep current Test PASS
+2025-09-24 17:26:51.274155 - Iteration0: Battery Test PASS
+2025-09-24 17:27:01.988234 - Iteration0: Location Test FAIL
+2025-09-24 17:27:12.501040 - Iteration 0: Motion Test FAIL
+2025-09-24 17:31:21.769658 - Iteration0: Current after Flashing Test PASS
+2025-09-24 17:31:34.835313 - Iteration0: Version Test PASS
+2025-09-24 17:31:48.133775 - Iteration0: Button_3 Test PASS
+2025-09-24 17:32:02.383331 - Iteration0: Current consumption short press Test PASS
+2025-09-24 17:32:17.363101 - Iteration0: Current consumption long press Test PASS
+2025-09-24 17:32:51.554304 - Iteration0: POR sleep current Test PASS
+2025-09-24 17:33:07.494565 - Iteration0: Battery Test PASS
+2025-09-24 17:33:18.249325 - Iteration0: Location Test FAIL
+2025-09-24 17:33:28.760671 - Iteration 0: Motion Test FAIL
+2025-09-24 17:43:23.592639 - Iteration0: Current after Flashing Test PASS
+2025-09-24 17:43:37.901197 - Iteration0: Version Test PASS
+2025-09-24 17:43:51.329398 - Iteration0: Button_3 Test FAIL
+2025-09-24 17:44:01.760475 - Iteration0: Current consumption short press Test FAIL
+2025-09-24 17:44:15.981187 - Iteration0: Current consumption long press Test FAIL
+2025-09-24 17:44:50.052138 - Iteration0: POR sleep current Test PASS
+2025-09-24 17:45:07.456076 - Iteration0: Battery Test PASS
+2025-09-24 17:45:18.218880 - Iteration0: Location Test FAIL
+2025-09-24 17:45:28.729554 - Iteration 0: Motion Test FAIL
+2025-09-24 17:50:03.705329 - Iteration0: Current after Flashing Test PASS
+2025-09-24 17:50:14.443360 - Iteration0: Version Test PASS
+2025-09-24 17:50:28.743921 - Iteration0: Button_3 Test PASS
+2025-09-24 17:50:44.289095 - Iteration0: Current consumption short press Test FAIL
+2025-09-24 17:50:57.904713 - Iteration0: Current consumption long press Test PASS
+2025-09-24 17:51:31.940318 - Iteration0: POR sleep current Test PASS
+2025-09-24 17:51:48.186104 - Iteration0: Battery Test PASS
+2025-09-24 17:51:59.040229 - Iteration0: Location Test FAIL
+2025-09-24 17:52:09.556183 - Iteration 0: Motion Test FAIL
+2025-09-24 18:09:01.915144 - Iteration0: Current after Flashing Test PASS
+2025-09-24 18:09:11.888401 - Iteration0: Version Test FAIL
+2025-09-24 18:09:21.745456 - Iteration0: Button_3 Test FAIL
+2025-09-24 18:09:35.706829 - Iteration0: Current consumption short press Test PASS
+2025-09-24 18:09:50.600471 - Iteration0: Current consumption long press Test PASS
+2025-09-24 18:10:24.750229 - Iteration0: POR sleep current Test PASS
+2025-09-24 18:10:40.792554 - Iteration0: Battery Test PASS
+2025-09-24 18:10:56.405839 - Iteration0: Location Test FAIL
+2025-09-24 18:11:06.919596 - Iteration0: Motion Test PASS
+2025-09-24 18:23:13.573779 - Iteration0: Current after Flashing Test PASS
+2025-09-24 18:23:27.252513 - Iteration0: Version Test PASS
+2025-09-24 18:23:40.795883 - Iteration0: Button_3 Test PASS
+2025-09-24 18:23:56.222844 - Iteration0: Current consumption short press Test PASS
+2025-09-24 18:23:56.641842 - Iteration0: Button_03 current consumption Test FAIL
+2025-09-24 18:24:11.935747 - Iteration0: Current consumption long press Test PASS
+2025-09-24 18:24:45.948565 - Iteration0: POR sleep current Test FAIL
+2025-09-24 18:25:03.400181 - Iteration0: Battery Test PASS
+2025-09-24 18:25:14.188969 - Iteration0: Location Test FAIL
+2025-09-24 18:25:24.700351 - Iteration0: Motion Test PASS
+2025-09-24 18:38:18.860433 - Iteration0: Current after Flashing Test PASS
+2025-09-24 18:38:33.482239 - Iteration0: Version Test PASS
+2025-09-24 18:38:46.960074 - Iteration0: Button_3 Test PASS
+2025-09-24 18:39:01.121755 - Iteration0: Current consumption short press Test PASS
+2025-09-24 18:39:01.461613 - Iteration0: Button_03 current consumption Test FAIL
+2025-09-24 18:39:16.224401 - Iteration0: Current consumption long press Test PASS
+2025-09-24 18:39:50.329278 - Iteration0: POR sleep current Test FAIL
+2025-09-24 18:40:07.578965 - Iteration0: Battery Test PASS
+2025-09-24 18:40:18.490222 - Iteration0: Location Test FAIL
+2025-09-24 18:40:29.003728 - Iteration0: Motion Test PASS

@@ -1,0 +1,3385 @@
+[03/19/2025 19:48:00 004] - Andromeda Tag Firmware load process begin to proceed - 17459
+[03/19/2025 19:48:00 006] - "C:\ti\uniflash_6.3.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[03/19/2025 19:48:19 947] - Executing the following command:
+> "C:\ti\uniflash_6.3.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Performing Device Unlock via Mass Erase...
+Device Unlocked
+
+[03/19/2025 19:48:20 004] - Andromeda Tag Mass Erase successfully.
+[03/19/2025 19:48:20 005] - "C:\ti\uniflash_6.3.0\dslite.bat" -c "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[03/19/2025 19:51:09 655] - Executing the following command:
+> "C:\ti\uniflash_6.3.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "D:\DESK-DOWNLOAD\2025-03-18\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 11.0.0.2335
+Configuring Debugger (may take a few minutes on first launch)...
+	Parsing connections/TIXDS110_Connection.xml
+	Parsing drivers/tixds510icepick_c.xml
+	Parsing drivers/tixds510cs_dap.xml
+	Parsing drivers/tixds510cortexM.xml
+	Parsing devices/cc1352r1f3.xml
+	Parsing routers/icepick_c.xml
+	Parsing ..\Modules\ICEPickCHidden.xml
+	Parsing routers/cs_dap.xml
+	Parsing ..\Modules\cs_dap_NotVisible.xml
+	Parsing cpus/cortex_m4.xml
+	Parsing ..\Modules\cortexM4_NotVisible.xml
+	Parsing ../Modules/CC26xx/CC2652/ADI_4_AUX.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_BATMON.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_EVENT.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_IOC.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_PMCTL.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_RTC.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_AIODIO.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_ANAIF.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_EVCTL.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_MAC.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SCE.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SMPH.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SPIM.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SYSIF.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_TDC.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_TIMER01.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_TIMER2.xml
+	Parsing ../Modules/CC26xx/CC2652/CCFG.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_DWT.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_FPB.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_ITM.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_SCS.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_TIPROP.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_TPIU.xml
+	Parsing ../Modules/CC26xx/CC2652/CRYPTO.xml
+	Parsing ../Modules/CC26xx/CC2652/DDI_0_OSC.xml
+	Parsing ../Modules/CC26xx/CC2652/EVENT.xml
+	Parsing ../Modules/CC26xx/CC2652/FCFG1.xml
+	Parsing ../Modules/CC26xx/CC2652/FLASH.xml
+	Parsing ../Modules/CC26xx/CC2652/GPIO.xml
+	Parsing ../Modules/CC26xx/CC2652/GPT.xml
+	Parsing ../Modules/CC26xx/CC2652/I2C.xml
+	Parsing ../Modules/CC26xx/CC2652/I2S.xml
+	Parsing ../Modules/CC26xx/CC2652/IOC.xml
+	Parsing ../Modules/CC26xx/CC2652/PKA.xml
+	Parsing ../Modules/CC26xx/CC2652/PKA_INT.xml
+	Parsing ../Modules/CC26xx/CC2652/PRCM.xml
+	Parsing ../Modules/CC26xx/CC2652/RFC_DBELL.xml
+	Parsing ../Modules/CC26xx/CC2652/RFC_PWR.xml
+	Parsing ../Modules/CC26xx/CC2652/RFC_RAT.xml
+	Parsing ../Modules/CC26xx/CC2652/SMPH.xml
+	Parsing ../Modules/CC26xx/CC2652/SRAM_MMR.xml
+	Parsing ../Modules/CC26xx/CC2652/SSI.xml
+	Parsing ../Modules/CC26xx/CC2652/TRNG.xml
+	Parsing ../Modules/CC26xx/CC2652/UART.xml
+	Parsing ../Modules/CC26xx/CC2652/UDMA.xml
+	Parsing ../Modules/CC26xx/CC2652/VIMS.xml
+	Parsing ../Modules/CC26xx/CC2652/WDT.xml
+	Parsing ../Modules/CC26xx/CC2652/CC26x2_JSTATE_2_NotVisible.xml
+	Initializing Register Database...
+	Parsing C:\Users\RSSATH~1\AppData\Local\TEXASI~1\CCS\TICLOU~1\0\0\8171619852115344281.cache
+	Initializing: IcePick_C
+	Mapping registers: IcePick_C - Core Registers
+	Mapping registers: IcePick_C - Hidden
+	Building search data: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Mapping registers: CS_DAP_0 - Core Registers
+	Mapping registers: CS_DAP_0 - Hidden
+	Building search data: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Mapping registers: Cortex_M4_0 - Core Registers
+	Mapping registers: Cortex_M4_0 - AUX_ADI4
+	Mapping registers: Cortex_M4_0 - AON_BATMON
+	Mapping registers: Cortex_M4_0 - AON_EVENT
+	Mapping registers: Cortex_M4_0 - AON_IOC
+	Mapping registers: Cortex_M4_0 - AON_PMCTL
+	Mapping registers: Cortex_M4_0 - AON_RTC
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO0
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO1
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO2
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO3
+	Mapping registers: Cortex_M4_0 - AUX_ANAIF
+	Mapping registers: Cortex_M4_0 - AUX_EVCTL
+	Mapping registers: Cortex_M4_0 - AUX_MAC
+	Mapping registers: Cortex_M4_0 - AUX_SCE
+	Mapping registers: Cortex_M4_0 - AUX_SMPH
+	Mapping registers: Cortex_M4_0 - AUX_SPIM
+	Mapping registers: Cortex_M4_0 - AUX_SYSIF
+	Mapping registers: Cortex_M4_0 - AUX_TDC
+	Mapping registers: Cortex_M4_0 - AUX_TIMER01
+	Mapping registers: Cortex_M4_0 - AUX_TIMER2
+	Mapping registers: Cortex_M4_0 - CCFG
+	Mapping registers: Cortex_M4_0 - CPU_DWT
+	Mapping registers: Cortex_M4_0 - CPU_FPB
+	Mapping registers: Cortex_M4_0 - CPU_ITM
+	Mapping registers: Cortex_M4_0 - CPU_SCS
+	Mapping registers: Cortex_M4_0 - CPU_TIPROP
+	Mapping registers: Cortex_M4_0 - CPU_TPIU
+	Mapping registers: Cortex_M4_0 - CRYPTO
+	Mapping registers: Cortex_M4_0 - AUX_DDI0_OSC
+	Mapping registers: Cortex_M4_0 - EVENT
+	Mapping registers: Cortex_M4_0 - FCFG1
+	Mapping registers: Cortex_M4_0 - FLASH
+	Mapping registers: Cortex_M4_0 - GPIO
+	Mapping registers: Cortex_M4_0 - GPT0
+	Mapping registers: Cortex_M4_0 - GPT1
+	Mapping registers: Cortex_M4_0 - GPT2
+	Mapping registers: Cortex_M4_0 - GPT3
+	Mapping registers: Cortex_M4_0 - I2C0
+	Mapping registers: Cortex_M4_0 - I2S0
+	Mapping registers: Cortex_M4_0 - IOC
+	Mapping registers: Cortex_M4_0 - PKA
+	Mapping registers: Cortex_M4_0 - PKA_INT
+	Mapping registers: Cortex_M4_0 - PRCM
+	Mapping registers: Cortex_M4_0 - RFC_DBELL
+	Mapping registers: Cortex_M4_0 - RFC_PWR
+	Mapping registers: Cortex_M4_0 - RFC_RAT
+	Mapping registers: Cortex_M4_0 - SMPH
+	Mapping registers: Cortex_M4_0 - SRAM_MMR
+	Mapping registers: Cortex_M4_0 - SSI0
+	Mapping registers: Cortex_M4_0 - SSI1
+	Mapping registers: Cortex_M4_0 - TRNG
+	Mapping registers: Cortex_M4_0 - UART0
+	Mapping registers: Cortex_M4_0 - UART1
+	Mapping registers: Cortex_M4_0 - UDMA0
+	Mapping registers: Cortex_M4_0 - VIMS
+	Mapping registers: Cortex_M4_0 - WDT
+	Mapping registers: Cortex_M4_0 - Hidden
+	Building search data: Cortex_M4_0
+	Applying virtual groups: Cortex_M4_0 - EVENT
+	Applying virtual groups: Cortex_M4_0 - FLASH
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_6.3.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	loading DWARF line information
+	loading ELF symbols
+	loading ELF symbols: 1%
+	loading ELF symbols: 2%
+	loading ELF symbols: 3%
+	loading ELF symbols: 4%
+	loading ELF symbols: 5%
+	loading ELF symbols: 6%
+	sorting and removing duplicate symbols: 100%
+Loading Symbols: C:\ti\uniflash_6.3.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	loading DWARF Debug Info
+	loading DWARF Debug Info: 1%
+	loading DWARF Debug Info: 2%
+	loading DWARF Debug Info: 3%
+	loading DWARF Debug Info: 4%
+	loading DWARF Debug Info: 5%
+	loading DWARF Debug Info: 6%
+	loading DWARF Debug Info: 7%
+	loading DWARF Debug Info: 8%
+	loading DWARF Debug Info: 9%
+	loading DWARF Debug Info: 10%
+	loading DWARF Debug Info: 11%
+	loading DWARF Debug Info: 12%
+	loading DWARF Debug Info: 13%
+	loading DWARF Debug Info: 14%
+	loading DWARF Debug Info: 15%
+	loading DWARF Debug Info: 16%
+	loading DWARF Debug Info: 17%
+	loading DWARF Debug Info: 18%
+	loading DWARF Debug Info: 19%
+	loading DWARF Debug Info: 20%
+	loading DWARF Debug Info: 21%
+	loading DWARF Debug Info: 22%
+	loading DWARF Debug Info: 23%
+	loading DWARF Debug Info: 24%
+	loading DWARF Debug Info: 25%
+	loading DWARF Debug Info: 26%
+	loading DWARF Debug Info: 27%
+	loading DWARF Debug Info: 28%
+	loading DWARF Debug Info: 29%
+	loading DWARF Debug Info: 30%
+	loading DWARF Debug Info: 31%
+	loading DWARF Debug Info: 32%
+	loading DWARF Debug Info: 33%
+	loading DWARF Debug Info: 34%
+	loading DWARF Debug Info: 35%
+	loading DWARF Debug Info: 36%
+	loading DWARF Debug Info: 37%
+	loading DWARF Debug Info: 38%
+	loading DWARF Debug Info: 39%
+	loading DWARF Debug Info: 40%
+	loading DWARF Debug Info: 41%
+	loading DWARF Debug Info: 42%
+	loading DWARF Debug Info: 43%
+	loading DWARF Debug Info: 44%
+	loading DWARF Debug Info: 45%
+	loading DWARF Debug Info: 46%
+	loading DWARF Debug Info: 47%
+	loading DWARF Debug Info: 48%
+	loading DWARF Debug Info: 49%
+	loading DWARF Debug Info: 50%
+	loading DWARF Debug Info: 51%
+	loading DWARF Debug Info: 52%
+	loading DWARF Debug Info: 53%
+	loading DWARF Debug Info: 54%
+	loading DWARF Debug Info: 55%
+	loading DWARF Debug Info: 56%
+	loading DWARF Debug Info: 57%
+	loading DWARF Debug Info: 58%
+	loading DWARF Debug Info: 59%
+	loading DWARF Debug Info: 60%
+	loading DWARF Debug Info: 61%
+	loading DWARF Debug Info: 62%
+	loading DWARF Debug Info: 63%
+	loading DWARF Debug Info: 64%
+	loading DWARF Debug Info: 65%
+	loading DWARF Debug Info: 66%
+	loading DWARF Debug Info: 67%
+	loading DWARF Debug Info: 68%
+	loading DWARF Debug Info: 69%
+	loading DWARF Debug Info: 70%
+	loading DWARF Debug Info: 71%
+	loading DWARF Debug Info: 72%
+	loading DWARF Debug Info: 73%
+	loading DWARF Debug Info: 74%
+	loading DWARF Debug Info: 75%
+	loading DWARF Debug Info: 76%
+	loading DWARF Debug Info: 77%
+	loading DWARF Debug Info: 78%
+	loading DWARF Debug Info: 79%
+	loading DWARF Debug Info: 80%
+	loading DWARF Debug Info: 81%
+	loading DWARF Debug Info: 82%
+	loading DWARF Debug Info: 83%
+	loading DWARF Debug Info: 84%
+	loading DWARF Debug Info: 85%
+	loading DWARF Debug Info: 86%
+	loading DWARF Debug Info: 87%
+	loading DWARF Debug Info: 88%
+	loading DWARF Debug Info: 89%
+	loading DWARF Debug Info: 90%
+	loading DWARF Debug Info: 91%
+	loading DWARF Debug Info: 92%
+	loading DWARF Debug Info: 93%
+	loading DWARF Debug Info: 94%
+	loading DWARF Debug Info: 95%
+	loading DWARF Debug Info: 96%
+	loading ELF symbols: 96%
+	sorting and removing duplicate symbols: 100%
+Success
+
+[03/19/2025 19:51:09 657] - Andromeda Tag Firmware programmed.
+[03/19/2025 19:51:09 665] - Andromeda Tag firmware load process completed for TagId 17459 
+ 
+[03/19/2025 19:51:09 665] - C:\ti\uniflash_6.3.0\simplelink\imagecreator\bin\xds110reset.exe
+[03/19/2025 19:51:11 134] - 
+[03/19/2025 19:51:11 135] - Andromeda Tag reseted successfully. 
+
+[03/21/2025 17:29:47 254] - Andromeda Tag Firmware load process begin to proceed - 17460
+[03/21/2025 17:29:47 255] - "C:\ti\uniflash_6.3.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[03/21/2025 17:29:54 046] - Executing the following command:
+> "C:\ti\uniflash_6.3.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Failed: IcePick_C: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+
+[03/21/2025 17:29:54 049] - Andromeda Tag Mass Erase successfully.
+[03/21/2025 17:29:54 050] - "C:\ti\uniflash_6.3.0\dslite.bat" -c "E:\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "E:\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "E:\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "E:\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "E:\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "E:\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:10:08 023] - Andromeda Tag Firmware load process begin to proceed - 17460
+[05/16/2025 17:10:08 030] - "C:\ti\uniflash_6.3.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 17:10:08 037] - 
+[05/16/2025 17:10:08 041] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 17:10:08 047] - "C:\ti\uniflash_6.3.0\dslite.bat" -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:10:08 053] - 
+[05/16/2025 17:10:08 056] - Andromeda Tag Firmware loading process failed - 
+
+[05/16/2025 17:11:18 363] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[05/16/2025 17:11:18 365] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 17:11:29 753] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[05/16/2025 17:11:29 758] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 17:11:29 759] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:12:17 700] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Parsing connections/TIXDS110_Connection.xml
+	Parsing drivers/tixds510icepick_c.xml
+	Parsing drivers/tixds510cs_dap.xml
+	Parsing drivers/tixds510cortexM.xml
+	Parsing devices/cc1352r1f3.xml
+	Parsing routers/icepick_c.xml
+	Parsing ..\Modules\ICEPickCHidden.xml
+	Parsing routers/cs_dap.xml
+	Parsing ..\Modules\cs_dap_NotVisible.xml
+	Parsing cpus/cortex_m4.xml
+	Parsing ..\Modules\cortexM4_NotVisible.xml
+	Parsing ../Modules/CC26xx/CC2652/ADI_4_AUX.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_BATMON.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_EVENT.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_IOC.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_PMCTL.xml
+	Parsing ../Modules/CC26xx/CC2652/AON_RTC.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_AIODIO.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_ANAIF.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_EVCTL.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_MAC.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SCE.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SMPH.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SPIM.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_SYSIF.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_TDC.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_TIMER01.xml
+	Parsing ../Modules/CC26xx/CC2652/AUX_TIMER2.xml
+	Parsing ../Modules/CC26xx/CC2652/CCFG.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_DWT.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_FPB.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_ITM.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_SCS.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_TIPROP.xml
+	Parsing ../Modules/CC26xx/CC2652/CPU_TPIU.xml
+	Parsing ../Modules/CC26xx/CC2652/CRYPTO.xml
+	Parsing ../Modules/CC26xx/CC2652/DDI_0_OSC.xml
+	Parsing ../Modules/CC26xx/CC2652/EVENT.xml
+	Parsing ../Modules/CC26xx/CC2652/FCFG1.xml
+	Parsing ../Modules/CC26xx/CC2652/FLASH.xml
+	Parsing ../Modules/CC26xx/CC2652/GPIO.xml
+	Parsing ../Modules/CC26xx/CC2652/GPT.xml
+	Parsing ../Modules/CC26xx/CC2652/I2C.xml
+	Parsing ../Modules/CC26xx/CC2652/I2S.xml
+	Parsing ../Modules/CC26xx/CC2652/IOC.xml
+	Parsing ../Modules/CC26xx/CC2652/PKA.xml
+	Parsing ../Modules/CC26xx/CC2652/PKA_INT.xml
+	Parsing ../Modules/CC26xx/CC2652/PRCM.xml
+	Parsing ../Modules/CC26xx/CC2652/RFC_DBELL.xml
+	Parsing ../Modules/CC26xx/CC2652/RFC_PWR.xml
+	Parsing ../Modules/CC26xx/CC2652/RFC_RAT.xml
+	Parsing ../Modules/CC26xx/CC2652/SMPH.xml
+	Parsing ../Modules/CC26xx/CC2652/SRAM_MMR.xml
+	Parsing ../Modules/CC26xx/CC2652/SSI.xml
+	Parsing ../Modules/CC26xx/CC2652/TRNG.xml
+	Parsing ../Modules/CC26xx/CC2652/UART.xml
+	Parsing ../Modules/CC26xx/CC2652/UDMA.xml
+	Parsing ../Modules/CC26xx/CC2652/VIMS.xml
+	Parsing ../Modules/CC26xx/CC2652/WDT.xml
+	Parsing ../Modules/CC26xx/CC2652/CC26x2_JSTATE_2_NotVisible.xml
+	Initializing Register Database...
+	Parsing C:\Users\CHELUV~1\AppData\Local\TEXASI~1\CCS\TICLOU~1\0\0\8596110552771885545.cache
+	Initializing: IcePick_C
+	Mapping registers: IcePick_C - Core Registers
+	Mapping registers: IcePick_C - Hidden
+	Building search data: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Mapping registers: CS_DAP_0 - Core Registers
+	Mapping registers: CS_DAP_0 - Hidden
+	Building search data: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Mapping registers: Cortex_M4_0 - Core Registers
+	Mapping registers: Cortex_M4_0 - AUX_ADI4
+	Mapping registers: Cortex_M4_0 - AON_BATMON
+	Mapping registers: Cortex_M4_0 - AON_EVENT
+	Mapping registers: Cortex_M4_0 - AON_IOC
+	Mapping registers: Cortex_M4_0 - AON_PMCTL
+	Mapping registers: Cortex_M4_0 - AON_RTC
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO0
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO1
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO2
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO3
+	Mapping registers: Cortex_M4_0 - AUX_ANAIF
+	Mapping registers: Cortex_M4_0 - AUX_EVCTL
+	Mapping registers: Cortex_M4_0 - AUX_MAC
+	Mapping registers: Cortex_M4_0 - AUX_SCE
+	Mapping registers: Cortex_M4_0 - AUX_SMPH
+	Mapping registers: Cortex_M4_0 - AUX_SPIM
+	Mapping registers: Cortex_M4_0 - AUX_SYSIF
+	Mapping registers: Cortex_M4_0 - AUX_TDC
+	Mapping registers: Cortex_M4_0 - AUX_TIMER01
+	Mapping registers: Cortex_M4_0 - AUX_TIMER2
+	Mapping registers: Cortex_M4_0 - CCFG
+	Mapping registers: Cortex_M4_0 - CPU_DWT
+	Mapping registers: Cortex_M4_0 - CPU_FPB
+	Mapping registers: Cortex_M4_0 - CPU_ITM
+	Mapping registers: Cortex_M4_0 - CPU_SCS
+	Mapping registers: Cortex_M4_0 - CPU_TIPROP
+	Mapping registers: Cortex_M4_0 - CPU_TPIU
+	Mapping registers: Cortex_M4_0 - CRYPTO
+	Mapping registers: Cortex_M4_0 - AUX_DDI0_OSC
+	Mapping registers: Cortex_M4_0 - EVENT
+	Mapping registers: Cortex_M4_0 - FCFG1
+	Mapping registers: Cortex_M4_0 - FLASH
+	Mapping registers: Cortex_M4_0 - GPIO
+	Mapping registers: Cortex_M4_0 - GPT0
+	Mapping registers: Cortex_M4_0 - GPT1
+	Mapping registers: Cortex_M4_0 - GPT2
+	Mapping registers: Cortex_M4_0 - GPT3
+	Mapping registers: Cortex_M4_0 - I2C0
+	Mapping registers: Cortex_M4_0 - I2S0
+	Mapping registers: Cortex_M4_0 - IOC
+	Mapping registers: Cortex_M4_0 - PKA
+	Mapping registers: Cortex_M4_0 - PKA_INT
+	Mapping registers: Cortex_M4_0 - PRCM
+	Mapping registers: Cortex_M4_0 - RFC_DBELL
+	Mapping registers: Cortex_M4_0 - RFC_PWR
+	Mapping registers: Cortex_M4_0 - RFC_RAT
+	Mapping registers: Cortex_M4_0 - SMPH
+	Mapping registers: Cortex_M4_0 - SRAM_MMR
+	Mapping registers: Cortex_M4_0 - SSI0
+	Mapping registers: Cortex_M4_0 - SSI1
+	Mapping registers: Cortex_M4_0 - TRNG
+	Mapping registers: Cortex_M4_0 - UART0
+	Mapping registers: Cortex_M4_0 - UART1
+	Mapping registers: Cortex_M4_0 - UDMA0
+	Mapping registers: Cortex_M4_0 - VIMS
+	Mapping registers: Cortex_M4_0 - WDT
+	Mapping registers: Cortex_M4_0 - Hidden
+	Building search data: Cortex_M4_0
+	Applying virtual groups: Cortex_M4_0 - EVENT
+	Applying virtual groups: Cortex_M4_0 - FLASH
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 1181 labels: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[05/16/2025 17:12:17 703] - Andromeda Tag Firmware programmed.
+[05/16/2025 17:12:17 706] - Andromeda Tag firmware load process completed for TagId 17686523 
+ 
+[05/16/2025 17:12:17 707] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[05/16/2025 17:12:18 299] - 
+[05/16/2025 17:12:18 301] - Andromeda Tag reseted successfully. 
+
+[05/16/2025 17:22:19 904] - Failed to create firmware file - 17686524 
+ 
+[05/16/2025 17:22:48 806] - Failed to create firmware file - 17686524 
+ 
+[05/16/2025 17:22:52 469] - Failed to create firmware file - 17686524 
+ 
+[05/16/2025 17:22:56 923] - Failed to create firmware file - 17686524 
+ 
+[05/16/2025 17:23:23 373] - Andromeda Tag Firmware load process begin to proceed - 17686524
+[05/16/2025 17:23:23 377] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 17:23:27 753] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[05/16/2025 17:23:27 757] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 17:23:27 759] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:23:45 789] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[05/16/2025 17:23:45 796] - Andromeda Tag Firmware programmed.
+[05/16/2025 17:23:45 797] - Andromeda Tag firmware load process completed for TagId 17686524 
+ 
+[05/16/2025 17:23:45 797] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[05/16/2025 17:23:46 210] - 
+[05/16/2025 17:23:46 210] - Andromeda Tag reseted successfully. 
+
+[05/16/2025 17:24:36 441] - Failed to create firmware file - 17686525 
+ 
+[05/16/2025 17:24:47 433] - Failed to create firmware file - 17686525 
+ 
+[05/16/2025 17:27:47 109] - Failed to create firmware file - 17686525 
+ 
+[05/16/2025 17:28:18 364] - Failed to create firmware file - 17686525 
+ 
+[05/16/2025 17:28:30 374] - Andromeda Tag Firmware load process begin to proceed - 17686525
+[05/16/2025 17:28:30 374] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 17:28:34 425] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[05/16/2025 17:28:34 441] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 17:28:34 443] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:28:53 079] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[05/16/2025 17:28:53 079] - Andromeda Tag Firmware programmed.
+[05/16/2025 17:28:53 079] - Andromeda Tag firmware load process completed for TagId 17686525 
+ 
+[05/16/2025 17:28:53 079] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[05/16/2025 17:28:53 525] - 
+[05/16/2025 17:28:53 525] - Andromeda Tag reseted successfully. 
+
+[05/16/2025 17:34:03 745] - Andromeda Tag Firmware load process begin to proceed - 17686526
+[05/16/2025 17:34:03 754] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 17:34:08 733] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[05/16/2025 17:34:08 740] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 17:34:08 742] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:34:28 086] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 1181 labels: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[05/16/2025 17:34:28 090] - Andromeda Tag Firmware programmed.
+[05/16/2025 17:34:28 093] - Andromeda Tag firmware load process completed for TagId 17686526 
+ 
+[05/16/2025 17:34:28 095] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[05/16/2025 17:34:28 589] - 
+[05/16/2025 17:34:28 590] - Andromeda Tag reseted successfully. 
+
+[05/16/2025 17:34:38 329] - Failed to create firmware file - 17686527 
+ 
+[05/16/2025 17:36:26 335] - Failed to create firmware file - 17686527 
+ 
+[05/16/2025 17:37:14 812] - Failed to create firmware file - 17686527 
+ 
+[05/16/2025 17:41:18 103] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[05/16/2025 17:41:18 108] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 17:41:22 956] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[05/16/2025 17:41:22 959] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 17:41:22 961] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+[05/16/2025 17:41:41 620] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\SettingsFiles\generated.ufsettings" -e -f -v "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\Upgrader.bin",0x000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\UpdatedFirmware.bin",0x52000 "C:\Users\cheluvagb\Downloads\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Andromeda-Staff-Tag-V29-Pre-ReleaseV41.1.107\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[05/16/2025 17:41:41 622] - Andromeda Tag Firmware programmed.
+[05/16/2025 17:41:41 624] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[05/16/2025 17:41:41 625] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[05/16/2025 17:41:42 014] - 
+[05/16/2025 17:41:42 016] - Andromeda Tag reseted successfully. 
+
+[05/16/2025 18:13:31 835] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[05/16/2025 18:13:31 840] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[05/16/2025 18:13:36 262] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[05/16/2025 18:13:36 266] - Andromeda Tag Mass Erase successfully.
+[05/16/2025 18:13:36 268] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/22/2025 14:45:31 662] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/22/2025 14:45:31 670] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/22/2025 14:45:50 272] - Andromeda Tag Firmware load process begin to proceed - 17686524
+[09/22/2025 14:45:50 277] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:07:01 194] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:07:01 212] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:13:04 730] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:13:04 739] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:13:10 866] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:13:10 872] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:13:10 877] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:13:16 313] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Mapping registers: Cortex_M4_0 - Core Registers
+	Mapping registers: Cortex_M4_0 - AUX_ADI4
+	Mapping registers: Cortex_M4_0 - AON_BATMON
+	Mapping registers: Cortex_M4_0 - AON_EVENT
+	Mapping registers: Cortex_M4_0 - AON_IOC
+	Mapping registers: Cortex_M4_0 - AON_PMCTL
+	Mapping registers: Cortex_M4_0 - AON_RTC
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO0
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO1
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO2
+	Mapping registers: Cortex_M4_0 - AUX_AIODIO3
+	Mapping registers: Cortex_M4_0 - AUX_ANAIF
+	Mapping registers: Cortex_M4_0 - AUX_EVCTL
+	Mapping registers: Cortex_M4_0 - AUX_MAC
+	Mapping registers: Cortex_M4_0 - AUX_SCE
+	Mapping registers: Cortex_M4_0 - AUX_SMPH
+	Mapping registers: Cortex_M4_0 - AUX_SPIM
+	Mapping registers: Cortex_M4_0 - AUX_SYSIF
+	Mapping registers: Cortex_M4_0 - AUX_TDC
+	Mapping registers: Cortex_M4_0 - AUX_TIMER01
+	Mapping registers: Cortex_M4_0 - AUX_TIMER2
+	Mapping registers: Cortex_M4_0 - CCFG
+	Mapping registers: Cortex_M4_0 - CPU_DWT
+	Mapping registers: Cortex_M4_0 - CPU_FPB
+	Mapping registers: Cortex_M4_0 - CPU_ITM
+	Mapping registers: Cortex_M4_0 - CPU_SCS
+	Mapping registers: Cortex_M4_0 - CPU_TIPROP
+	Mapping registers: Cortex_M4_0 - CPU_TPIU
+	Mapping registers: Cortex_M4_0 - CRYPTO
+	Mapping registers: Cortex_M4_0 - AUX_DDI0_OSC
+	Mapping registers: Cortex_M4_0 - EVENT
+	Mapping registers: Cortex_M4_0 - FCFG1
+	Mapping registers: Cortex_M4_0 - FLASH
+	Mapping registers: Cortex_M4_0 - GPIO
+	Mapping registers: Cortex_M4_0 - GPT0
+	Mapping registers: Cortex_M4_0 - GPT1
+	Mapping registers: Cortex_M4_0 - GPT2
+	Mapping registers: Cortex_M4_0 - GPT3
+	Mapping registers: Cortex_M4_0 - I2C0
+	Mapping registers: Cortex_M4_0 - I2S0
+	Mapping registers: Cortex_M4_0 - IOC
+	Mapping registers: Cortex_M4_0 - PKA
+	Mapping registers: Cortex_M4_0 - PKA_INT
+	Mapping registers: Cortex_M4_0 - PRCM
+	Mapping registers: Cortex_M4_0 - RFC_DBELL
+	Mapping registers: Cortex_M4_0 - RFC_PWR
+	Mapping registers: Cortex_M4_0 - RFC_RAT
+	Mapping registers: Cortex_M4_0 - SMPH
+	Mapping registers: Cortex_M4_0 - SRAM_MMR
+	Mapping registers: Cortex_M4_0 - SSI0
+	Mapping registers: Cortex_M4_0 - SSI1
+	Mapping registers: Cortex_M4_0 - TRNG
+	Mapping registers: Cortex_M4_0 - UART0
+	Mapping registers: Cortex_M4_0 - UART1
+	Mapping registers: Cortex_M4_0 - UDMA0
+	Mapping registers: Cortex_M4_0 - VIMS
+	Mapping registers: Cortex_M4_0 - WDT
+	Mapping registers: Cortex_M4_0 - Hidden
+	Building search data: Cortex_M4_0
+	Applying virtual groups: Cortex_M4_0 - EVENT
+	Applying virtual groups: Cortex_M4_0 - FLASH
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 09:13:16 320] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 09:16:16 730] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:16:16 738] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:16:22 140] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:16:22 151] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:16:22 154] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:18:54 247] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:18:54 253] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:18:58 826] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:18:58 829] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:18:58 829] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:19:03 693] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 09:19:03 705] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 09:20:23 617] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:20:23 621] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:20:28 217] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:20:28 221] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:20:28 223] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:20:32 657] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 09:20:32 662] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 09:20:42 832] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:20:42 832] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:20:47 639] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:20:47 669] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:20:47 673] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:20:52 985] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 09:20:52 991] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 09:36:49 650] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:36:49 653] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:36:53 687] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:36:53 689] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:36:53 691] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:36:58 497] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 09:36:58 497] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 09:37:43 810] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 09:37:43 815] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 09:37:48 649] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 09:37:48 654] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 09:37:48 655] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 09:37:52 669] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 09:37:52 672] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 10:00:14 143] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 10:00:14 152] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 10:00:20 054] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 10:00:20 062] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 10:00:20 064] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 10:00:24 639] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 10:00:24 645] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 10:09:25 191] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 10:09:25 198] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 10:09:30 275] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 10:09:30 278] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 10:09:30 279] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 10:09:34 200] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 10:09:34 205] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 10:09:50 505] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 10:09:50 509] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 10:09:55 054] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 10:09:55 060] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 10:09:55 064] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 10:09:58 845] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 10:09:58 849] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 11:41:41 852] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 11:41:41 863] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 11:41:48 721] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 11:41:48 733] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 11:41:48 737] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 11:41:54 224] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+fatal: Cortex_M4_0: Error connecting to the target: (Error -1274 @ 0x0) Error encountered during connect sequence.  The specific reason is unknown but may be the result of trying to access a Core or logic that is inaccessible due to a lack of Power, Clocks, or Authentication (i.e. Security is preventing).  If blocked by security, and if supported, access may be allowed after following the Authentication process. (Emulation package 12.7.0.00130) 
+Failed: Operation was aborted on 'Cortex_M4_0'
+
+[09/23/2025 11:41:54 228] - Andromeda Tag Firmware loading process failed - 
+
+[09/23/2025 19:42:07 768] - Andromeda Tag Firmware load process begin to proceed - 17686523
+[09/23/2025 19:42:07 780] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 19:42:17 660] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 19:42:17 669] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 19:42:17 671] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 19:42:41 545] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/23/2025 19:42:41 553] - Andromeda Tag Firmware programmed.
+[09/23/2025 19:42:41 558] - Andromeda Tag firmware load process completed for TagId 17686523 
+ 
+[09/23/2025 19:42:41 561] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/23/2025 19:42:42 168] - 
+[09/23/2025 19:42:42 171] - Andromeda Tag reseted successfully. 
+
+[09/23/2025 19:52:37 720] - Andromeda Tag Firmware load process begin to proceed - 17686524
+[09/23/2025 19:52:37 732] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 19:52:44 174] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 19:52:44 180] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 19:52:44 183] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 19:53:07 321] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 71 globals: 90%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/23/2025 19:53:07 328] - Andromeda Tag Firmware programmed.
+[09/23/2025 19:53:07 335] - Andromeda Tag firmware load process completed for TagId 17686524 
+ 
+[09/23/2025 19:53:07 340] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/23/2025 19:53:08 020] - 
+[09/23/2025 19:53:08 024] - Andromeda Tag reseted successfully. 
+
+[09/23/2025 20:09:22 842] - Andromeda Tag Firmware load process begin to proceed - 17686525
+[09/23/2025 20:09:22 852] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 20:09:29 707] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 20:09:29 711] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 20:09:29 712] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 20:09:50 401] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/23/2025 20:09:50 414] - Andromeda Tag Firmware programmed.
+[09/23/2025 20:09:50 426] - Andromeda Tag firmware load process completed for TagId 17686525 
+ 
+[09/23/2025 20:09:50 429] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/23/2025 20:09:51 099] - 
+[09/23/2025 20:09:51 103] - Andromeda Tag reseted successfully. 
+
+[09/23/2025 20:30:13 069] - Andromeda Tag Firmware load process begin to proceed - 17686526
+[09/23/2025 20:30:13 081] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/23/2025 20:30:19 890] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/23/2025 20:30:19 899] - Andromeda Tag Mass Erase successfully.
+[09/23/2025 20:30:19 901] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/23/2025 20:30:42 627] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 1181 labels: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/23/2025 20:30:42 633] - Andromeda Tag Firmware programmed.
+[09/23/2025 20:30:42 638] - Andromeda Tag firmware load process completed for TagId 17686526 
+ 
+[09/23/2025 20:30:42 640] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/23/2025 20:30:43 129] - 
+[09/23/2025 20:30:43 131] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 14:21:43 426] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 14:21:43 433] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 14:21:50 252] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 14:21:50 255] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 14:21:50 257] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:09:16 696] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 15:09:16 705] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:09:22 439] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:09:22 445] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:09:22 449] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:09:42 710] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:09:42 716] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:09:42 720] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 15:09:42 723] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:09:43 248] - 
+[09/24/2025 15:09:43 250] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 15:16:14 169] - Andromeda Tag Firmware load process begin to proceed - 17686528
+[09/24/2025 15:16:14 171] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:16:19 253] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:16:19 263] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:16:19 265] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:16:39 493] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 files: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:16:39 502] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:16:39 515] - Andromeda Tag firmware load process completed for TagId 17686528 
+ 
+[09/24/2025 15:16:39 519] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:16:40 135] - 
+[09/24/2025 15:16:40 137] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 15:18:11 264] - Andromeda Tag Firmware load process begin to proceed - 17686529
+[09/24/2025 15:18:11 266] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:18:15 566] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:18:15 577] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:18:15 577] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:18:35 493] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 71 globals: 90%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:18:35 508] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:18:35 514] - Andromeda Tag firmware load process completed for TagId 17686529 
+ 
+[09/24/2025 15:18:35 516] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:18:36 139] - 
+[09/24/2025 15:18:36 139] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 15:20:37 339] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 15:20:37 346] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:20:42 392] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:20:42 403] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:20:42 408] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:21:02 482] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:21:02 489] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:21:02 495] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 15:21:02 499] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:21:03 006] - 
+[09/24/2025 15:21:03 009] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 15:37:49 698] - Andromeda Tag Firmware load process begin to proceed - 17686528
+[09/24/2025 15:37:49 710] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:37:56 424] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:37:56 432] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:37:56 439] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:38:17 112] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:38:17 118] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:38:17 124] - Andromeda Tag firmware load process completed for TagId 17686528 
+ 
+[09/24/2025 15:38:17 125] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:38:17 821] - 
+[09/24/2025 15:38:17 825] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 15:40:01 362] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 15:40:01 368] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:40:06 954] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:40:06 968] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:40:06 972] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:40:27 928] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:40:27 934] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:40:27 945] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 15:40:27 950] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:40:28 384] - 
+[09/24/2025 15:40:28 385] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 15:47:03 614] - Andromeda Tag Firmware load process begin to proceed - 17686528
+[09/24/2025 15:47:03 625] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:48:29 449] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 15:48:29 456] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 15:48:34 726] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 15:48:34 732] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 15:48:34 737] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 15:48:56 263] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 15:48:56 270] - Andromeda Tag Firmware programmed.
+[09/24/2025 15:48:56 277] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 15:48:56 282] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 15:48:56 732] - 
+[09/24/2025 15:48:56 734] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 16:00:35 349] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 16:00:35 355] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 16:00:41 565] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 16:00:41 573] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 16:00:41 575] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 16:01:02 801] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 16:01:02 807] - Andromeda Tag Firmware programmed.
+[09/24/2025 16:01:02 814] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 16:01:02 817] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 16:01:03 198] - 
+[09/24/2025 16:01:03 202] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 16:06:42 389] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 16:06:42 395] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 16:06:47 492] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 16:06:47 509] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 16:06:47 512] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 16:07:07 829] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 16:07:07 839] - Andromeda Tag Firmware programmed.
+[09/24/2025 16:07:07 849] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 16:07:07 855] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 16:07:08 535] - 
+[09/24/2025 16:07:08 539] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 17:12:32 063] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 17:12:32 069] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 17:12:38 661] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 17:12:38 673] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 17:12:38 677] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 17:13:00 139] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 17:13:00 146] - Andromeda Tag Firmware programmed.
+[09/24/2025 17:13:00 151] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 17:13:00 156] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 17:13:00 719] - 
+[09/24/2025 17:13:00 722] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 17:19:24 044] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 17:19:24 048] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 17:19:29 554] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 17:19:29 573] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 17:19:29 580] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 17:19:50 646] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 1181 labels: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 17:19:50 650] - Andromeda Tag Firmware programmed.
+[09/24/2025 17:19:50 653] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 17:19:50 654] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 17:19:51 045] - 
+[09/24/2025 17:19:51 046] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 17:24:19 421] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 17:24:19 425] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 17:24:24 180] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 17:24:24 182] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 17:24:24 184] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 17:24:44 897] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 17:24:44 904] - Andromeda Tag Firmware programmed.
+[09/24/2025 17:24:44 912] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 17:24:44 916] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 17:24:45 674] - 
+[09/24/2025 17:24:45 676] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 17:30:38 784] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 17:30:38 788] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 17:30:45 386] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 17:30:45 395] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 17:30:45 400] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 17:31:06 668] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 files: 70%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 17:31:06 682] - Andromeda Tag Firmware programmed.
+[09/24/2025 17:31:06 697] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 17:31:06 703] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 17:31:07 318] - 
+[09/24/2025 17:31:07 321] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 17:42:40 487] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 17:42:40 493] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 17:42:46 787] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 17:42:46 795] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 17:42:46 800] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 17:43:08 965] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Finish indexing 62 labels: 90%
+	Finish indexing 62 labels: 100%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 17:43:08 969] - Andromeda Tag Firmware programmed.
+[09/24/2025 17:43:08 972] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 17:43:08 975] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 17:43:09 407] - 
+[09/24/2025 17:43:09 412] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 17:49:21 138] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 17:49:21 149] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 17:49:25 844] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 17:49:25 853] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 17:49:25 859] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 17:49:46 576] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 globals: 80%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 364 functions: 80%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 17:49:46 580] - Andromeda Tag Firmware programmed.
+[09/24/2025 17:49:46 588] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 17:49:46 591] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 17:49:47 090] - 
+[09/24/2025 17:49:47 094] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 18:08:18 719] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 18:08:18 725] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 18:08:24 999] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 18:08:25 007] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 18:08:25 013] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 18:08:46 439] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 1181 labels: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 18:08:46 446] - Andromeda Tag Firmware programmed.
+[09/24/2025 18:08:46 453] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 18:08:46 458] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 18:08:47 226] - 
+[09/24/2025 18:08:47 229] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 18:22:30 571] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 18:22:30 578] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 18:22:36 882] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 18:22:36 895] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 18:22:36 899] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 18:22:58 310] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 62 labels: 100%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 18:22:58 321] - Andromeda Tag Firmware programmed.
+[09/24/2025 18:22:58 330] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 18:22:58 334] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 18:22:59 013] - 
+[09/24/2025 18:22:59 015] - Andromeda Tag reseted successfully. 
+
+[09/24/2025 18:37:37 010] - Andromeda Tag Firmware load process begin to proceed - 17686527
+[09/24/2025 18:37:37 018] - "C:\ti\uniflash_8.7.0\dslite.bat" --mode cc13xx-cc26xx-mass-erase -d XDS110
+[09/24/2025 18:37:44 796] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" cc13xx-cc26xx-mass-erase -d XDS110
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+Cortex_M3_0: GEL Output: Memory Map Initialization Complete.
+Performing Device Unlock via Mass Erase...
+Cortex_M3_0: MassErase(): Initializing.
+Cortex_M3_0: MassErase(): Issuing Board Reset.
+Cortex_M3_0: MassErase(): Mass erase complete.
+Device Unlocked
+
+[09/24/2025 18:37:44 806] - Andromeda Tag Mass Erase successfully.
+[09/24/2025 18:37:44 809] - "C:\ti\uniflash_8.7.0\dslite.bat" -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+[09/24/2025 18:38:11 485] - Executing the following command:
+> "C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\DebugServer\bin\DSLite" flash -c "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\CC1352R1\XDS110\cc1352r1f3.ccxml" -l "C:\EmbeddedTestingAutomation\Scripts\SettingsFiles\generated.ufsettings" -e -f -v "C:\EmbeddedTestingAutomation\Scripts\Firmware\Upgrader.bin",0x000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\AndromedaTag_1_1.bin",0x8000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\UpdatedFirmware.bin",0x52000 "C:\EmbeddedTestingAutomation\Scripts\Firmware\BootLoader.bin",0x56000
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+DSLite version 12.7.0.3382
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Initializing: IcePick_C
+	Executing Startup Scripts: IcePick_C
+	Initializing: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_M4_0
+	Executing Startup Scripts: Cortex_M4_0
+Connecting...
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
+Cortex_M4_0: GEL Output: Board Reset Complete.
+Loading Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+	Setting PC to entry point.: 96%
+Verifying Program: Multiple Files
+	Preparing ... 
+	0 of 27812 at 0x0
+	0 of 32752 at 0x8000: 10%
+	0 of 32752 at 0xfff0: 22%
+	0 of 32752 at 0x17fe0: 34%
+	0 of 32752 at 0x1ffd0: 46%
+	0 of 32752 at 0x27fc0: 58%
+	0 of 32752 at 0x2ffb0: 70%
+	0 of 21804 at 0x37fa0: 82%
+	0 of 16384 at 0x52000: 90%
+GEL Expression: OnFileLoaded( 0, 0, 1)
+	0 of 8192 at 0x56000: 96%
+	Finished: 96%
+info: Cortex_M4_0: Program verification successful for Multiple Files
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_rtos_rom_syms.out
+	sorting and removing duplicate symbols: 100%
+	Loading object file: 100%
+	Finish loading object file: 100%
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 0 files: 60%
+	Finish indexing 0 functions: 70%
+	Finish indexing 0 functions: 80%
+	Finish indexing 0 globals: 80%
+	Finish indexing 1181 labels: 90%
+	Finish indexing 1181 labels: 100%
+	Finish indexing 0 user defined types: 100%
+Loading Symbols: C:\ti\uniflash_8.7.0\deskdb\content\TICloudAgent\win\ccs_base\emulation\gel/images/cc26xx/cc26x2r1f_driverlib_rom_syms.out
+	Loading object file
+	Finish loading object file
+	Initialize internal indices : 50%
+	Initialize internal indices : 60%
+	Finish indexing 91 files: 60%
+	Finish indexing 364 functions: 70%
+	Finish indexing 71 globals: 80%
+	Finish indexing 62 labels: 90%
+	Finish indexing 1110 user defined types: 100%
+Success
+
+[09/24/2025 18:38:11 496] - Andromeda Tag Firmware programmed.
+[09/24/2025 18:38:11 507] - Andromeda Tag firmware load process completed for TagId 17686527 
+ 
+[09/24/2025 18:38:11 516] - C:\ti\uniflash_8.7.0\simplelink\imagecreator\bin\xds110reset.exe
+[09/24/2025 18:38:12 030] - 
+[09/24/2025 18:38:12 033] - Andromeda Tag reseted successfully. 
+

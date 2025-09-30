@@ -1,0 +1,183 @@
+﻿"Feature/Function
+(Category)","Test Area 
+(Test ID)","Test Case (Description)
+Execution","Precondition
+(Inputs)",Test Procedures (Steps),Expected Results,Created By,"Actual Results
+(Observed Outputs)",JIRA ID #,Comments,Tested by,
+General,DPS_BLE_only-1,Flash the tag with new FW,Tag is Unpaired with Star,Download the V41.1.118 FW from the production tool and  flash it on the tag,"1. check the tag is entering the  BLE.
+2.verify the default setting as per the spec.
+",Sagar,pass,,,,Already covered in main test plan
+General,DPS_BLE_only-2,"Flash the tag with new FW, verify the Factory sleep by key press",Tag is Unpaired with Star,pess and hold the any key for more the 5 sec,when press and hold the key the led should blink is reverse order and tage should enter into factory sleep.,Sagar,pass,,,,Already covered in main test plan
+General,DPS_BLE_only-3,"Flash the tag with new FW, verify the Inventory sleep",Tag is Unpaired with Star,"1. using mobile application send the inventery sleep command.
+2. after sending the command wake up the tage by pressing the key press",after sending the command and after waking up led should blink in forword direction,Sagar,pass,,,,Already covered in main test plan
+General,DPS_BLE_only-4,"Flash the tag with new FW, switching from Orion and Pegasus platform by BLE",Tag is Unpaired with Star,"1. set a tag to BLE mode by key press.
+2. send a switch to Pegasus platform command bu  the mobile application.
+3. again set a tag to BLE mode by key press","1.check the tage is entering the  BLE.
+2.verify the default setting as per the spec.
+3. verify the version number, key press and voltage displayed properly in mobile application",Sagar,pass,,,,Already covered in main test plan
+General,DPS_BLE_only-5,"switching from Orion and Pegasus platform by BLE, verify the Inventory sleep",Tag is Unpaired with Star,"1. using mobile application send the inventery sleep command.
+2. after sending the command wake up the tage by pressing the key press",after sending the command and after waking up led should blink in forword direction,Sagar,pass,,,,Already covered in main test plan
+General,DPS_BLE_only-6,"verify the FW, MF and tag ID",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer",check the data in the sniffer is show properly in sniffer,Sagar,pass,,,,Already covered in main test plan
+Virgin Active state after flashing,DPS_BLE_only-7,"Virgin Active state, aggressive page request (4 request) with 1.5 sec interval in both platform",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer",Tag will start sending aggressive page request (4 request) with 1.5 sec interval in both Orion and Pegasus platform.,Sagar,pass,,,,
+Virgin Active state after flashing,DPS_BLE_only-8, Virgin Active state 3xRF active page request,Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer and Core server","1.Tag will start sending page request (3 set) with 24.5+6 sec interval in both Orion and Pegasus platform.
+2. 1set = (24.5sec+6sec)",Sagar,pass,,,,
+Virgin Active state after flashing,DPS_BLE_only-9,"Virgin active state, tag  receives Only BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will get rested.
+2.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+3. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+4.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,pass,,,,
+Virgin Active state after flashing,DPS_BLE_only-10,"Virgin active state, when tag is in BLE only mode, apply the motion or key press",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will not get affected.
+2. Tag will continue to do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,pass,,,,
+Virgin Active state after flashing,DPS_BLE_only-11,"Virgin active state, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the UHF only or UHF+BLE command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will enter in virgin active state UHF.
+2. Tag will start sending page request (3 set) with 24.5+6 sec interval in both Orion and Pegasus platform.",Sagar,pass,,,,
+Virgin Active state after invertery sleep ,DPS_BLE_only-12,"Virgin Active state, aggressive page request (4 request) with 1.5 sec interval in both platform",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer",Tag will start sending aggressive page request (4 request) with 1.5 sec interval in both Orion and Pegasus platform.,Sagar,pass,,,,
+Virgin Active state after invertery sleep ,DPS_BLE_only-13, Virgin Active state 3xRF active page request,Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer and Core server","1.Tag will start sending page request (3 set) with 24.5+6 sec interval in both Orion and Pegasus platform.
+2. 1set = (24.5sec+6sec)",Sagar,pass,,,,
+Virgin Active state after invertery sleep ,DPS_BLE_only-14,"Virgin active state, tag  receives Only BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will get rested.
+2.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+3. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+4.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,pass,,,,
+Virgin Active state after invertery sleep ,DPS_BLE_only-15,"Virgin active state, when tag is in BLE only mode, apply the motion or key press",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will not get affected.
+2. Tag will continue to do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Virgin Active state after invertery sleep ,DPS_BLE_only-16,"Virgin active state, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the UHF only or UHF+BLE command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will enter in virgin active state UHF.
+2. Tag will start sending page request (3 set) with 24.5+6 sec interval in both Orion and Pegasus platform.",Sagar,,,,,
+Virgin Active state after factory sleep ,DPS_BLE_only-17,"Virgin Active state, aggressive page request (4 request) with 1.5 sec interval in both platform",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer",Tag will start sending aggressive page request (4 request) with 1.5 sec interval in both Orion and Pegasus platform.,Sagar,,,,,
+Virgin Active state after factory sleep ,DPS_BLE_only-18, Virgin Active state 3xRF active page request,Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer and Core server","1.Tag will start sending page request (3 set) with 24.5+6 sec interval in both Orion and Pegasus platform.
+2. 1set = (24.5sec+6sec)",Sagar,,,,,
+Virgin Active state after factory sleep ,DPS_BLE_only-19,"Virgin active state, tag  receives Only BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will get rested.
+2.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+3. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+4.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Virgin Active state after factory sleep ,DPS_BLE_only-20,"Virgin active state, when tag is in BLE only mode, apply the motion or key press",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will not get affected.
+2. Tag will continue to do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Virgin Active state after factory sleep ,DPS_BLE_only-21,"Virgin active state, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in Virging Active state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the UHF only or UHF+BLE command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will enter in virgin active state UHF.
+2. Tag will start sending page request (3 set) with 24.5+6 sec interval in both Orion and Pegasus platform.",Sagar,,,,,
+Applied sleep state,DPS_BLE_only-22,"Tag will send consecutive page request in both Orion and Pegasus with 1 min/5min/30min interval for 10 sets.
+Note : 1 set =( 60+6)sec in both  platform
+1 set = (300+6)sec in both platform
+1set = (1800+6) sec in both platform",Tag is Unpaired with Star,"1.Set the tag in applied sleep state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer",Tag should send 10 set of page request in Both Orion and Pegasus in all the 3 time 1/5/30 min (1 min once -> 1 orion + 1 pegasus),Sagar,,,,,
+Applied sleep state,DPS_BLE_only-23,"Applied sleep state, tag  receives Only BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in applied sleep state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will get rested.
+2.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+3. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+4.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Applied sleep state,DPS_BLE_only-24,"Applied sleep state, when tag is in BLE only mode, apply the motion or key press",Tag is Unpaired with Star,"1.Set the tag in applied sleep state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will not get affected.
+2. Tag will continue to do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Applied sleep state,DPS_BLE_only-25,"Applied sleep state, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in applied sleep state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the UHF only or UHF+BLE command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will enter in Applied sleep state UHF.
+2. Tag will start follow Applied sleep state paging sequencein both Orion and Pegasus platform. 1/5/30 min paging",Sagar,,,,,
+Dynamic Platform Switcning  Async,DPS_BLE_only-26,"Tag will send 3location packet and 2 psuedo page request, when tag is not able to connected to star.
+Example, Orion will be considered as last registered platform.",Tag is Unpaired with Star,"1.Set the tag in DPS state and set platform as Orion or Pegasus.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer and Core server","Tag will send 3LP +2PSP+3LP+2PSP+3LP in last registered platform. (Orion)
+LP = location packet
+SP = Psuedo page",Sagar,,,,,
+Dynamic Platform Switcning Async,DPS_BLE_only-27,"after psuedo tag will do aggressive page request (4 request) with 1.5 sec interval in last platform
+Example, Orion will be considered as last registered platform.",Tag is Unpaired with Star,"1.Set the tag in DPS state and set platform as Orion or Pegasus.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer and Core server",Tag will start sending aggressive page request (4 request) with 1.5 sec intervalin last registered platform (Orion),Sagar,,,,,
+Dynamic Platform Switcning  Async,DPS_BLE_only-28,"Tag will start sending 12 set of page request in last registered platform. (1 set = 2 page request (24.5sec+6sec) in acive mode and 3 page request in sleep).
+Example, Orion will be considered as last registered platform.",Tag is Unpaired with Star,"1.Set the tag in DPS state and set platform as Orion or Pegasus.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. Record the Pagerequest in Sniffer and Core server","1.Tag should have sent 12 set of page request in last registered platform. (Orion).
+2. Tag will send the 2 set page in pegasus platform.
+3. Tag should do total 42 set page request",Sagar,,,,,
+Dynamic Platform Switcning  Async,DPS_BLE_only-29,"Dynamic Platform Switcning  Async ,tag  receives Only BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in DPS state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will get rested.
+2.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+3. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+4.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Dynamic Platform Switcning  Async,DPS_BLE_only-30,"Dynamic Platform Switcning  Async, when tag is in BLE only mode, apply the motion or key press",Tag is Unpaired with Star,"1.Set the tag in DPS state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the BLE only command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will not get affected.
+2. Tag will continue to do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Dynamic Platform Switcning  Async,DPS_BLE_only-31,"Dynamic Platform Switcning  Async, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is Unpaired with Star,"1.Set the tag in DPS state.
+2. Disable TX for Stars though Set RF RX / TX state command.
+3. send the UHF only or UHF+BLE command through mobile application.
+4. Record the Pagerequest in Sniffer","1. Tag will enter in DPS state UHF.
+2. Tag will start to follow Dynamic Platform Switcning paging sequence 12 set last+2 set in other platform, total 42 set",Sagar,,,,,
+Dynamic Platform Switcning  Sync orion  ,DPS_BLE_only-32,"Dynamic Platform Switcning  sync ,tag  receives Only BLE profile ",Tag is paired with Star,"1.Set the tag in DPS state.
+2. send the BLE only command through core server.
+3. Record the Pagerequest in Sniffer","1. Tag will be doing the normal operation
+2. when tag receive BLE only command ,Tag will get rested.
+3.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+4. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+5.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Dynamic Platform Switcning  Sync orion  ,DPS_BLE_only-33,"Dynamic Platform Switcning  sync, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is paired with Star,"1.Set the tag in DPS state.
+2. send the UHF only or UHF+BLE command through mobile application.
+3. Record the Pagerequest in Sniffer","1. Tag will enter in DPS state UHF.
+2. Tag  will send location packet get connected with star.",Sagar,,,,,
+Dynamic Platform Switcning  Sync pegasus,DPS_BLE_only-34,"Dynamic Platform Switcning  sync ,tag  receives Only BLE profile ",Tag is paired with Star,"1.Set the tag in DPS state.
+2. send the BLE only command through core server.
+3. Record the Pagerequest in Sniffer","1. Tag will be doing the normal operation
+2. when tag receive BLE only command ,Tag will get rested.
+3.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+4. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+5.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.",Sagar,,,,,
+Dynamic Platform Switcning  Sync pegasus,DPS_BLE_only-35,"Dynamic Platform Switcning  sync, when tag is in BLE only mode, tag  receives UHF only or UHF+ BLE profile no change in platform and state.",Tag is paired with Star,"1.Set the tag in DPS state.
+2. send the UHF only or UHF+BLE command through mobile application.
+3. Record the Pagerequest in Sniffer","1. Tag will enter in DPS state UHF.
+2. Tag  will send location packet get connected with star.",Sagar,,,,,
+Dynamic Platform Switcning  Sync. Star id is 311 ,DPS_BLE_only-36,"Dynamic Platform Switcning  sync ,tag  receives Only BLE profile, star id is set to 311",Tag is paired with Star,"1.Set the tag in DPS state.
+2. send the BLE only command through core server.
+3. Record the Pagerequest in Sniffer","1. Tag will get rested.
+2.Tag will start sending aggressive page request (4 request) with 1.5sec in last know platform.
+3. Tag will start sending page request (1 set) with 24.5+6 sec.n last know platform.
+4.Tag will do paging in LastKnowPlatform at 5 min interval+6sec+6sec.
+5. Tag will not connect with the star, only it will do the paging in LastKnowPlatform",Sagar,,,,,
+Dynamic Platform Switcning  Sync. Star id is 4095,DPS_BLE_only-37,"Dynamic Platform Switcning  sync ,tag  receives Only BLE profile, star id is set to 4095",Tag is paired with Star,"1.Set the tag in DPS state.
+2. send the BLE only command through core server.
+3. chang the star id 4095 
+4. Record the Pagerequest in Sniffer","After changing the star Id 4095, the tag  will send location packet get connected with star.",Sagar,,,,,

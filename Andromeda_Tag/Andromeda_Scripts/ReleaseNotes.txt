@@ -1,0 +1,847 @@
+Andromeda-Staff-Tag-29-Pre-ReleaseV41.1.107 : 19-03-2025
+========================================================
+1) When the Tag receives the "switch to Orion" command from the server, update the command in the location data and switch the platform from Pegasus to Orion.
+2) When the Tag receives the "switch to Orion" command from the mobile app, immediately switch the platform from Pegasus to Orion.
+3) Set the IR report time to match the legacy 744 staff Tag configuration.
+4) Reduced the UHF location acknowledgment reception timeout from 8 ms to 5 ms.
+5) Immediately set the IR sensor to Hibernate mode when the Tag receives a valid IR or when the AGC IE timeout of 12 ms is reached.
+6) The Tag supports large Tag IDs on the Pegasus platform.
+7) Updated the platform values for both Pegasus and Orion. So this requiring a new mobile app to display the correct platform.
+
+Andromeda-Staff-Tag-29-Pre-ReleaseV41.1.106 : 10-03-2025
+========================================================
+- Resolved issues causing instability in UHF TX & RX.
+- In ASync Mode, the Tag activates Long IR (1.6 sec / 3.1 sec) every 30 seconds.
+- The Tag synchronizes its clock with the monitor after receiving a valid IR ID.
+- After clock synchronization, the Tag activates Short IR (1.5 sec / 3 sec) for each IR Profile.
+- If the Tag fails to receive 3 IR signals, it switches back to Long IR. 
+
+Andromeda-Staff-Tag-29-Pre-ReleaseV41.1.105 : 04-03-2025
+========================================================
+- Support Pegasus UHF upgrade 
+ATE TX : Clock Debug IO
+ATE RX : UHF TX & RX Debug IO
+
+Andromeda-Staff-Tag-29-Pre-ReleaseV41.1.104 : 25-02-2025
+========================================================
+- Fixed issue that tag didn't reset by command from server.
+- Set Debug IO for internal testing
+ATE TX : Clock Debug IO
+ATE RX : UHF TX & RX Debug IO
+
+Andromeda-Staff-Tag-29-Pre-ReleaseV41.1.103 : 17 -02-2025
+========================================================
+UHF Paging: Tag Sent Page request and receive page response from star. Tag come online to server after Tag receive Page response
+UHF Location: Tag send UHF location data based on the report rate.
+IR Reception: Tag send IR Reception using Dual iR sensors and also AGC IR reception algorithm. Tag receives IR signal form 1 to 4095 monitor ID
+Platform Change Command via mobile app: We can switch the Tag Platform Orion to Pegasus vice versa. 
+
+Andromeda-Staff-Tag-29-Pre-ReleaseV41.1.102 : 03-02-2025
+========================================================
+1) In Tag Firmware, we always Hard Code as Pegasus Platform in this release only.
+2) Cases to Validate
+  a) Paging Sequence in Active State
+  b) Paging Sequence in Sleep State
+  c) Paging Tx & RX Timeout 
+  d) Paging Receive Time.
+  e) Sleep Current
+  f) Active Current
+  
+ Note : 
+	1) We also added Star firmware in this release. So Star Receive Paging data and Sent this data Server. Star also sent Page response to Tag
+	2) We also added Pagng Server in this release. This is a test release to check Firmware during development. So install the latest Pegasus Server and Replace this RTLS-Paging server in the Server installed Path. This Paging Sent constant Page response to Tag. 
+  
+
+Andromeda-Staff-Tag-V30-Pre-ReleaseV41.1.101 : 07-01-2025
+==========================================================
+Pegasus Platform Support:
+- The firmware now supports the Pegasus platform for Andromeda tags.
+Platform Switching:
+ - IR Rx Profile Update: By setting the IR Rx profile to 20, the tag switches to the Pegasus platform. Any IR Rx profile other than 20 will direct the tag to the Orion platform.
+   The IR Rx profile can be modified via BLE
+
+Requirements:
+Need updated Star FW and PC server to receive response and enter into the server.
+
+Andromeda-Staff-Tag-V30-Pre-ReleaseV41.1.1 : 06-01-2025
+=======================================================
+Pegasus Platform Support:
+- The firmware now supports the Pegasus platform for Andromeda tags.
+Platform Switching:
+ - IR Rx Profile Update: By setting the IR Rx profile to 20, the tag switches to the Pegasus platform. Any IR Rx profile other than 20 will direct the tag to the Orion platform.
+   The IR Rx profile can be modified via BLE
+
+Requirements:
+Need updated Star FW and PC server to receive response and enter into the server.
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.7 : 31-12-2024
+=======================================================
+- Reset the 1 minute integration timeout whenever a new command is received for the tag. The 1 minute timeout will be based on the last BLE command received.
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.6 : 27-12-2024
+=======================================================
+- Updated the motion test. Tag count the motion when integration test process for 1 min. Tag sent the motion count the GATT Profile.
+- Updated Individual Led Test sub command. 
+- Updated LBI Test with & without Led indication.
+
+refer packet structure from this link: https://centrakinc.atlassian.net/wiki/spaces/SWE/pages/2458910757/BLE+MM+Badge+Design+Document 
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.5 : 26-12-2024
+=======================================================
+- Updated the duress button fix
+- Updated the LBI Value in BLE advertisement packet after integration test 
+- Updated the Integration Test command ( 1 Byte = Command (0x37),  2 Byte = Command Value). 
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.4 : 09-12-2024
+========================================================
+- Added buzzer test in the integration Process. The LED and buzzer were activated simultaneously.
+
+Andromeda-Staff-Tag-V28-Pre-ReleaseV41.1.4 : 06-12-2024
+========================================================
+- BLE transmissions are reduced when the tag enters an IR detection zone.
+- When the tag is in both the IR/LF zones, the BLE data transmission rate is doubled
+  if BLE Report Rate is 3sec and 1 sec
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.3 : 25-11-2024
+========================================================
+1) IR Improvement 
+	a) Updated Tag to receive Monitor E Profile IR 
+	b) Code Optimization in the IR Receive Process
+2) Battery life improvement	
+	a) If the tag is in the No IR field, we power off and on the IR after every 3 IR failures. After 10 failures, we power off and on the IR again, but only from 3rd power-off cycles
+3) Count Crash 
+	a) Tag clear the crash counter after 10 mins 
+	b) Tag clear the crash counter when we sent set frequency command.
+	c) Write the crash counter in flash whenever tag get reset.
+	d) Tag Clear the crash counter before switch to new firmware in UHF upgrade process completed.  
+4) Fixed issues that In ASync Mode, Tag IR RX Profile and Enable / Disable IR Rx not set correctly when we change profile via mobile app. This profile works after we reset the Tag in ASync Mode.  	
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.2 : 05-11-2024
+========================================================
+- Fixed the Issue, the open long IR (which was longer than expected)
+- Fixed the Issue, the tag open IR for 7 consecutive cycles instead of 6 cycles.
+
+Andromeda-Staff-Tag-V27-Pre-ReleaseV41.1.1 : 23-10-2024
+========================================================
+
+- Base Version - Andromeda-Staff-Tag-V26-Pre-ReleaseV41.1.15
+- Updated the Operating Temperature for LTT (-40°C to 105°C)
+- Updated the Default Profile of BLE Fast Reporting Interval from 1 Hr to 6 Hr.
+- Updated the LBS Algorthims improvements.
+	* Increase VLL threshold from 2300 to 2700.
+	* Increase hysteresis value from 1% to 5%.
+	* When in LBS mode, require that both VLL and VHL are greater than LBS thresholds + hysteresis in order to come out of LBS.
+	* Add hysteresis for temperature similar to the hysteresis used for voltage.
+	* Temperature hysteresis should be a fixed temperature value set at 5C. 
+- Updated to skip the RF data whenever the buzzer is on, 
+  and that skipped RF data will be transmitted in the subsequent RF slot.
+- During the "Find a Tag" feature, in the worst-case scenario involving 
+  both the buzzer and LED, we may skip RF data for up to 1 second. During the button acknowledgment for the duress command, it is possible to skip RF data for up to 500 ms. 
+- When the buzzer is activated via command, it is also possible to skip RF data for up to 500 ms
+
+Andromeda-Staff-Tag-V26-Pre-ReleaseV41.1.15 : 23-10-2024
+========================================================
+1) Tag always in ASync mode when we set the operating mode as BLE Only Mode.
+2) Tag sent Paging every 5 mins in BLE only mode. 
+3) Whenever Tag reset, Paging Sequence : Quick paging( four 1.5 sec ) + Paging Profile, 6 sec + 5 mins,  6 sec.  6 sec + 5 mins,  6 sec.  6 sec )
+4) In BLE Only Mode, Tag get ack/Paging Reponse only from Special Star Id 4095. So Tag comes to server with 4095 StarId. 
+5) In BLE Only Mode, Tag didn't get ack/Paging Reponse  from other star Id 1 to 4094.
+6) Updated the Valid Repeater Freq in 10 ( 868.9 MHZ ) & 14 ( 868.45 MHZ )
+7) Changed the VHL UHF Payload packet First byte from 0xAA to 0x00.
+
+Andromeda-Staff-Tag-V26-Pre-ReleaseV41.1.14 : 14-10-2024
+========================================================
+a) Key code value changed :
+	1) 1D + 2D = 8 => We added Key Code for 1D + 2D
+	2) 3D = 11  => We changed key code from 8 to 11
+	3) 1L + 2L + 3L = 12 => We changed key code from 15 to 12.
+b) Updated Button press Connectivity Test :
+	1) Positive led feedback ( Centrak logo led / Connectivity led blinks) : If Tag get then Tag blink blue led for 2 sec ( 250 ms on/ off ).
+	2) Negative Led feedback ( Red Led blinks ) : If Tag didn't get then Tag blink Red led for 2 sec ( 250 ms on/ off ) after duress timeout reached
+	3) Tag in Star Coverage :
+		1) Centrak logo led blinks when Positive led feedback in Sync Mode( Star coverage) 
+		2) Centrak logo short led blinks ( 20 ms on/off every  duress rate) when Tag didn't get ack 1st location data in UHF only Mode 
+		3) Centrak logo & Connectivity short led blinks ( 20 ms on/off every  duress rate) when Tag didn't get ack 1st location data in Multi Mode only Mode 
+	4) Tag in out Star Coverage :
+		1) Centrak logo short led blinks ( 20 ms on/off every  duress rate) when Tag we press the any button in UHF only Mode 
+		2) Connectivity short led blinks ( 20 ms on/off every  duress rate)  when Tag we press the any button in BLE only / Multi Mode 
+c) Tag didn't measure battery ( VLL & VHL ) when tag led is on 
+d) We changed VHL measurement time 9100 us to 9400 us		
+
+Andromeda-Staff-Tag-V26-Pre-ReleaseV41.1.12 : 03-10-2024
+=======================================================
+
+Battery Measurement Adjustments:
+
+VLL:
+	Initial Measurement Delay: Increased from 40 ms to 65 ms.
+	Total Wait Delay: Increased from 90 ms to 100 ms.
+	Measurement Delay Removal: Removed the delay during battery measurement.
+VHL:
+	Payload Size: Updated to 42 bytes aslike summary packet (Takes 9.645 ms for transmission)
+	Battery Measurement Timing: Scheduled to occur after 9.1ms.
+	Measurement Delay Removal: Removed the delay during battery measurement.
+
+- Updated to prevent battery measurement during buzzer/RF transmission in the same time slot.
+- Battery measurement is now performed first before any other processes,
+  such as writing the upgrade packet to external flash when the tag is in upgrade mode
+  or any RF transmission in the same slot.
+- Added a 100ms settling delay for the battery Measurement in VHL Measurement in 
+  factory sleep, Battery Measurement through keypress Event( 1D + 2D) 
+- Updated to prevent the IR receive(only when IR profile is 1.5Sec) 
+  when the battery measurement time reaches before the IR slot to reduce the stress.
+
+- Fixed the issue in Buzzer,tag buzz only 250 ms in response to an ack for the button press event
+  instead 500ms(250 ms at 4500 Hz and next 250 ms at 5500 Hz).
+- Updated to reset the RC Oscillator when the RC SPI Calibration fail.
+
+
+
+Andromeda-Staff-Tag-V26-Pre-ReleaseV41.1.12 : 03-10-2024
+=======================================================
+- Added 40ms stabilization delay for the Crystal oscillator before the LF receiver begins processing signals.
+- Added 8ms stabilization delay for the RC oscillator before the LF receiver begins processing signals.
+
+Andromeda-Staff-Tag-V26-Pre-ReleaseV41.1.10-BatteryMeasurementTest : 25-09-2024
+=======================================================
+- Test Firmware for Internal Test based on Andromeda-Staff-Tag-V25-Pre-ReleaseV41.1.8-BatteryMeasurementTest.
+- Added 20ms delay after VHL test to allow battery voltage to settle before doing other tasks.
+- Added 1ms delay before the Battery measurement process
+
+  This delay required during the Location sync done before the Battery measurement slot,
+  In location sync, we stop and start 250ms WDT Timer in the Sensor controller,
+  In the next slot we measure the battery measurement this impact the tag 
+  not to settle the Low power mode sleep in ADC Initial sleep 40ms.
+  This lead to high current ~4-6 mA in ADC Initial sleep 40ms.
+
+
+Andromeda-Staff-Tag-V25-Pre-ReleaseV41.1.8-BatteryMeasurementTest : 20-09-2024
+=======================================================
+- Test Firmware for Internal Test.
+- Updated the Firmware to Send the VLL measurement in the Field RoomId in RF Location Data
+  and in BLE data.
+
+Andromeda-Staff-Tag-V25-Pre-ReleaseV41.1.7 : 17-09-2024
+=======================================================
+- Updated the Battery Measurement Process
+
+ VLL Measurement:
+------------------
+1) Initiate the Sensor controller ADC Task and put the main Micro in 90ms sleep.
+2) In sensor Controller, switch the Power Mode to Low Power Mode and wait for Measurement Delay 40ms in Low Power Mode .
+3) After the wakeup, switch the  Power Mode from  Low Power Mode to Active Mode  and wait for 200us before the measurement.
+4) In Battery Measurement Process, we do 5 battery Measurement with some measurement delay
+5) Start the First measurement, wait for measurement Delay 200us, then do next measurement. Likewise do all the 5 Measurement
+6) For the 5 Measurement it takes 1ms for process delay to  complete the measurement
+7) After the wakeup, the main micro collect all the sampled adc value and calulate the average for VLL 
+
+VHL Measurement:
+---------------------
+1) The main Micro start transmitting the RF Tx as High Load and Initiate the Sensor controller ADC Task 
+2) In sensor Controller, switch the Power Mode to Low Power Mode and wait for Measurement Delay 6ms in Low Power Mode .
+3) After the wakeup, switch the  Power Mode from  Low Power Mode to Active Mode  and wait for 200us before the measurement.
+4) In Battery Measurement Process, we do 5 battery Measurement with some measurement delay
+5) Start the First measurement, wait for measurement Delay 200us, then do next measurement. Likewise do all the 5 Measurement
+6) For the 5 Measurement it takes 1 ms for process delay to  complete the measurement
+7) After the wakeup, the main micro collect all the sampled adc value and calulate the average for VHL 
+
+
+Andromeda-Staff-Tag-V25-Pre-ReleaseV41.1.6 : 09-09-2024
+=======================================================
+- Added the BLE Active Report rate 1sec in the Profile 
+  we can configure this Report rate through Core server and BLE App.
+-Intergrated the V24A, V24B & V24C Changes
+
+V24A:
+New Button Press Detection algorithms
+Option to configure Duress Buttons via profile. This needs New Core Server or Mobile app(Default Option :
+	-Set Priority for Button Press, 1st Priority : Alert button press pattern, 2nd Priority : Long Button Press, 3rd Priority : Double Button Press, 4th Priority : short Button Press.
+	-Support different combination of button press.
+	-Support BLE Only Mode.
+	-Tag writes flash after VHL Measurement only when LBS Status flag changes.
+	-Tag detect Long Button press when button hold timeout is more than 1.5 sec upto end of 2 sec of timer expires
+
+V24B:
+ATE motion Test improvement
+	-Read and Prepare XYZ axis dump every 250 ms
+	-Tag sent this dump to ATE Tool after Tag test timeout reached.
+	-Tag support Maximum Timeout = 10 sec.
+
+V24C:
+	-Tag sent Button Press data until Tag get ack for button press or Button press hold timeout expired
+	-Button press hold timeout can be configure via profile Duress Timeout (Default 60 sec).
+	-In Sync Mode, Tag sent button press data in fast BLE Packet when Tag didn't get Button press ack from Star.
+	-Set Default Duress rate timeout as 60 sec
+
+
+
+
+
+Andromeda-Staff-Tag-V25-Pre-ReleaseV41.1.5 : 02-08-2024
+=======================================================
+- During Battery measurement 
+	a) Add 50 ms delay before VLL & VHL Measurement
+	b) In middle of BLE Tx, Tag do the battery measurement. In this case tag disable the BLE Tx and measure the Battery (VLL & VHL). Tag Restart the BLE tx after the measurement completed.
+	c) If Battery measurement timeout is reached in the middle fast BLE tx. In this case Tag measure battery after fast BLE tx completed
+	
+- Fixed issues that Tag ignore the forced Fast BLE Tx (1L+ 2L) Key press & forced battery measurement (1D + 2 D) key press when Tag didn't get ack from previous key press data.
+
+- Fixed issue that button press option not set correclty via profile
+
+Andromeda-Staff-Tag-V25-Pre-ReleaseV41.1.4 : 02-08-2024
+=======================================================
+- New Button Press Detection algorithms
+	1) Option to configure Duress Buttons via profile. This needs New Core Server or Mobile app(Default Option : 1).
+	2) Set Priority for Button Press, 1st Priority : Long Button Press, 2nd Priority : Long Button Press, 3rd : short Button Press.
+	3) Support different combination of button press.
+- Support BLE Only Mode.
+- Tag write flash after VHL Measurement when any change in LBS Status flag. 
+
+Andromeda-Staff-Tag-ATE-Internal-Release-V41.1.14 : 23-07-2024
+=============================================================
+- Read and Prepate XYZ axis dump every 250 ms 
+- Tag sent this dump to ATE Tool after Tag test timeout reached.
+- Tag support Maximum Timeout = 10 sec. 
+
+
+Andromeda-Staff-Tag-ATE-Internal-Release-V41.1.13 : 23-07-2024
+=============================================================
+- Motion Trigger Start only after we sent Accelerometer Configuration settings to Tag
+- Configuration for Accelerometer
+	1) Range
+	2) Resolutions
+	3) Sniffer Sample Rate
+	4) CWake Sample Rate 
+	5) Sniffer Detection Count
+	6) Sniffer Threshold.
+	7) Tag Test Time out in 0.5 sec
+- Tag read X,Y,Z Axis every 250 ms gap and also Tag count number of motion Trigger.
+- If the Tag Test Timeout expired then Tag sent	the Max XYZ Axis and Trigger count to Tool.
+- We also increase length of Ack & NAck command from Tool.
+
+Note: This version motion test not compatible with older version
+
+
+Andromeda-Staff-Tag-ATE-Internal-Release-V41.1.12 : 22-07-2024
+=============================================================
+- Base Version 24A
+- Tag support sniff threshold 0 in ATE Motion Trigger Test.
+
+Andromeda-Staff-Tag-V41.1.24A : 19-07-2024
+==========================================
+Fixed issue: Tag not detecting motion in an very occasionally 
+
+Andromeda-Staff-Tag-V41.1.24 : 17-07-2024
+==========================================
+- Official Release of V41.1.11.
+
+Andromeda-Staff-Tag-V41.1.11 : 12-07-2024
+==========================================
+1) Fixed issues that 16 uA current consumption in sleep state after BLE Fast Report rate.when tag was in IR Field.
+2) ATE Sleep current : Diable ATE TX Pin & ATE RX Pin before enter into sleep current test and Enable ATE TX Pin & ATE RX Pin after sleep current test 
+3) Add addional condition check in ATE Test Start command & RF Calibration Test.
+
+Andromeda-Staff-Tag-V41.1.10 : 10-07-2024
+==========================================
+1) Fixed issues that 16 uA current consumption in sleep state after BLE Fast Report rate.
+2) We Changed the VHL = 2300 & Vll =2200 threshold in Production Tool setting.ini file.
+
+Andromeda-Staff-Tag-V41.1.9 : 24-06-2024
+========================================
+1) Revert the LBI Load as like V23
+	a) VLL - Red Blink for 5 ms
+	b) VHL - Led Blink for 40 ms in 2 mA.
+2) We used Led Stress VHL for all Battery measurement
+	a) Forced Battery measurement( 1D + 2D)
+	b) Integration Test Battery Measurement in Factory / Inventory Sleep
+	c) Battery measurement before second factory sleep.
+	d) Battery in LBS Process
+	e) ATE Battery Voltage test 
+	f) Battery measurement in every 24 hrs before transmit UHF location in inventory sleep.
+3) Fixed issues that Tag didn't sent BLE packet every 5 min in Sleep state.	
+
+
+Andromeda-Staff-Tag-V41.1.8 : 20-06-2024
+========================================
+1) Base Version 6
+2) ATE Hangup Fix : Button False Trigger in the code Startup
+	a) Added Hysteresis in the button IOs
+	b) Clear Buttons interrupt before enable this Buttons interrupt
+	c) Added 6.6 ms RC time (3 times * 100k * 22 nf) delay after we set Hardware enable pin as inputs
+	d) Create Timer before enable the button interrupt.
+3) ATE Improvements : 
+	a) We consider the uart timeout. we set again uart listing mode when we get uart timeout.
+	b) Changed the ATE Led 2 button Test command value.
+	c) Change ATE Start Command 2 bytes( 46 0D ) to 4 bytes ( 46 00 00 0D).
+	e) We Reduced the ATE Test Start timeout 250 to 20 ms(ie: Tag Takes maximum 250 ms timeout to sent response for start Command(46 00 00 0D)
+	f) Removed Set GLDO before ATE Test. DC DC is always enable in ATE Test.
+	g) LF Calibration after the ATE Test.
+4) The LF channel remains ON even when LF Rx is Disable, after turned off the LF channel, 3uA reduced in active current.
+5) After the Tag wakeup from sleep, the IR power ON every 1 or 2 consecutive fail instead of 3 consecutive fail.
+6) Changed the Bootloader compiler version TI-CLANG-V3.2.0 
+7) Set Bootloader optimization as 1
+8) Changed the Upgrade Sysconfig as 1.18.0
+
+
+Andromeda-Staff-Tag-V41.1.6 : 05-06-2024
+========================================
+IO{ Set External Flash CS IO & Write Hold IO as output low (defaultSo). So 3 uA current was reduced  in sleep state
+ATE: We Turn On GLDO in ATE Process and GLDO was tuned off after ATE Process was completed
+ATE: Set ATR RX IO as Input pullup as default & ATE TX IO as output high as default.
+Integration Test: In Factory / Inventory Sleep, If we Press key 1+2+3 then Tag do Integration Test(Led Test, IR Test (6 sec timeout), LF Test (6 sec timeout), Battery Test and sent all info info in UHF & BLE ( 6 retry with 1 sec gap)
+Integration Test: If Tag wakeup from Factory1 Sleep, then we Press key 1+2+3 then Tag do Integration Test(Led Test, IR Test (6 sec timeout), LF Test (6 sec timeout), Battery Test and sent all info info in UHF & BLE ( 6 retry with 1 sec gap)) and enter into second factory sleep.
+Flash: Fixed issues  that Tag enter into LBS mode when Tag receive reset command during Upgrade Process.
+
+
+Andromeda-Staff-Tag-V41.1.5 : 31-05-2024
+========================================
+ATE Accelerometer Test:  Tag Sent the Motion Trigger info & XYZ axus when motion/Vibrate the Tag. We also configure the Sinnfer Sample Rate, Sniffer Count( Threshold & Detection count) in via ATE Tool.
+FLASH: Tag Generate Random Delay as like Prodcution Tool.
+FLASH  Tag read macId pre fix & Macid offset from memory. Tag Calucate MacId based on this MacId pre fix & Mac Id offset.
+UHF Location : Tag sent Battery Status, version & Temperature value in command via UHF Location in cyclic order.
+LF RX: Check LF RX Startbit value >= 2200.
+VHL: Tag sent Battey UHF Packet in Repeater channel.
+
+Andromeda-Staff-Tag-V41.1.4 : 28-05-2024
+========================================
+Code : Code cleanup and code optimization. 
+Tag Type: Changed default Tag Type from Asset to Staff
+LBS : VHL Measurement in UHF TX. Tag Transmit UHF Data 930 MHZ with +5 dbm to avoid RF Crowd
+LBS : VLL Measurement in Standby Mode
+LBS : Tag Wakeup from LBS Mode Sleep when we press any key
+LBS : Tag Enter into LBS due count crash. Clear and write the count crash info in valid Tag Reset(for eg: Reset command via core server or mobile app etc...)
+HWID : New Hardware Id 11 for RC Oscillator
+UPGRADE : Reduced the Max Upgrade Status bit segment from 9216 to 5120
+ASSET : Changed Asset Tag Button 1 IO from DIO 4 to DIO3. DIO3 is used Button 3 in Staff Tag
+LF : Enable GLDO before LF Rx and Diable GLDO after LF RX.
+LF : Based On HW ID Tag Use RC Oscillator or Crystal Oscillator.
+LF : RC oscillator Calibration every time after LF Calibration. Calibrate RC Oscillator every 1 hour or +/- 10 degree change in Temperature  
+LF Calibration : Restore the LF Signal pin after LF Calibration completed
+LF : Enable Antenna Damping
+LF : Removed LF Antenna cap Calibration offset 3 & 4 
+ATE Button Test : Tag Button Test will be pass when we press the button before Button Test started or press button when Tag enter into the button test.
+ATE Sleep Current Test : We can configure sleep current delay via ATE Tool. By default 2 sec delay.
+ATE 250 ms Clock Test : Changed the output Toggle IO from DIO 17 to DIO 25
+ATE 32 kHz Clock Test : changed the output toggle IO from DIO 16 to DIO 25
+ATE 16 MHZ Clock Test : Added 16 MHZ clock Test in ATE
+ATE LF Clock Clock Test : Added LF clock Test in ATE
+Second Factory Sleep : Tag did not go to Second Factory Sleep if the measured voltage is below 2850
+Second Factory Sleep LBI Measurement : VHL Battery measurement before Tag enter into Second factory Sleep. 
+Factory Sleep LBI Measurement : If we press 1,2,3 key when Tag is in factory/Inventory sleep then Tag do VHL Battery measurement. 
+Forced Battery Measurement : VHL Battery measurement when press 1D+2D. Tag Blinks Led based on this voltage
+Flash : Buffer memory overrun issue in Flash Read & Flash Write
+Flash : Added New MacId Prefix (00:24:DD) and Tag calculate its TagId ( Mac Id Last 3 bytes = TagId - 2104555 ).
+Led Driver : Reduced Max LED Driver current as 2mA in all places wherever we used LED Driver current as more than 2
+Default Profile : Cisco Connectable Duress timeout changed from 30 sec to 1 min
+Default Profile : Asset Latch timeout changed from 1 min  to 2 mins
+Default Profile : Air value offset changed from 100 to 200
+Default Profile : Cisco Connectable Ping rate changed from 50 ms to 100 ms
+Default Profile : BLE TX Power changed from +5 dbm
+Default Profile : Beep cycle changed from 1 to 3
+Default Profile : Alert Delay changed from 1 sec to 21 sec
+Default Profile : Default number of ping 5
+Cisco Connectable Flag : Removed LED blink during Cisco connectable BLE transmission automatically triggered based on fast report timeout (Without key press event / BLE TX turned on through command)
+Cisco Connectable Flag : Fixed issues that Tag didn't sent cisco connectable flag when Tag is in 900 MHZ IR/LF Coverage.
+Boot Loader : Disable Force VDDR, Disable DC DC Charge for GLDO, Disable DC DC Active for GLDO
+
+
+Andromeda-Staff-Tag-V41.1.3 : 13-05-2024
+=========================================
+- Test Firmware for RC Oscillator.
+
+Andromeda-Staff-Tag-V41.1.2 : 3-04-2024
+=========================================
+ATE Changes:
+- Added to configure the time to stay in sleep state.
+- Configure the Delay in SLEEP_TIME = 1(in sec)
+
+Andromeda-Staff-Tag-V41.1.1 : 28-03-2024
+=========================================
+ATE Changes:
+- Change to 250ms Clock Test - we can check the 250ms clock in TIO1 (DIO25).
+- Change to 32kHz Clock Test - we can check the 32KHz clock in TIO1 (DIO25).
+- Added 16MHZ Clock Test - we can check the 16MHz clock in TIO1 (DIO25).
+- Added LF Crystal Clock Test - we can check the LF Crystal Clock in CL_DAT.
+Firmware Changes:
+- Fixed issue that tag didn’t enter into LBS due Count Crash.
+- Fixed issue tag didn’t wakeup from LBS due key press.
+- Updated the LED driver current of max 2mA in all functionality.
+
+Andromeda-Staff-Tag-V41.1.23 : 20-02-2024
+=========================================
+- Offical Release of V41.1.6. We just changed the Version Number from 6 to 23
+V41.1.6 : Release Note
+
+- Added functionality for the integration test. (After woken from factory sleep after ATE test)
+	- If button press 1,2,3 is triggered it perform LBI check
+	- If LBI is >= 2850,flash all LED for 5 seconds and send the measured the LBI Value in BLE & RF(Astar 4095) Packets for 5sec. 
+	- If LBI is < 2850, flash Red LED for 30 seconds and send the measured the LBI Value in BLE & RF(Astar 4095) Packets for 5sec. 
+	- Then go to factory sleep.
+-If button press 1,2,3 is triggered at any time in factory sleep begin test again.
+-Fixed Issue in ATE tool that it sometimes not receives the LF Rx Test response data from the tag when the Tag in ATE Test.
+
+Andromeda-Staff-Tag-V41.1.6 : 19-02-2024
+======================================================
+- Added functionality for the integration test. (After woken from factory sleep after ATE test)
+	- If button press 1,2,3 is triggered it perform LBI check
+	- If LBI is >= 2850,flash all LED for 5 seconds and send the measured the LBI Value in BLE & RF(Astar 4095) Packets for 5sec. 
+	- If LBI is < 2850, flash Red LED for 30 seconds and send the measured the LBI Value in BLE & RF(Astar 4095) Packets for 5sec. 
+	- Then go to factory sleep.
+-If button press 1,2,3 is triggered at any time in factory sleep begin test again.
+-Fixed Issue in ATE tool that it sometimes not receives the LF Rx Test response data from the tag when the Tag in ATE Test.
+
+
+Andromeda-Staff-Tag-V41.1.22 : 02:02:2024
+===========================================
+- we Separate the location index between UHF Location Data and BLE data.
+- In ATE accelerometer Test, Tag read the X,Y,& Z from accelerometer and sent this value to ATE Tool.ATE Tool receive this accelerometer X,Y&Z value from Tag. Tool Validate this value and set test pass
+- In ATE Button Test, User need to press the button before ATE Button Test Start. ATE Validate that the Button pressed order. if the Button pressed order 1,2&3 then test was pressed otherwise test failed
+- Tag Support Second factory Sleep. This second factory sleep will work only when Tag enter into factory Sleep via ATE Process and then wakeup from factory Sleep.
+- Removed Debug led blink in the temperature measurement.
+- Tag Support find a Tag Feature. If Tag receive Led on 2 ms or find a tag command from server / mobile app. Tag Start Blink Led 250 ms On/Off and Buzzer 1 sec On/Off upto 30 sec. Tag immediately Turn off Led and Buzzer when we pressed any key.
+- Updated upgrade Id enhancement feature in the Tag firmware. For this we need change core sever. Core Server will send Upgrade Id via Profile.So Right now this feature not support by Tag.
+- Updated the randomization delay in On Demand Upgrade UHF packet and Reduced number On Demand packet per 3 sec to avoid RF collision
+- Updated the location data index and retry information in On UHF Demand packet. For this also we will need new core server.
+- Fixed issues that Tag didn't receive double marker in IRA when Tag in out off stat coverage and IRA receiver only has monitor coverage
+- During Upgrade Process, Tag Clear the received upgrade packet when move to out off star coverage more than 30 mins
+- During Upgrade Process, Tag clear the received upgrade packet when Tag didn't receive 10 consecutive upgrade packet
+- Tag sent Cisco AP connectable beacon based on connectable report rate.
+- Disable the Upgrade Debug info.
+
+Andromeda-Staff-Tag-V41.1.5-Internal-Test : 29-01-2024
+======================================================
+-Added the Location Sync During UHF Upgrade Process.
+-Added to send Location Data when beacon received.
+-Added Randomization Delay during On Demand Process.
+
+Andromeda-Staff-Tag-V41.1.4-Internal-Test : 23-01-2024
+======================================================
+- Base version V21.
+- We can Enable or Disable the Upgrade Debug Info through IR-RX Profile.
+- To Enable Upgrade Debug Info then set IR-RX profile as 20.
+- Fixed the Upgrade Debug Info to support 10 Digit TagID.
+
+Andromeda-Staff-Tag-V41.1.3-Internal-Test : 23-01-2024
+======================================================
+- Base version V18.
+- We can Enable or Disable the Upgrade Debug Info through IR-RX Profile.
+- To Enable Upgrade Debug Info then set IR-RX profile as 20.
+- Fixed the Upgrade Debug Info to support 10 Digit TagID.
+
+Andromeda-Staff-Tag-V41.1.2-Internal-Test : 19-01-2024
+======================================================
+- Updated the UHF Debug info in Tag.we can enable / disable upgrade debug info via production settings.ini file.
+- During Upgrade process, we Cear Received Upgrade segment packet when Tag move to out of star coverage and wait more than 30 mins and then Tag come to star coverage.
+- Tag forcefully do on Demand after 200 cycle failed to receive all 8 packet per cycle
+- Tag support 2nd factory
+- Tag will enter into 2nd factory sleep only when Tag enter into 1st factory sleep via ATE and then wakeup from factory sleep. Tag will Enter 2nd factory
+- if we press any ane button 3 or more than 3 time and lbi value > 2850 then Tag will enter 2nd factory sleep
+- In accelerometer test, Tag read X,Y&Z axis from accelerometer and send this value to ATE Tool. ATE Tool validate the received gravity value and ini setting gravity value. if the gravity values are in the valid range then only accelerometer test will be pass.
+- .In Button Test, we will press 1,2 & 3 in this order only before button test.
+
+Andromeda-Staff-Tag-V41.1.21 05-01-2024
+---------------------------------------
+- Updated LBI check command in the Tag. If 1D + 2D button was pressed then Tag measure the LBI and Blink led based on the LBI Value
+- Updated the additional Validation in BLE OTA Upgrade that Tag check whether all upgrade packets are received before switch to upgrader mode.
+- Fixed issues that Tag get reset when Tag in Alive State and then we sent Turn on vibrator command.  
+- In UHF Upgrade, Reduced Upgrade packet write in External flash memory timing from 28 to 20 ms.
+- Tag Measure LBI every 5 mins when Tag was in UHF Upgrade.
+
+Andromeda-Staff-Tag-V41.1.20-7-10-SDK 12-12-2023
+------------------------------------------------
+- Paging Profile was changed from Wifi Paging Profile (ie: 12.5 sec, 24.5 sec, 5 mins, 24.5 sec) to 900 MHZ( ie: 12.5 sec, 9.5 sec, 6.5 sec, 24.5 sec ) Paging Profile 
+- Fixed issue in Buzzer Mode Duress Button press Profile, when we Press Button 1D/2D then Tag buzz after tag get ack from star / BLE
+- Fixed issue that In UHF Upgrade Tag always sent Page request when Tag failed to receive UHF beacon Pacekt from star
+- If 1D + 2D button was pressed then Tag Measure LBI. Tag Blink Led for 2 second, Led Pattern was based on LBI Value. Tag also sent Measure LBI Value in next location data based on report rate.
+	1) Turn On LED_1 + LED_2 + LED_3 + LED_4  when Lbi value was greater than 2820 
+	2) Turn On LED_1 + LED_2 + LED_3  when Lbi value between 2700 to 2819
+	3) Turn On LED_1 + LED_2  when Lbi value between 2580 to 2699
+	4) Turn On LED_1 + RED LED when Lbi value was less than 2579 
+- Tag didn't 1D + 2D in UHF / BLE Data. 
+- Tag set upgrader mode info in flash memory after it receives BLE OTA Upgrade complete status from Mobile app and then Tag was reset automatically and moves to Upgrader after it terminate from mobile app..
+
+
+Andromeda-Staff-Tag-V41.1.19-7-10-SDK 05-12-2023
+------------------------------------------------
+- Fixed issues that Tag didn't receive IR in out of Star Coverage.
+- Fixed issues that Tag takes 13 uA Sleep current when we set IR RX Profile more than 3.
+- Fixed issues that Tag some times didn't send BLE packet when Tag in Sync mode with Alive State.
+
+Andromeda-Staff-Tag-V41.1.18-7-10-SDK 29-11-2023
+-------------------------------------------------
+- In Both Sync & Async Mode, All Advertisement beacons are connectable beacons. So Mobile app can connect active & sleep report rate BLE Advertisement beacons,
+- Added a flash for Cisco AP, This flag was used to connect Tag via Cisco AP.
+- Tag didn't set this flag when Tag sent BLE Advertisement packet in active & Sleep Report rate.
+- Tag set this flash in 4 cases
+1) In Both Sync & Async Mode, when we press button 1L + 2L then Tag Set this Cisco AP flag and Sent BLE Packet upto duress timeout without Button press information.
+2) In ASync Mode, if any key pressed other than 1L + 2L then Tag Set this Cisco AP flag and Sent BLE Packet upto duress timeout with Button pressed information.
+3) In ASync Mode, Every one hour and Set this Cisco AP flag and Sent BLE Packet upto duress. This connection rate can be changed via Mobile APP & Core server. This feature supported Core server not released.
+4) In Sync Mode, If we sent Turn on BLE command from core server then Tag Set this Cisco AP flag and Sent BLE Packet upto duress timeout. This feature supported Core server not released.
+
+- Fixed issue: Whenever Tag reseted then Tag didn't sent Battery value in First UHF Location data. It always sent Tempperaure value.
+- Fixed issue :In Async Mode Tag didn't BLE packet when Tag was in LF Field.
+
+
+Andromeda-Staff-Tag-V41.1.17-7-10-SDK- 27-11-2023
+-------------------------------------------------
+
+1) Removed Temperature offset in LBS Temperature Measurement
+2) Set 6 MHZ clock LF SPI Transfer
+3) Set SPI Mode 1 in LF SPI Write.
+4) Increased the External flash SPI timeout from 1250 ms to 1500 ms
+5) Tag Sent non connectable beacon in active & Sleep report rate. Tag always sent Connectable beacon in only every one hour or duress event.
+6) Tag set connectable ot non connectable beacon information in advertisement packet.
+7) Fixed issue in UHF upgrade that Tag Upgrade recycle same version upgrade.
+8) Changed the Low Temperature & High Temperature threshold -5 to 65 degree Celsius 
+9) Updated debug info in Mobile app admin login.(ie: LF cap1 value, LF cap 3 Value and all LBS Threshold,   
+10) Fixed issues that Tag didn't goes to factory Sleep.
+11) Fixed fixed issue in ATE tool some time Battery test went to timeout,
+12) Updated Production tool to configure the LBS Thershold.
+
+Andromeda-Staff-Tag-V41.1.16-7-10-SDK- 17-11-2023
+-------------------------------------------------
+Base Version : V41.1.15
+- Migrated to new SDK 7_10
+- Update Buzzer Mode in Tag. Based on this Buzzer Mode Tag buzz when it get ack for Button Press Evant.Buzzer ON time = 500 ms( 250 ms for 4500 HZ and another 250 ms for 5500 HZ).
+	Buzzer Mode Off - No Buzz when Tag get ack for Button Press Event.
+	Buzzer Mode Button Press  - Buzz when Tag get ack for any Button Press Event.
+	Buzzer Mode Duress - Buzz when Tag get ack for Duress Button Press Event.
+- Turn Off Led & Buzzer when Tag goes to alive state(ie: long report rate)..	
+	
+- Fixed issues Active high current cosumption IR RX 
+- Fixed issue that In Async Mode Tag goes to alive state when we press button and duress timeout not reached. for eg: In Motion, we set duress timeout 120 sec and press button Tag goes to sleep before duress timeout reached.
+
+Andromeda-Staff-Tag-V41.1.1-7-10-SDK - 07-11-2023
+-------------------------------------------------
+Base Version : V41.1.15
+- Migrated to new SDK 7_10
+- In Alive State, Tag Sent BLE packet baed on the Duress Rate upto Duress Timeout.for example In alive State Tag setn BLE packet upto 30 sec for 1 sec interval rate of 5 pings.
+- Fixed issues that tag didn;t battery status in alive state. Tag always sent ttemperature in alive state.
+
+
+AndromedaTag-V41.1.15 - 07-11-2023
+----------------------------------
+a) Fixed the Issue in BLE report Rate changed when sleep during Synchronous and Asynchronous. 
+b) Updated the firmware to Calibrate the "LF calibration" Command through the server.
+c) Fixed the Issue in Location data indexes are shared for BLE and UHF data.
+d) Updated the Temperature Value to shows in Cyclic command.
+
+AndromedaTag-V41.1.14 - 30-10-2023
+----------------------------------
+a) Fixed issue tha memory corrupted when button press interrupt was generated during flash write process.
+b) Fixed issues that Motion detection count not set correctly in Sniffer threshold Register
+c) Fixed issues that Tag sent Buton 2L in location data.
+d) We changed Led on State greter than 50 ms to 50 ms and Led off State as 250 ms. for example In factory sleep Led On time changed from 250 ms to 50 ms etc.
+
+AndromedaTag-V41.1.13 - 20-10-2023
+----------------------------------
+a) Implemented new button event detection logic (single, double, long, and multi button press detections)
+b) Reset accelerometer interrupts and put accelerometer in sniff mode one more time when enter into deepsleep.
+c) Removed Supply voltage Level validation before flash write. Prior it was set to 2.3 volts.  So that while testing LBS with VHL as 2.2 volts, it did not save the LBS status in flash.
+d) When Tag is in LBS mode, did not wakeup main MCU every 250 ms.  Instead of that wakesup main MCU once in every 5 mins to check the battery voltage level and temperature.  It will reduce the current consumption from ~25uA to ~10 uA when Tag is in LBS mode.
+e) Fixed issue: Tag reset after 20 mins when it is in LBS mode.
+f) Fixed issue: When tag moved to outoff UHF coverage and come back to UHF coverage during OTA upgrade, Tag takes one full OTA upgrade cycle to initiate Ondemand upgrade process even it reached 95% OTA upgrade is completed.
+g) Enhanced Ondemand OTA upgrade initiation process.  In addition with 95% OTA upgrade completion, When Tag failed to receive all 8 upgrade chunks for more than 200 cycles then, it will initiate the Ondemand upgrade before reach 95%
+
+
+AndromedaTag-V41.1.12 - 16-10-2023
+----------------------------------
+a) Corrected accelerometer Reset sequence
+b) Do LF Calibration when ever we do LF Init. Also added correction for calibrated LF capacitance Cap1: -3 and Cap3: -4.  So if the calibrated value is more than the offset it will be corrected otherwise calibrated value will be set to zero.
+c) Added constant frequency offset 20Khz in the calibrated RF Frequency offset in the ATE test Tool.  If there is no freqency offset or if we did not do ATE, then RF Frequency Offset will be set to 20 Khz in the Firmware.
+d) Set the detfault BLE TX power as +5dbm.
+e) UHF location data TX power will be set to +5dbm for all tries instead of (+0, +2 and +5 dbm).
+f) Released IR RX Profile 20 from the special use case of Proximity Test.  We can do the Proximity Test in ATE. Now we can use IR RX Profile 20.
+g) Added Write with no response, Notify and Extended properties to the GATT characteristic for IOS mobile apppliction support.
+
+Bootloader: These two changes made in bootloader.  It requires manual reporgramming.  These changes will not take effect when we do OTA upgarde 
+a) Turned Off internal DC_DC (during recharge in powerdown and active mode)
+	SET_CCFG_MODE_CONF_DCDC_RECHARGE = 1
+	SET_CCFG_MODE_CONF_DCDC_ACTIVE = 1
+b) Changed the SET_CCFG_MODE_CONF_XOSC_CAPARRAY_DELTA value from 0x4 to 0x7.	
+	
+Mobile Application:	
+a) Updated mobile application to show the Tag version on the OTA Upgarde Firmware selection screen.	
+b) Enhanced OTA Upgrade completion time in IOS application.  Now OTA upgrade will be completed nearly 20 secs in IOS app.
+
+ATE Tool:
+a) Defined 20KHz offset for RF Calibration. 
+b) Updated the formula to calculate RF frequency offset value (FractFrequency) FractFreq = Frequency Offset * 65.536 instead of 62.5
+
+AndromedaTag-V41.1.11 - 29-09-2023
+----------------------------------
+- In Vll, Red Led Blinks 5 ms and then we measure the Battery voltage from battery monitor
+- In VHL, we Turn on Led 4 with 10 mA current. After 25 ms, we measure the Battery voltage from battery monitor. Led 4 turn of after 15 ms from Battery voltage measurement(ie: Led On timeout = 40 ms (25 ms + 15 ms ) ).
+- Tag sent LBS attempt in BLE Packet as like UHF Location data Packet. 
+- 4.5 kHz clock was generated when we turn on the Buzzer
+- Fixed in Ble Active & Sleep report. Now it support 48 sec & 60 mins
+- Updated Led Blink pattern in Tag. So Please flash the Tag and then check upgrade
+- Reduced the Flash Programming time from 48 sec to 17 sec.
+- We can Enable or Disable the Verify process in Production tool in settings.ini file  
+- We Updated Reprogramming feature in Production in settings.ini file(ini field = PROGRAMMING_TOOL_TYPE =1 ). If we enable the Reprogramming then Production Tool Read Tag Id, Calibration values and profile value from memory and write this information to memory.
+- We Implemented the Read all memory & Read Profile information from memory 
+- UHF Upgrade was terminate when we start BLE Upgrade.
+
+Note : we set 1 mA current in Led Blink. If it is viable or not, If not then please investigate & provide the Led current 
+
+AndromedaTag-V41.1.10 - 25-09-2023
+-----------------------------------
+- Updated UHF Upgrade Enhancement
+- Update Production Programming Enhancement
+- Turn on the Flash Power and then Upgrade all packets.
+- Updated Factory Sleep in ATE Test.
+- Before LF Calibration, we Set Cap 1 and Cap 3 value as zero
+
+AndromedaTag-V41.1.9 - 14-09-2023
+--------------------------------------
+Title: Andromeda Enhanced Feature Releases
+Release Date: 14-09-2023
+Name: AndromedaTag-V41.1.9
+
+Release Notes: 
+a) Added 1 ms delay after we power on external flash.
+b) By default Tag transmit 4.5 kHz in buzzer IO in ATE Test OnLy. we can configure Buzzer frequency via ATE Tool.
+
+AndromedaTag-V41.1.8 - 12-09-2023
+-----------------------------------
+Title: Andromeda Enhanced Feature Releases
+Release Date: 12-09-2023
+Name: AndromedaTag-V41.1.8
+
+Release Notes: 
+a) Added the Enhanced Wireless Upgrade in UHF.
+b) Reduced time Interval in the BLE Upgrade.
+c) Added the LED Blink before 10ms the tempereture measurement(for Test Purpose)
+
+Note: We added addtional integration check in the upgrader, So we need to flash this firmare
+
+AndromedaTag-V41.1.7-ATE - 11-09-2023
+-----------------------------------
+Title: Andromeda Enhanced Feature Releases for ATE Only
+Release Date: 06-09-2023
+Name: AndromedaTag-V41.1.6
+
+Release Notes: 
+a) Added 32kHz Test, we can see 32 kHz clock TDO(DIO16)
+b) In 250 ms clock, we can see 250 ms clock in TDI(DIO17)
+e) Added factory Param Test, In this we Test dan get the calibtated frequency, calibrate capcitor value)
+b) Set Led Current via ATE Test Tool
+c) Add 1 ms delay after External Falsh Power On.
+d) Remooe Round of in the RF Transmission Test
+e) Added 2 precision  in Batery Test
+g) Added Test Summery information in ATE Tool log.
+
+
+AndromedaTag-V41.1.6 - 31-08-2023
+-----------------------------------
+Title: Andromeda Enhanced Feature Releases
+Release Date: 06-09-2023
+Name: AndromedaTag-V41.1.6
+
+Release Notes: 
+a) Added ATE Test (BLE Test, RF Calibration Test, LF Calibration Test, 250 ms Clock Test)
+
+AndromedaTag-V41.1.5 - 31-08-2023
+-----------------------------------
+Title: Andromeda Enhanced Feature Releases
+Release Date: 31-08-2023
+Name: AndromedaTag-V41.1.5
+
+Release Notes: 
+a) Made code cleanup.
+b) Integrated ATE support
+c) Keep the Tag active during the BLE upgrade time period.  Tag never go to sleep until BLE upgrade process is going on.
+d) If tag did not receive IR for three consecutive cycles, then turned off IR power and then turned on to recalculate AGC value one more time.
+e) Little bit relased the IR guardband. from 3.5 ms to 5 ms.
+f) Reduced the LED blink time from 250ms to 20ms when Tag sending button press message through BLE.  This is just a debug notification we will remove this if it is not required.
+g) Added Checksum for all BLE communication.
+h) Updated LF Register settings as per redmine ticket 68353.
+
+a) Fixed issue: Tag sending multiple location data with same data index when the Tag loses Star's ACK
+b) Fixed issue: Measuring Temperature once in every  1 min when Tag is active.
+c) Fixed issue: Set default frequency when Tag is wakeup from Factory Sleep.
+d) Fixed issue: Address high current issue with Tag is in Inventory Sleep.
+
+
+Reference Jira Ticket:-AND-845
+
+AndromedaTag-V41.1.3 -ATE - 25/08/2023
+========================================
+- Support ATE Test( Battery voltage, Acceleromter, Buzeer, External Flash. LF RX Ch1, LF RX Ch2, Led 1, Led 2, Led 3, Led 4, Red Led, Button 1,  Button 2, Button 3 & Sleep current Test )
+
+Note: This version Only for ATE Test,
+
+AndromedaTag-V41.1.2 - 11/08/2023
+==================================
+- Support ATE Test.
+- we can configure the Test Criteria in settings.ini file.
+- Tag enter into Automation Test mode whenever Tag has been reset
+- In Automation Test Mode, Tag is waiting for 2 sec to receive command from Automation Test Tool
+- If Tag didn't receive command from Automation Test within 2 sec then Tag moves normal RTLS Process.
+- Automation Test sent Enter Automation Test mode request to Tag upto 20 sec. If Tool receive response from Tag then Tool stop sending the request.
+- Tag enter into Automation Test mode when Tag receive sent Enter Automation Test mode request from tool.
+- Red Led blinks (On time: 20 ms , offtime : 250 ms) upto 2 sec. This indicate that tag was in ATE Mode and waiting for command request
+
+Note: This version Only to ATE, Plase don't use this version integration Test.
+
+
+AndromedaTag-V41.1.4 - 11/08/2023
+===================================
+1) Removed watchdog clock adjustment in the Andromeda Tag Firmware
+2) Fixed issuse that storngest IR Rssi not validate in the Tag firmware
+3) Enable the Auto flush CRC in RF Receive
+
+Note: We Reserved Tag Version 1 for BLE OTA Upgrade Test and UHF Upgrade Test
+
+AndromedaTag-V41.1.2 - 2/08/2023
+=================================
+ Implemented HHC Algorithm
+- Provided option to set the BLE TX power from -20 dbm to +5 dbm
+
+- Enhancements:
+- During our Testing we found some additional current consumption at the end of BLE upgarde.  This is due to mobile app did not close the connection afer complete the OTA upgrade process.
+- Also we noticed, After the OTA Upgrade completion, Tag takes nearly 20 secs to copy the new firmware from External Flash to MCU's flash memory.  This was reduced to 2 secs.
+
+AndromedaTag-V41.1.1-Test - 2/08/2023
+==================================
+1) This release similar to the previous engineering release(V41.1.1)
+2) Tag always in Asyc Mode. It won't enters into sync mode.
+3) Tag always in motion. So Tag didn't goes to sleep
+
+AndromedaTag-V41.1.1 - 28/07/2023
+==================================
+Initial version of full functional Firmware for Andromeda Tag.  You can program this firmware on Andromeda Staff Badge and Asset Tag.  Verified this firmware in Andromeda Staff Badge Hardware.  This firmware will support the the following Functionalities:
+
+When Tag in Synchronous mode:
+1) Factory Sleep / Wakeup
+2) Inventory Sleep / Wakeup
+3) UHF Paging
+4) UHF Active / Sleep Reporting
+5) Button Events
+6) IR Reception using Dual iR sensors and also AGC IR reception algorithm
+7) LF Reception
+8) Sending Commands from Core Server
+9) Profile change through CoreServer
+10) OTA Upgrade through UHF
+
+When Tag in Asynchronous mode:
+1) BLE Active / Sleep Reporting
+2) Duress Reporting
+3) Profile Change through Mobile App
+4) IR Reception using Dual iR sensors and also AGC IR reception algorithm
+5) LF Reception
+6) Sending Commands from Mobile App
+7) OTA Upgrade through Mobile App.
+
+Note:  We did the fundamental testing with Staff Tag alone.  We will do detailed unit test for each functionlaity while Newtown Engineering is doing Testing.  For the next two weeks, we will collect the Test feedback from Newtown Engineering and outcome of our Test results, do the optimization / enhancement / fixes in Orion Version of the Tag. 	Also we will start implementing the Pegasus functionality and make an integrated release which supports both Orion and Pegasus before end of next month (August)
+
+Tag consumes nearly 10uA when it is in deep sleep.
+
+Can you please let us know 
+a) If any of the profile which needs configurable through Core / Mobile app.
+b) Default Profile value for Staff Badge and Asset Tag.
+
+Items not implemented / tested:
+- Hand hygiene use cases.
+- Safetty solution use cases.
+- LED Blink Pattern

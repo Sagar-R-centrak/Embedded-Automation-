@@ -1,0 +1,7 @@
+Add below lines at the end of server ini file to see the wifi tags in core server
+
+
+[CISCODNA_SETTINGS]
+ENABLE_LOG=1
+CISCO_TENANT_ID=84
+SITE_ID=1793
