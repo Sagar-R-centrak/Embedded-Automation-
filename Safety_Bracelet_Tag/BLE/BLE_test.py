@@ -3,16 +3,25 @@ import struct
 import time
 import datetime
 import logging
-import os
 import subprocess
+from Arduino_API.Arduino_serial_API import SerialConnection
 
-HEADER_LEN = 13
-LOCATION_PKT_LEN = 30
-TAG_FILTER = 17658109  # Hardcoded Tag ID
-LOG_FILE = f"tag_{TAG_FILTER}.txt"
+class MainProcess:
+    def __init__(self):
+        self.serial_conn = SerialConnection(port="COM11", baud_rate=9600)
+        print("Initializing serial connection...")
+        self.serial_conn.init_serial()
+
+    def send_cmd(self, serial_message):
+        print(f"Sending command '{serial_message}' to Arduino...")
+        self.serial_conn.send_command(serial_message)
+
+TAG_FILTER = 17684992
+MAC_FILTER = "00:00:00:00:00:00"
+LOG_FILE = f"tag_{TAG_FILTER}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+DEFAULT_DURATION = 125  # Default duration in seconds
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
-
 
 class PacketDecoder:
     @staticmethod
@@ -64,7 +73,7 @@ class PacketDecoder:
         lbi = struct.unpack('<H', packet[19:21])[0]
         cmd3 = packet[21:24].hex()
         ts = int.from_bytes(packet[24:28], 'little')
-        readable_time = datetime.datetime.fromtimestamp(ts, datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S')
+        readable_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         ekey = packet[28]
         lf_flag = packet[29]
         status_fields = PacketDecoder.decode_status_byte(status_byte)
@@ -91,9 +100,11 @@ class PacketDecoder:
             'LF Flag': lf_flag
         }
 
+HEADER_LEN = 13
+LOCATION_PKT_LEN = 30
 
 class PacketCapture:
-    def __init__(self, host='0.0.0.0', port=7171, timeout=1.0):
+    def __init__(self, host='127.0.0.1', port=7177, timeout=1.0):
         self.host = host
         self.port = port
         self.timeout = timeout
@@ -102,10 +113,9 @@ class PacketCapture:
     def _format_log_line(self, rx_utc, header, pkt):
         return (
             f"{rx_utc} | Cycle={header['Cycle Counter']} | StarMAC={header['Star MAC Id']} | "
-            f"TagID={pkt['Tag ID']} | RSSI={pkt['RSSI']} | MonID={pkt['Monitor ID']} | CMD={pkt['CMD']} | "
+            f"TagID={pkt['Tag ID']} | RSSI={pkt['RSSI']} | MonID={pkt['Monitor ID']}| "
             f"IR={pkt['IR ID']} | Ver={pkt['Version']} | Astar={pkt['Astar ID']} | LBI={pkt['LBI']} | "
-            f"CMD3={pkt['CMD3']} | EKEY={pkt['EKEY']} | LF={pkt['LF Flag']} | Status={pkt['Status Byte']} | "
-            f"DevTS={pkt['Timestamp']}\r\n"
+            f"LF={pkt['LF Flag']} \r\n "
         )
 
     def _try_parse_frames(self, log_fp):
@@ -115,7 +125,7 @@ class PacketCapture:
             header_bytes = self._buffer[:HEADER_LEN]
             try:
                 header = PacketDecoder.decode_header(header_bytes)
-            except:
+            except Exception:
                 self._buffer.pop(0)
                 continue
             data_length = header['Data Length']
@@ -126,18 +136,29 @@ class PacketCapture:
             del self._buffer[:total_len]
             payload = frame[HEADER_LEN:]
             for i in range(data_length // LOCATION_PKT_LEN):
-                pkt = PacketDecoder.decode_location_packet(payload[i*LOCATION_PKT_LEN:(i+1)*LOCATION_PKT_LEN])
-                if pkt['Tag ID'] == TAG_FILTER:
-                    rx_utc = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                    log_fp.write(self._format_log_line(rx_utc, header, pkt))
-                    log_fp.flush()
-                    logging.info(f"Logged Tag {TAG_FILTER}")
+                try:
+                    pkt = PacketDecoder.decode_location_packet(payload[i*LOCATION_PKT_LEN:(i+1)*LOCATION_PKT_LEN])
+                    if (
+                        pkt['Tag ID'] == TAG_FILTER and
+                        header['Star MAC Id'] == MAC_FILTER and
+                        not (
+                            pkt['CMD3'] == "190014" and
+                            pkt['EKEY'] == 0 and
+                            pkt['Status Byte'] == "00000000"
+                        )
+                    ):
+                        rx_utc = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+                        log_fp.write(self._format_log_line(rx_utc, header, pkt))
+                        log_fp.flush()
+                        logging.info(f"Logged Tag {TAG_FILTER} from MAC {MAC_FILTER}")
+                except Exception as e:
+                    logging.warning(f"Failed to decode packet: {e}")
 
-    def listen_and_log(self, duration_sec):
+    def listen_and_log(self, duration_sec=DEFAULT_DURATION):
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock, open(LOG_FILE, 'a', newline='') as log_fp:
             sock.bind((self.host, self.port))
             sock.settimeout(self.timeout)
-            logging.info(f"Listening for Tag ID {TAG_FILTER} for {duration_sec} seconds...")
+            logging.info(f"Listening for Tag ID {TAG_FILTER} from MAC {MAC_FILTER} for {duration_sec} seconds...")
             start = time.time()
             while time.time() - start < duration_sec:
                 try:
@@ -147,13 +168,15 @@ class PacketCapture:
                 except socket.timeout:
                     continue
         logging.info(f"Capture complete. Log saved to {LOG_FILE}")
-        # Auto-open in Notepad
         try:
             subprocess.Popen(['notepad.exe', LOG_FILE])
         except Exception as e:
             logging.error(f"Could not open Notepad: {e}")
 
-
+# Main execution block
 if __name__ == "__main__":
+    process = MainProcess()
+    process.send_cmd("tag1multiskey1,2\n")
     capt = PacketCapture()
-    capt.listen_and_log(duration_sec=120)
+    capt.listen_and_log()  # Uses DEFAULT_DURATION
+    process.serial_conn.close()
