@@ -7,9 +7,9 @@ import logging
 import json
 import re
 from openpyxl import load_workbook
-from Report_process import RateProcessor
-from Profile import JSONMessageApp
-from Tcp_command_1 import DevCommandSender
+#from Report_process import RateProcessor
+#from Profile import JSONMessageApp
+#from Tcp_command_1 import DevCommandSender
 from Power_supply import KoradPowerSupply
 g4_tag1_id = 8457892
 server_ip = "192.168.1.5"
@@ -20,9 +20,9 @@ PS.disconnect()
 time.sleep(5)
 PS.connect()
 PS.set_voltage(3)
-TCP = JSONMessageApp(server_ip)
-Report_processor = RateProcessor()
-sender = DevCommandSender()
+#TCP = JSONMessageApp(server_ip)
+#Report_processor = RateProcessor()
+#sender = DevCommandSender()
 
 def load_config():
     with open("config.json", "r") as file:
@@ -35,42 +35,21 @@ host = config["host"]
 port = config["port"]
 timeout = config["timeout"]
 
-'''def Report(test_id,f):
+
+def Report(test_id, f):
     file = 'G4_tag_testcases_automation.xlsx'
     STP = load_workbook(file)
     sheet = STP['RF_900MHz']
-for x in range(2000):
-       x += 1
-       rn = 'D' + str(x)
-       rs = 'F' + str(x)
-       c = str(sheet[rn].value)
-       if test_id in c:
-           if f == 1:
-               sheet[rs].value = "PASS"
-               print(x)
-           else:
-               sheet[rs].value = "FAIL"
-               print(x)
-   STP.save('G4_tag_testcases_automation.xlsx')
-   '''
 
-
-
-def Report(test_id, f):
-    file = 'G4_tag_testcases_automation.xlsx'   # keep filename consistent
-    STP = load_workbook(file)
-    sheet = STP['RF_900MHz']  # modern way to access sheet
-
-    for row in range(1, sheet.max_row + 1):  # loop only through existing rows
+    for row in range(1, sheet.max_row + 1):
         test_case = sheet[f'D{row}'].value
-        if test_case and test_id in str(test_case):  # safer check
+        if test_case and test_id in str(test_case):
             result_cell = f'F{row}'
             sheet[result_cell].value = "PASS" if f == 1 else "FAIL"
             print(f"Updated row {row} -> {sheet[result_cell].value}")
 
-    STP.save(file)  # save back to SAME file
+    STP.save(file)
 
-#
 
 # Configure logging
 LOG_FILE = "output.log"  # Predefined file name
@@ -116,13 +95,24 @@ class SerialConnection:
         except serial.SerialException as e:
             print(f"Error opening serial port: {e}")
     #Supriya
-    def in_waiting(self):
+    def readline(self):
+        if self.ser is None:
+            # This will give you a clear, early error if serial isn't initialized
+            raise RuntimeError("Serial connection not initialized. Call init_serial() first.")
+
+        if self.ser.in_waiting:
+            return self.ser.readline().decode(errors="ignore").strip()
+
+        return None
+
+    '''def in_waiting(self):
         return self.ser.in_waiting
 
     def readline(self):
         if self.ser.in_waiting:
             return self.ser.readline().decode().strip()
         return None
+    '''
     #supriya end
     def send_command(self, command):
         try:
@@ -299,7 +289,7 @@ class PacketDecoder:
 
 
 class PacketCapture:
-    def __init__(self, host='192.168.1.5', port=7167, timeout=10):
+    def __init__(self, host='192.168.1.10', port=7167, timeout=10):
         self.host = host
         self.port = port
         self.timeout = timeout
@@ -428,6 +418,8 @@ class PacketCapture:
         return validation_result
 
 
+
+
 class MainProcess:
     def __init__(self):
         self.serial_conn = SerialConnection(port=Arduino_serial_port, baud_rate=9600)
@@ -465,21 +457,6 @@ class MainProcess:
 
         return is_valid
 
-    def Move_api(self, serial_message, expected_values):
-
-
-        print(f"Sending command '{serial_message}' to Arduino...")
-        self.serial_conn.send_command(serial_message)
-        time.sleep(0.1)
-        print("Capturing packets...")
-        self.packet_capture.capture("move")
-
-        print("Processing and validating captured packets...")
-        is_valid = self.packet_capture.process_packets(expected_values)
-
-
-        return is_valid
-
     def Command_api(self, serial_message, expected_values):
         print(f"Sending command '{serial_message}' to Arduino...")
         self.serial_conn.send_command(serial_message)
@@ -490,16 +467,42 @@ class MainProcess:
         print("Processing and validating captured packets...")
         is_valid = self.packet_capture.process_packets(expected_values)
 
-
         return is_valid
+
+    def get_blink_count(self, timeout=10):
+        """
+        Reads from the serial connection until timeout or a blink count is found.
+
+        Args:
+            self: Object containing `serial_conn` with a `.readline()` method.
+            timeout (int): How long to wait (in seconds) before giving up.
+
+        Returns:
+            int | None: The blink count if found, otherwise None.
+        """
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            line = self.serial_conn.readline().decode(errors="ignore").strip()
+            if not line:
+                continue
+
+            print(f"Serial Output: {line}")
+
+            if "Blinks:" in line:
+                try:
+                    return int(line.split("Blinks:")[1].strip())
+                except (IndexError, ValueError):
+                    print("Failed to parse blink count from:", line)
+                    return None
+        return None
+
+
+
 
 process = MainProcess()
 if __name__ == "__main__":
 
 
-
-
-    #---------------------------------Supriya--------------------------------------------
     print("Executing G4Version_01 : To validate tag FW version  ")
     logging.info("Executing Version_01 : To validate tag FW version \n  ")
     time.sleep(3)
@@ -520,31 +523,30 @@ if __name__ == "__main__":
         Report("Version_01", 0)
         Output(f"Iteration{i}: Version_01 Test FAIL")
     #-----------------------------------------------------------------------------------
-    print("Executing G4_TagType_02 : To validate tag type")
-    logging.info("Executing G4_TagType_02 : To validate tag type \n  ")
+    print("Executing G4_DeviceType_02 : To validate device type")
+    logging.info("Executing G4_DeviceType_02 : To validate device type \n  ")
     time.sleep(3)
     expected_values = {
         'Tag ID': g4_tag1_id,
-        'Device Type': 1  # 1 for Tag, 0 for Monitor
+        'Device Type': 1  # 1 for Tag, 0 for Monitor                #tag type 35, SW , HW version
     }
     result = process.button_api(serial_message="t1lp", expected_values=expected_values)
     i = 1
     if result:
         print("Packet validation successful.")
-        print(f"Iteration{i}: TagType_02 Test PASS")
-        Report("TagType_02", 1)
-        Output(f"Iteration{i}: TagType_02 Test PASS")
+        print(f"Iteration{i}: DeviceType_02 Test PASS")
+        Report("DeviceType_02", 1)
+        Output(f"Iteration{i}: DeviceType_02 Test PASS")
     else:
         print("Packet validation failed.")
-        print(f"Iteration{i}: TagType_02 Test FAIL")
-        Report("TagType_02", 0)
-        Output(f"Iteration{i}: TagType_02 Test FAIL")
+        print(f"Iteration{i}: DeviceType_02 Test FAIL")
+        Report("DeviceType_02", 0)
+        Output(f"Iteration{i}: DeviceType_02 Test FAIL")
     #--------------------------------------------------------------------------------------
     print("Executing G4_TagId_03 : To validate tag id")
-    logging.info("Executing G4_TagId_03 : To validate tag id \n  ")
+    logging.info("Executing G4_TagId_03 : To validate tag id \n ")
     time.sleep(3)
     expected_values = {
-        'Tag ID': g4_tag1_id,
         'Tag ID': 8457892
     }
     result = process.button_api(serial_message="t1lp", expected_values=expected_values)
@@ -552,7 +554,7 @@ if __name__ == "__main__":
     if result:
         print("Packet validation successful.")
         print(f"Iteration{i}: TagId_03 Test PASS")
-        Report("TagType_02", 1)
+        Report("TagId_02", 1)
         Output(f"Iteration{i}: TagId_03 Test PASS")
     else:
         print("Packet validation failed.")
@@ -585,7 +587,7 @@ if __name__ == "__main__":
     time.sleep(3)
     expected_values = {
         'Tag ID': g4_tag1_id,
-        'Button 1': '1'
+        'Button 1': '1'  # long and short press
     }
     result = process.button_api(serial_message="t1lp", expected_values=expected_values)
     i = 1
@@ -607,10 +609,10 @@ if __name__ == "__main__":
     # Door_status: 1 = CLOSED, 2 = OPEN
     expected_values = {
         'Tag ID': g4_tag1_id,
-        'Door_status': 2  # Example: expecting OPEN
+        'Door_status': 2
     }
 
-    result = process.button_api(serial_message="t1lp", expected_values=expected_values)
+    result = process.button_api(serial_message="t1lp", expected_values=expected_values)   #automation for profile configuration
 
     i = 1
     if result:
@@ -664,48 +666,43 @@ if __name__ == "__main__":
         Report("CurrentTempValue_07", 0)
         Output(f"Iteration{i}: CurrentTempValue_07 Test FAIL")
     #-------------------------------------------------------------------------------------------
-    print("Executing Wakefrom_InventorySleep_08: To validate wake up and monitor LED blink for Inventory sleep")
+    #Factory Sleep
+
+    print("Executing Move_FactorySleep_and_MonitorLED_08: To validate move tag into Factory sleep and monitor LED blinks")
     logging.info(
-        "Executing Wakefrom_InventorySleep_08: To validate wake up and monitor LED blink for Inventory sleep\n"
-    )
+        "Executing Move_FactorySleep_and_MonitorLED_08: To validate move tag into Factory sleep and monitor LED blinks\n")
     time.sleep(3)
 
     expected_values = {
-        'Tag ID': g4_tag1_id
+        'Tag ID': g4_tag1_id,
+        'version': 4
     }
 
-    # Precondition: Tag should be in inventory sleep
-    # Wake up the tag
-    process.button_api(serial_message="t1ho", expected_values=expected_values)
+    # Move tag into factory sleep
+    result = process.button_api(serial_message="t1ho", expected_values=expected_values)
     time.sleep(0.5)
-    process.button_api(serial_message="t1hlo", expected_values=expected_values)
 
-    # Now read serial output
-    blink_detected = False
-    start_time = time.time()
-    timeout = 5
-    last_blink_count = 0
+    # Immediately check LED blinks
+    blink_count = process.get_blink_count(timeout=5)
 
-    while time.time() - start_time < timeout:
-        line = process.serial_conn.readline()
-        if line:
-            print(line)
-            if "Blinks:" in line:
-                last_blink_count = int(line.split("Blinks:")[1].strip())
+    i = 1
+    if result and blink_count == 3:
+        print("Move_FactorySleep_and_MonitorLED_08: PASS")
+        Report("Move_FactorySleep_and_MonitorLED_08", 1)
+        Output(f"Iteration{i}: Move_FactorySleep_and_MonitorLED_08 Test PASS")
+    elif blink_count is None:
+        print("Move_FactorySleep_and_MonitorLED_08: FAIL → No blink data received")
+        Report("Move_FactorySleep_and_MonitorLED_08", 0)
+        Output(f"Iteration{i}: Move_FactorySleep_and_MonitorLED_08 Test FAIL (No blink data)")
+    else:
+        print(f"Move_FactorySleep_and_MonitorLED_08: FAIL → Blinks detected: {blink_count}")
+        Report("Move_FactorySleep_and_MonitorLED_08", 0)
+        Output(f"Iteration{i}: Move_FactorySleep_and_MonitorLED_08 Test FAIL (Blinks: {blink_count})")
 
-                if last_blink_count == 3:
-                    print("Executing Wakefrom_InventorySleep_08: PASS")
-                    blink_detected = True
-                    break
-                else:
-                    print(f"Executing Wakefrom_InventorySleep_08: FAIL → Blinks detected: {last_blink_count}")
-                    blink_detected = False
-                    break
-
-    #--------------------------------------------------------------------------------------
-    print("Executing Wakeup_InventorySleep_09: To validate wake up from Inventory sleep and button press")
+    # --------------------------------------------------------------------------------------------------
+    print("Executing ButtonPress_FactorySleep_09: To validate button press when tag is in Factory sleep")
     logging.info(
-        "Executing Wakeup_InventorySleep_09: To validate wake up from Inventory sleep and button press\n"
+        "Executing ButtonPress_FactorySleep_09: To validate button press when tag is in Factory sleep\n"
     )
     time.sleep(3)
 
@@ -714,12 +711,221 @@ if __name__ == "__main__":
         'version': 4
     }
 
-    # Precondition: Tag should be in inventory sleep
-    # Wake up the tag
-    process.button_api(serial_message="t1ho", expected_values=expected_values)
+    # Precondition: Tag should be in Factory sleep
+    process.button_api(serial_message="t1sp", expected_values={})
     time.sleep(0.5)
-    process.button_api(serial_message="t1hlo", expected_values=expected_values)
+
+    # Capture packets after button press
+    packets_received = process.packet_capture.captured_packets
+    i = 1
+    if not packets_received:
+        print("No location data received after short press in factory sleep: PASS")
+        print(f"Iteration{i}: ButtonPress_FactorySleep_09 Test PASS")
+        Report("ButtonPress_FactorySleep_09", 1)
+        Output(f"Iteration{i}: ButtonPress_FactorySleep_09 Test PASS")
+    else:
+        print("Location data received after short press in factory sleep: FAIL")
+        print(f"Iteration{i}: ButtonPress_FactorySleep_09 Test FAIL")
+        Report("ButtonPress_FactorySleep_09", 0)
+        Output(f"Iteration{i}: ButtonPress_FactorySleep_09 FAIL")
+    # --------------------------------------------------------------------------------------------------
+    print(
+        "Executing MultipleButtonPress_FactorySleep_10: To validate multiple button press when tag is in Factory sleep")
+    logging.info(
+        "Executing MultipleButtonPress_FactorySleep_10: To validate multiple button press when tag is in Factory sleep\n"
+    )
+    time.sleep(3)
+
+    expected_values = {
+        'Tag ID': g4_tag1_id,
+        'version': 4
+    }
+
+    # Precondition: Tag should be in Factory sleep
+    process.button_api(serial_message="t1sp", expected_values={})
     time.sleep(0.5)
+    process.button_api(serial_message="t1sp", expected_values={})
+    time.sleep(0.5)
+    process.button_api(serial_message="t1sp", expected_values={})
+    time.sleep(0.5)
+
+    # Capture packets after button press
+    packets_received = process.packet_capture.captured_packets
+    i = 1
+    if not packets_received:
+        print("No location data received after short press in factory sleep: PASS")
+        print(f"Iteration{i}: MultipleButtonPress_FactorySleep_10 Test PASS")
+        Report("MultipleButtonPress_FactorySleep_10", 1)
+        Output(f"Iteration{i}:MultipleButtonPress_FactorySleep_10 Test PASS")
+    else:
+        print("Location data received after short press in factory sleep: FAIL")
+        print(f"Iteration{i}: MultipleButtonPress_FactorySleep_10 Test FAIL")
+        Report("MultipleButtonPress_FactorySleep_10", 0)
+        Output(f"Iteration{i}: MultipleButtonPress_FactorySleep_10 FAIL")
+    # ---------------------------------------------------------------------------------------------------
+    print(
+        "Executing Wakeup_FactorySleep_and_MonitorLED_11: To validate wake up from Factory sleep and monitor LED blinks")
+    logging.info(
+        "Executing Wakeup_FactorySleep_and_MonitorLED_11: To validate wake up from Factory sleep and monitor LED blinks\n")
+    time.sleep(3)
+
+    expected_values = {
+        'Tag ID': g4_tag1_id,
+        'version': 4
+    }
+
+    # Wake up from Factory sleep and validate packet
+    result = process.button_api(serial_message="t1ho", expected_values=expected_values)
+    time.sleep(0.5)
+
+    # Immediately check LED blinks
+    blink_count = process.get_blink_count(timeout=5)
+
+    i = 1
+    if result and blink_count == 3:
+        print("Wakeup_FactorySleep_and_MonitorLED_11: PASS")
+        Report("Wakeup_FactorySleep_and_MonitorLED_11", 1)
+        Output(f"Iteration{i}: Wakeup_FactorySleep_and_MonitorLED_11 Test PASS")
+    elif not result:
+        print("Wakeup_FactorySleep_and_MonitorLED_11: FAIL → Packet validation failed")
+        Report("Wakeup_FactorySleep_and_MonitorLED_11", 0)
+        Output(f"Iteration{i}: Wakeup_FactorySleep_and_MonitorLED_11 Test FAIL (Packet validation failed)")
+    elif blink_count is None:
+        print("Wakeup_FactorySleep_and_MonitorLED_11: FAIL → No blink data received")
+        Report("Wakeup_FactorySleep_and_MonitorLED_11", 0)
+        Output(f"Iteration{i}: Wakeup_FactorySleep_and_MonitorLED_11 Test FAIL (No blink data)")
+    else:
+        print(f"Wakeup_FactorySleep_and_MonitorLED_11: FAIL → Blinks detected: {blink_count}")
+        Report("Wakeup_FactorySleep_and_MonitorLED_11", 0)
+        Output(f"Iteration{i}: Wakeup_FactorySleep_and_MonitorLED_11 Test FAIL (Blinks: {blink_count})")
+
+    # ----------------------------------------------------------------------------------
+    print("Executing Wakeup_FactorySleep&ButtonPress_12: To validate button press after waking up from Factory sleep")
+    logging.info(
+        "Executing Wakeup_FactorySleep&ButtonPress_12: To validate button press after waking up from Factory sleep\n"
+    )
+    time.sleep(3)
+
+    expected_values = {
+        'Tag ID': g4_tag1_id,
+        'version': 4
+    }
+
+    # Precondition: Tag should be in Factory sleep
+    process.button_api(serial_message="t1sp", expected_values=expected_values)
+    time.sleep(0.5)
+
+    i = 1
+    if result:
+        print("Packet validation successful.")
+        print(f"Iteration{i}: Wakeup_FactorySleep&ButtonPress_12 Test PASS")
+        Report("Wakeup_FactorySleep&ButtonPress_12", 1)
+        Output(f"Iteration{i}:Wakeup_FactorySleep&ButtonPress_12 Test PASS")
+    else:
+        print("Packet validation failed.")
+        print(f"Iteration{i}: Wakeup_FactorySleep&ButtonPress_12 Test FAIL")
+        Report("Wakeup_FactorySleep&ButtonPress_12", 0)
+        Output(f"Iteration{i}: Wakeup_FactorySleep&ButtonPress_12 FAIL")
+    #-----------------------------------------------------------------------------------------------------
+    print("Executing ButtonPress_InventorySleep_13: To validate button press when tag is in Inventory sleep")
+    logging.info(
+        "Executing ButtonPress_InventorySleep_13: To validate button press when tag is in Inventory sleep\n"
+    )
+    time.sleep(3)
+
+    # Precondition: Tag should be in Inventory sleep
+    process.button_api(serial_message="t1sp", expected_values={})
+    time.sleep(0.5)
+
+    # Capture packets after button press
+    packets_received = process.packet_capture.captured_packets
+    i = 1
+    if not packets_received:
+        print("No location data received after short press in factory sleep: PASS")
+        print(f"Iteration{i}: ButtonPress_InventorySleep_13 Test PASS")
+        Report("ButtonPress_InventorySleep_13", 1)
+        Output(f"Iteration{i}:ButtonPress_InventorySleep_13 Test PASS")
+    else:
+        print("Location data received after short press in factory sleep: FAIL")
+        print(f"Iteration{i}: ButtonPress_InventorySleep_13 Test FAIL")
+        Report("ButtonPress_InventorySleep_13", 0)
+        Output(f"Iteration{i}: ButtonPress_InventorySleep_13 FAIL")
+    #------------------------------------------------------------------------------------------
+    print("Executing MultipleButtonPress_InventorySleep_14: To validate button press multiple times when tag is in Inventory sleep")
+    logging.info(
+        "Executing MultipleButtonPress_InventorySleep_14: To validate button press multiple times when tag is in Inventory sleep\n"
+    )
+    time.sleep(3)
+
+    # Precondition: Tag should be in Inventory sleep
+    process.button_api(serial_message="t1sp", expected_values={})
+    time.sleep(0.5)
+    process.button_api(serial_message="t1sp", expected_values={})
+    time.sleep(0.5)
+    process.button_api(serial_message="t1sp", expected_values={})
+    time.sleep(0.5)
+
+    # Capture packets after button press
+    packets_received = process.packet_capture.captured_packets
+    i = 1
+    if not packets_received:
+        print("No location data received after short press in factory sleep: PASS")
+        print(f"Iteration{i}: MultipleButtonPress_InventorySleep_14 Test PASS")
+        Report("MultipleButtonPress_InventorySleep_14", 1)
+        Output(f"Iteration{i}:MultipleButtonPress_InventorySleep_14 Test PASS")
+    else:
+        print("Location data received after short press in factory sleep: FAIL")
+        print(f"Iteration{i}: MultipleButtonPress_InventorySleep_14 Test FAIL")
+        Report("MultipleButtonPress_InventorySleep_14", 0)
+        Output(f"Iteration{i}: MultipleButtonPress_InventorySleep_14 FAIL")
+    #------------------------------------------------------------------------------------------
+    print(
+        "Executing Wakeup_InventorySleep_and_MonitorLED_15: To validate wake up from Inventory sleep and monitor LED blinks")
+    logging.info(
+        "Executing Wakeup_InventorySleep_and_MonitorLED_15: To validate wake up from Inventory sleep and monitor LED blinks\n")
+    time.sleep(3)
+
+    expected_values = {
+        'Tag ID': g4_tag1_id,
+        'version': 4
+    }
+
+    # Wake up from Inventory sleep and validate packet
+    result = process.button_api(serial_message="t1ho", expected_values=expected_values)
+    time.sleep(0.5)
+
+    # Immediately check LED blinks
+    blink_count = process.get_blink_count(timeout=5)
+
+    i = 1
+    if result and blink_count == 3:
+        print("Wakeup_InventorySleep_and_MonitorLED_15: PASS")
+        Report("Wakeup_InventorySleep_and_MonitorLED_15", 1)
+        Output(f"Iteration{i}: Wakeup_InventorySleep_and_MonitorLED_15 Test PASS")
+    elif not result:
+        print("Wakeup_InventorySleep_and_MonitorLED_15: FAIL → Packet validation failed")
+        Report("Wakeup_InventorySleep_and_MonitorLED_15", 0)
+        Output(f"Iteration{i}: Wakeup_InventorySleep_and_MonitorLED_15 Test FAIL (Packet validation failed)")
+    elif blink_count is None:
+        print("Wakeup_InventorySleep_and_MonitorLED_15: FAIL → No blink data received")
+        Report("Wakeup_InventorySleep_and_MonitorLED_15", 0)
+        Output(f"Iteration{i}: Wakeup_InventorySleep_and_MonitorLED_15 Test FAIL (No blink data)")
+    else:
+        print(f"Wakeup_InventorySleep_and_MonitorLED_15: FAIL → Blinks detected: {blink_count}")
+        Report("Wakeup_InventorySleep_and_MonitorLED_15", 0)
+        Output(f"Iteration{i}: Wakeup_InventorySleep_and_MonitorLED_15 Test FAIL (Blinks: {blink_count})")
+
+    #--------------------------------------------------------------------------------------
+    print("Executing WakeupInventorySleep&ButtonPress_16: To validate button press after waking up from Inventory sleep")
+    logging.info(
+        "Executing WakeupInventorySleep&ButtonPress_16: To validate button press after waking up from Inventory sleep\n"
+    )
+    time.sleep(3)
+
+    expected_values = {
+        'Tag ID': g4_tag1_id,
+        'Button 1': '1'
+    }
 
     #button press
     process.button_api(serial_message="t1sp", expected_values=expected_values)
@@ -728,58 +934,20 @@ if __name__ == "__main__":
     i = 1
     if result:
         print("Packet validation successful.")
-        print(f"Iteration{i}: Wakeup_InventorySleep_09 Test PASS")
-        Report("Wakeup_InventorySleep_09", 1)
-        Output(f"Iteration{i}: Wakeup_InventorySleep_09 Test PASS")
+        print(f"Iteration{i}: Wakeup_InventorySleep_16 Test PASS")
+        Report("Wakeup_InventorySleep_16", 1)
+        Output(f"Iteration{i}: Wakeup_InventorySleep_16 Test PASS")
     else:
         print("Packet validation failed.")
-        print(f"Iteration{i}: Wakeup_InventorySleep_09 Test FAIL")
-        Report("Wakeup_InventorySleep_09", 0)
-        Output(f"Iteration{i}: Wakeup_InventorySleep_09 Test FAIL")
+        print(f"Iteration{i}: Wakeup_InventorySleep_16 Test FAIL")
+        Report("Wakeup_InventorySleep_16", 0)
+        Output(f"Iteration{i}: Wakeup_InventorySleep_16 Test FAIL")
 
-    #--------------------------------------------------------------------------------------
-    import time
-
-
-    def get_blink_count(process, timeout=10):
-        """
-        Reads from the serial connection until timeout or a blink count is found.
-
-        Args:
-            process: Object containing `serial_conn` with a `.readline()` method.
-            timeout (int): How long to wait (in seconds) before giving up.
-
-        Returns:
-            int | None: The blink count if found, otherwise None.
-        """
-        start_time = time.time()
-        while time.time() - start_time < timeout:
-            line = process.serial_conn.readline().decode(errors="ignore").strip()
-            if not line:
-                continue
-
-            print(f"Serial Output: {line}")
-
-            if "Blinks:" in line:
-                try:
-                    return int(line.split("Blinks:")[1].strip())
-                except (IndexError, ValueError):
-                    print("⚠️ Failed to parse blink count from:", line)
-                    return None
-        return None
+    #----------------------------------------------------------------------------------------------
 
 
-    blink_count = get_blink_count(process, timeout=5)
-
-    if blink_count is None:
-        print("Executing Wakefrom_InventorySleep_06: FAIL → No blink data received")
-    elif blink_count == 3:
-        print("Executing Wakefrom_InventorySleep_06: PASS")
-    else:
-        print(f"Executing Wakefrom_InventorySleep_06: FAIL → Blinks detected: {blink_count}")
-
-    #-----------------------------------Supriya end-------------------------------------
-
+#integrate current capture for all cases
+#use pywin to automate inventory sleep tool
         
         process.serial_conn.close()
 
