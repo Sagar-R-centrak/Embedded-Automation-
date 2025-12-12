@@ -7,6 +7,8 @@ import subprocess
 import pandas as pd
 import openpyxl
 from Arduino_API.Arduino_serial_API import SerialConnection
+from GUI_API.TI_Packet_Sniffer import PacketSnifferApp
+from GUI_API.BLE_Packet_Sniffer import BleSnifferApp
 
 class MainProcess:
     def __init__(self):
@@ -19,12 +21,12 @@ class MainProcess:
         self.serial_conn.send_command(serial_message)
 
 TAG_FILTER = 17684992
-MAC_FILTER = "00:00:00:00:00:00"
-EXPECTED_MONITOR_ID = 0
-EXPECTED_IR_ID = 0
+MAC_FILTER = None  # Allow all MACs
+EXPECTED_MONITOR_ID = 8508965
+EXPECTED_IR_ID = 55
 EXPECTED_ASTAR_ID = 900
 EXPECTED_VERSION = 119
-EXPECTED_LBI = 2575
+EXPECTED_LBI = 2452
 
 timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
 LOG_FILE = f"tag_{TAG_FILTER}_{timestamp}.txt"
@@ -108,7 +110,7 @@ HEADER_LEN = 13
 LOCATION_PKT_LEN = 30
 
 class PacketCapture:
-    def __init__(self, host='127.0.0.1', port=7177, timeout=1.0):
+    def __init__(self, host='', port=7171, timeout=1.0):  # Listen on all interfaces
         self.host = host
         self.port = port
         self.timeout = timeout
@@ -127,7 +129,7 @@ class PacketCapture:
         return {
             'Timestamp': pkt['Timestamp'],
             'Tag ID': 'Pass' if pkt['Tag ID'] == TAG_FILTER else 'Fail',
-            'MAC ID': 'Pass' if header['Star MAC Id'] == MAC_FILTER else 'Fail',
+            'MAC ID': 'Pass' if MAC_FILTER is None or header['Star MAC Id'] == MAC_FILTER else 'Fail',
             'Monitor ID': 'Pass' if pkt['Monitor ID'] == EXPECTED_MONITOR_ID else 'Fail',
             'IR ID': 'Pass' if pkt['IR ID'] == EXPECTED_IR_ID else 'Fail',
             'Astar ID': 'Pass' if pkt['Astar ID'] == EXPECTED_ASTAR_ID else 'Fail',
@@ -157,7 +159,7 @@ class PacketCapture:
                     pkt = PacketDecoder.decode_location_packet(payload[i*LOCATION_PKT_LEN:(i+1)*LOCATION_PKT_LEN])
                     if (
                         pkt['Tag ID'] == TAG_FILTER and
-                        header['Star MAC Id'] == MAC_FILTER and
+                        (MAC_FILTER is None or header['Star MAC Id'] == MAC_FILTER) and
                         not (
                             pkt['CMD3'] == "190014" and
                             pkt['EKEY'] == 0 and
@@ -187,15 +189,32 @@ class PacketCapture:
                 except socket.timeout:
                     continue
         logging.info(f"Capture complete. Log saved to {LOG_FILE}")
-        # try:
-        #     subprocess.Popen(['notepad.exe', LOG_FILE])
-        # except Exception as e:
-        #     logging.error(f"Could not open Notepad: {e}")
         pd.DataFrame(self.validation_results).to_excel(EXCEL_FILE, index=False)
         logging.info(f"Validation results saved to {EXCEL_FILE}")
 
 if __name__ == "__main__":
     process = MainProcess()
+    ble_pakc = BleSnifferApp()
+    ti_pack = PacketSnifferApp()
+
+    try:
+        ble_pakc.start()
+        ble_pakc.open_settings()
+        ble_pakc.write_streaming_ip("192.168.1.24")
+        ble_pakc.save()
+        ble_pakc.start_sniffer()
+        ble_pakc.close_settings()
+    except Exception as e:
+        logging.error(f"BLE Sniffer failed to start: {e}")
+
+    try:
+        ti_pack.start()
+        ti_pack.select_ble()
+        ti_pack.start_ble()
+        ti_pack.main_start()
+    except Exception as e:
+        logging.error(f"TI Packet Sniffer failed to start: {e}")
+
     process.send_cmd("tag1multiskey1,2\n")
     capt = PacketCapture()
     capt.listen_and_log()
